@@ -1,0 +1,322 @@
+[
+  {
+    "id": "eco-gsdp-per-capita",
+    "category_id": "economy",
+    "name": "GSDP Per Capita",
+    "unit": "INR",
+    "source": "MoSPI NAS",
+    "polarity": "positive",
+    "weight": 1.5,
+    "is_featured": true
+  },
+  {
+    "id": "eco-gsdp-growth",
+    "category_id": "economy",
+    "name": "GSDP Growth Rate",
+    "unit": "%",
+    "source": "MoSPI NAS",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "eco-gsdp-absolute",
+    "category_id": "economy",
+    "name": "GSDP (Absolute)",
+    "unit": "Cr INR",
+    "source": "MoSPI NAS",
+    "polarity": "positive",
+    "weight": 0.5,
+    "is_featured": false
+  },
+  {
+    "id": "eco-agriculture-share",
+    "category_id": "economy",
+    "name": "Agriculture Sector Share of GSDP",
+    "unit": "%",
+    "source": "MoSPI NAS",
+    "polarity": "negative",
+    "weight": 0.5,
+    "is_featured": false
+  },
+  {
+    "id": "eco-industry-share",
+    "category_id": "economy",
+    "name": "Industry Sector Share of GSDP",
+    "unit": "%",
+    "source": "MoSPI NAS",
+    "polarity": "positive",
+    "weight": 0.5,
+    "is_featured": false
+  },
+  {
+    "id": "eco-services-share",
+    "category_id": "economy",
+    "name": "Services Sector Share of GSDP",
+    "unit": "%",
+    "source": "MoSPI NAS",
+    "polarity": "positive",
+    "weight": 0.5,
+    "is_featured": false
+  },
+  {
+    "id": "eco-poverty-headcount",
+    "category_id": "economy",
+    "name": "Poverty Headcount Ratio",
+    "unit": "%",
+    "source": "NITI Aayog MPI",
+    "polarity": "negative",
+    "weight": 1.5,
+    "is_featured": true
+  },
+  {
+    "id": "eco-fiscal-deficit",
+    "category_id": "economy",
+    "name": "Fiscal Deficit as % of GSDP",
+    "unit": "%",
+    "source": "RBI State Finances",
+    "polarity": "negative",
+    "weight": 0.8,
+    "is_featured": false
+  },
+  {
+    "id": "eco-debt-gsdp",
+    "category_id": "economy",
+    "name": "State Debt to GSDP Ratio",
+    "unit": "%",
+    "source": "RBI State Finances",
+    "polarity": "negative",
+    "weight": 0.8,
+    "is_featured": true
+  },
+  {
+    "id": "eco-own-tax-revenue",
+    "category_id": "economy",
+    "name": "Own Tax Revenue as % of GSDP",
+    "unit": "%",
+    "source": "RBI State Finances",
+    "polarity": "positive",
+    "weight": 0.7,
+    "is_featured": false
+  },
+  {
+    "id": "eco-capital-expenditure",
+    "category_id": "economy",
+    "name": "Capital Expenditure as % of Total Expenditure",
+    "unit": "%",
+    "source": "RBI State Finances",
+    "polarity": "positive",
+    "weight": 0.7,
+    "is_featured": false
+  },
+  {
+    "id": "eco-gst-per-capita",
+    "category_id": "economy",
+    "name": "GST Collection Per Capita",
+    "unit": "INR",
+    "source": "GST Council",
+    "polarity": "positive",
+    "weight": 0.6,
+    "is_featured": false
+  },
+  {
+    "id": "eco-credit-deposit",
+    "category_id": "economy",
+    "name": "Credit-Deposit Ratio",
+    "unit": "ratio",
+    "source": "RBI",
+    "polarity": "positive",
+    "weight": 0.5,
+    "is_featured": false
+  },
+  {
+    "id": "eco-per-capita-consumption",
+    "category_id": "economy",
+    "name": "Per Capita Consumption Expenditure",
+    "unit": "INR/month",
+    "source": "MoSPI HCES",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "eco-gini",
+    "category_id": "economy",
+    "name": "Gini Coefficient",
+    "unit": "index",
+    "source": "World Bank / MoSPI",
+    "polarity": "negative",
+    "weight": 0.8,
+    "is_featured": true
+  },
+  {
+    "id": "emp-lfpr-total",
+    "category_id": "employment",
+    "name": "Labour Force Participation Rate (Total)",
+    "unit": "%",
+    "source": "MoSPI PLFS",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "emp-lfpr-female",
+    "category_id": "employment",
+    "name": "Female Labour Force Participation Rate",
+    "unit": "%",
+    "source": "MoSPI PLFS",
+    "polarity": "positive",
+    "weight": 1.5,
+    "is_featured": true
+  },
+  {
+    "id": "emp-unemployment",
+    "category_id": "employment",
+    "name": "Unemployment Rate",
+    "unit": "%",
+    "source": "MoSPI PLFS",
+    "polarity": "negative",
+    "weight": 1.5,
+    "is_featured": true
+  },
+  {
+    "id": "emp-youth-unemployment",
+    "category_id": "employment",
+    "name": "Youth Unemployment Rate (15-29)",
+    "unit": "%",
+    "source": "MoSPI PLFS",
+    "polarity": "negative",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "emp-regular-salaried",
+    "category_id": "employment",
+    "name": "Regular Salaried Workers Share",
+    "unit": "%",
+    "source": "MoSPI PLFS",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": false
+  },
+  {
+    "id": "emp-avg-daily-wage",
+    "category_id": "employment",
+    "name": "Average Daily Wage (Casual)",
+    "unit": "INR",
+    "source": "MoSPI PLFS",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": false
+  },
+  {
+    "id": "edu-literacy-total",
+    "category_id": "education",
+    "name": "Literacy Rate (Total)",
+    "unit": "%",
+    "source": "Census/NFHS",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "edu-ger-secondary",
+    "category_id": "education",
+    "name": "Gross Enrollment Ratio (Secondary)",
+    "unit": "%",
+    "source": "UDISE+",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "edu-ger-higher",
+    "category_id": "education",
+    "name": "Gross Enrollment Ratio (Higher Education)",
+    "unit": "%",
+    "source": "AISHE",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "edu-pupil-teacher",
+    "category_id": "education",
+    "name": "Pupil-Teacher Ratio (Elementary)",
+    "unit": "ratio",
+    "source": "UDISE+",
+    "polarity": "negative",
+    "weight": 0.8,
+    "is_featured": false
+  },
+  {
+    "id": "edu-female-literacy",
+    "category_id": "education",
+    "name": "Female Literacy Rate",
+    "unit": "%",
+    "source": "Census/NFHS",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "hlt-imr",
+    "category_id": "health",
+    "name": "Infant Mortality Rate",
+    "unit": "per 1000 live births",
+    "source": "SRS",
+    "polarity": "negative",
+    "weight": 1.5,
+    "is_featured": true
+  },
+  {
+    "id": "hlt-mmr",
+    "category_id": "health",
+    "name": "Maternal Mortality Ratio",
+    "unit": "per 100000 live births",
+    "source": "SRS",
+    "polarity": "negative",
+    "weight": 1.5,
+    "is_featured": true
+  },
+  {
+    "id": "hlt-life-expectancy",
+    "category_id": "health",
+    "name": "Life Expectancy at Birth",
+    "unit": "years",
+    "source": "SRS",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "hlt-stunting",
+    "category_id": "health",
+    "name": "Stunting Prevalence (Children <5)",
+    "unit": "%",
+    "source": "NFHS",
+    "polarity": "negative",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "hlt-institutional-delivery",
+    "category_id": "health",
+    "name": "Institutional Delivery Rate",
+    "unit": "%",
+    "source": "NFHS",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": false
+  },
+  {
+    "id": "hlt-hospital-beds",
+    "category_id": "health",
+    "name": "Hospital Beds per 1000 Population",
+    "unit": "per 1000",
+    "source": "NHP",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  }
+]
