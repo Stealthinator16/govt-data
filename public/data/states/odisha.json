@@ -1,0 +1,144 @@
+{
+  "year": 2021,
+  "state": {
+    "id": "odisha",
+    "name": "Odisha",
+    "type": "state",
+    "region": "East",
+    "population": 41974218,
+    "area_sq_km": 155707
+  },
+  "overall": {
+    "score": 38.15,
+    "rank": 27,
+    "tier": "Developing"
+  },
+  "categories": [
+    {
+      "category_id": "economy",
+      "score": 39.65,
+      "rank": 19,
+      "metrics_count": 11,
+      "category_name": "Economy & Income"
+    },
+    {
+      "category_id": "employment",
+      "score": 44.87,
+      "rank": 23,
+      "metrics_count": 6,
+      "category_name": "Employment & Labour"
+    },
+    {
+      "category_id": "education",
+      "score": 39.09,
+      "rank": 24,
+      "metrics_count": 5,
+      "category_name": "Education"
+    },
+    {
+      "category_id": "health",
+      "score": 38.72,
+      "rank": 30,
+      "metrics_count": 6,
+      "category_name": "Health & Healthcare"
+    },
+    {
+      "category_id": "women-gender",
+      "score": 29,
+      "rank": 33,
+      "metrics_count": 4,
+      "category_name": "Women & Gender"
+    },
+    {
+      "category_id": "children-youth",
+      "score": 57.34,
+      "rank": 16,
+      "metrics_count": 3,
+      "category_name": "Children & Youth"
+    },
+    {
+      "category_id": "elderly",
+      "score": 66.76,
+      "rank": 7,
+      "metrics_count": 1,
+      "category_name": "Elderly"
+    },
+    {
+      "category_id": "prices",
+      "score": 62.16,
+      "rank": 18,
+      "metrics_count": 1,
+      "category_name": "Prices & Cost of Living"
+    },
+    {
+      "category_id": "agriculture",
+      "score": 11.26,
+      "rank": 27,
+      "metrics_count": 2,
+      "category_name": "Agriculture & Food"
+    },
+    {
+      "category_id": "industry",
+      "score": 20.1,
+      "rank": 12,
+      "metrics_count": 3,
+      "category_name": "Industry & Manufacturing"
+    },
+    {
+      "category_id": "infrastructure",
+      "score": 64.7,
+      "rank": 24,
+      "metrics_count": 1,
+      "category_name": "Infrastructure"
+    },
+    {
+      "category_id": "energy-environment",
+      "score": 31.27,
+      "rank": 15,
+      "metrics_count": 2,
+      "category_name": "Energy & Environment"
+    },
+    {
+      "category_id": "crime-justice",
+      "score": 16.4,
+      "rank": 31,
+      "metrics_count": 2,
+      "category_name": "Crime & Justice"
+    },
+    {
+      "category_id": "financial-inclusion",
+      "score": 69.06,
+      "rank": 7,
+      "metrics_count": 1,
+      "category_name": "Financial Inclusion"
+    },
+    {
+      "category_id": "culture-tourism",
+      "score": 8.01,
+      "rank": 25,
+      "metrics_count": 2,
+      "category_name": "Culture, Tourism & Heritage"
+    },
+    {
+      "category_id": "demographics",
+      "score": 47.71,
+      "rank": 22,
+      "metrics_count": 3,
+      "category_name": "Demographics & Social"
+    },
+    {
+      "category_id": "digital-tech",
+      "score": 7.09,
+      "rank": 22,
+      "metrics_count": 1,
+      "category_name": "Digital & Technology"
+    },
+    {
+      "category_id": "transport",
+      "score": 33.53,
+      "rank": 27,
+      "metrics_count": 3,
+      "category_name": "Transport & Mobility"
+    }
+  ]
+}

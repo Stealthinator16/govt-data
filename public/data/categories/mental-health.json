@@ -1,0 +1,125 @@
+{
+  "year": 2021,
+  "category": {
+    "id": "mental-health",
+    "name": "Mental Health & Well-being"
+  },
+  "rankings": [
+    {
+      "state_id": "bihar",
+      "score": 100,
+      "rank": 1,
+      "metrics_count": 1,
+      "state_name": "Bihar",
+      "state_type": "state"
+    },
+    {
+      "state_id": "andhra-pradesh",
+      "score": 67.49,
+      "rank": 2,
+      "metrics_count": 1,
+      "state_name": "Andhra Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "madhya-pradesh",
+      "score": 64.66,
+      "rank": 3,
+      "metrics_count": 1,
+      "state_name": "Madhya Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "maharashtra",
+      "score": 64.15,
+      "rank": 4,
+      "metrics_count": 1,
+      "state_name": "Maharashtra",
+      "state_type": "state"
+    },
+    {
+      "state_id": "karnataka",
+      "score": 58.74,
+      "rank": 5,
+      "metrics_count": 1,
+      "state_name": "Karnataka",
+      "state_type": "state"
+    },
+    {
+      "state_id": "tamil-nadu",
+      "score": 44.08,
+      "rank": 6,
+      "metrics_count": 1,
+      "state_name": "Tamil Nadu",
+      "state_type": "state"
+    },
+    {
+      "state_id": "telangana",
+      "score": 43.31,
+      "rank": 7,
+      "metrics_count": 1,
+      "state_name": "Telangana",
+      "state_type": "state"
+    },
+    {
+      "state_id": "chhattisgarh",
+      "score": 38.16,
+      "rank": 8,
+      "metrics_count": 1,
+      "state_name": "Chhattisgarh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "kerala",
+      "score": 37.39,
+      "rank": 9,
+      "metrics_count": 1,
+      "state_name": "Kerala",
+      "state_type": "state"
+    },
+    {
+      "state_id": "puducherry",
+      "score": 34.3,
+      "rank": 10,
+      "metrics_count": 1,
+      "state_name": "Puducherry",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "andaman-nicobar",
+      "score": 0.6,
+      "rank": 11,
+      "metrics_count": 1,
+      "state_name": "Andaman & Nicobar Islands",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "sikkim",
+      "score": 0,
+      "rank": 12,
+      "metrics_count": 1,
+      "state_name": "Sikkim",
+      "state_type": "state"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "mhl-mental-health-facilities",
+      "name": "District Mental Health Programme Coverage",
+      "unit": "%",
+      "polarity": "positive"
+    },
+    {
+      "id": "mhl-psychiatrists",
+      "name": "Psychiatrists per 100000 Population",
+      "unit": "per 100000",
+      "polarity": "positive"
+    },
+    {
+      "id": "mhl-suicide-rate",
+      "name": "Suicide Rate",
+      "unit": "per 100000",
+      "polarity": "negative"
+    }
+  ]
+}

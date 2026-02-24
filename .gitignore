@@ -36,11 +36,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# data
+# data (SQLite is generated, not committed)
 data/npl.db
 data/npl.db-wal
 data/npl.db-shm
-data/raw/
-
-# generated JSON bundles
-public/data/
+data/cache/

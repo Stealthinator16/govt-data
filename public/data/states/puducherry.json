@@ -1,0 +1,137 @@
+{
+  "year": 2021,
+  "state": {
+    "id": "puducherry",
+    "name": "Puducherry",
+    "type": "ut",
+    "region": "South",
+    "population": 1247953,
+    "area_sq_km": 479
+  },
+  "overall": {
+    "score": 47.41,
+    "rank": 13,
+    "tier": "Rising"
+  },
+  "categories": [
+    {
+      "category_id": "economy",
+      "score": 50.57,
+      "rank": 11,
+      "metrics_count": 8,
+      "category_name": "Economy & Income"
+    },
+    {
+      "category_id": "employment",
+      "score": 51.71,
+      "rank": 17,
+      "metrics_count": 6,
+      "category_name": "Employment & Labour"
+    },
+    {
+      "category_id": "education",
+      "score": 70.77,
+      "rank": 5,
+      "metrics_count": 5,
+      "category_name": "Education"
+    },
+    {
+      "category_id": "health",
+      "score": 97.17,
+      "rank": 1,
+      "metrics_count": 4,
+      "category_name": "Health & Healthcare"
+    },
+    {
+      "category_id": "women-gender",
+      "score": 52.92,
+      "rank": 11,
+      "metrics_count": 4,
+      "category_name": "Women & Gender"
+    },
+    {
+      "category_id": "children-youth",
+      "score": 86.55,
+      "rank": 2,
+      "metrics_count": 3,
+      "category_name": "Children & Youth"
+    },
+    {
+      "category_id": "prices",
+      "score": 37.31,
+      "rank": 28,
+      "metrics_count": 1,
+      "category_name": "Prices & Cost of Living"
+    },
+    {
+      "category_id": "industry",
+      "score": 2.26,
+      "rank": 25,
+      "metrics_count": 3,
+      "category_name": "Industry & Manufacturing"
+    },
+    {
+      "category_id": "infrastructure",
+      "score": 99.84,
+      "rank": 2,
+      "metrics_count": 2,
+      "category_name": "Infrastructure"
+    },
+    {
+      "category_id": "energy-environment",
+      "score": 16.27,
+      "rank": 28,
+      "metrics_count": 2,
+      "category_name": "Energy & Environment"
+    },
+    {
+      "category_id": "crime-justice",
+      "score": 56.21,
+      "rank": 11,
+      "metrics_count": 1,
+      "category_name": "Crime & Justice"
+    },
+    {
+      "category_id": "financial-inclusion",
+      "score": 14.34,
+      "rank": 28,
+      "metrics_count": 1,
+      "category_name": "Financial Inclusion"
+    },
+    {
+      "category_id": "culture-tourism",
+      "score": 1.8,
+      "rank": 32,
+      "metrics_count": 2,
+      "category_name": "Culture, Tourism & Heritage"
+    },
+    {
+      "category_id": "demographics",
+      "score": 54.63,
+      "rank": 15,
+      "metrics_count": 3,
+      "category_name": "Demographics & Social"
+    },
+    {
+      "category_id": "digital-tech",
+      "score": 21.72,
+      "rank": 12,
+      "metrics_count": 1,
+      "category_name": "Digital & Technology"
+    },
+    {
+      "category_id": "transport",
+      "score": 57.57,
+      "rank": 5,
+      "metrics_count": 3,
+      "category_name": "Transport & Mobility"
+    },
+    {
+      "category_id": "mental-health",
+      "score": 34.3,
+      "rank": 10,
+      "metrics_count": 1,
+      "category_name": "Mental Health & Well-being"
+    }
+  ]
+}

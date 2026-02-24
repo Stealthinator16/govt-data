@@ -22,7 +22,6 @@ export function Footer() {
         </div>
         <p className="mt-6 text-xs text-muted-foreground">
           Data sourced from MoSPI, NFHS, Census, NCRB, RBI, UDISE+, and other government databases.
-          Sample data shown during development.
         </p>
       </div>
     </footer>

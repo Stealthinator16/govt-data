@@ -1,0 +1,151 @@
+{
+  "year": 2021,
+  "state": {
+    "id": "tamil-nadu",
+    "name": "Tamil Nadu",
+    "type": "state",
+    "region": "South",
+    "population": 72147030,
+    "area_sq_km": 130060
+  },
+  "overall": {
+    "score": 52.21,
+    "rank": 3,
+    "tier": "Rising"
+  },
+  "categories": [
+    {
+      "category_id": "economy",
+      "score": 56.03,
+      "rank": 6,
+      "metrics_count": 11,
+      "category_name": "Economy & Income"
+    },
+    {
+      "category_id": "employment",
+      "score": 51.39,
+      "rank": 18,
+      "metrics_count": 6,
+      "category_name": "Employment & Labour"
+    },
+    {
+      "category_id": "education",
+      "score": 67.11,
+      "rank": 8,
+      "metrics_count": 5,
+      "category_name": "Education"
+    },
+    {
+      "category_id": "health",
+      "score": 72.94,
+      "rank": 9,
+      "metrics_count": 6,
+      "category_name": "Health & Healthcare"
+    },
+    {
+      "category_id": "women-gender",
+      "score": 52.06,
+      "rank": 14,
+      "metrics_count": 4,
+      "category_name": "Women & Gender"
+    },
+    {
+      "category_id": "children-youth",
+      "score": 75.74,
+      "rank": 9,
+      "metrics_count": 3,
+      "category_name": "Children & Youth"
+    },
+    {
+      "category_id": "elderly",
+      "score": 72.08,
+      "rank": 5,
+      "metrics_count": 1,
+      "category_name": "Elderly"
+    },
+    {
+      "category_id": "prices",
+      "score": 30.68,
+      "rank": 29,
+      "metrics_count": 1,
+      "category_name": "Prices & Cost of Living"
+    },
+    {
+      "category_id": "agriculture",
+      "score": 21.04,
+      "rank": 17,
+      "metrics_count": 2,
+      "category_name": "Agriculture & Food"
+    },
+    {
+      "category_id": "industry",
+      "score": 85.88,
+      "rank": 3,
+      "metrics_count": 3,
+      "category_name": "Industry & Manufacturing"
+    },
+    {
+      "category_id": "infrastructure",
+      "score": 92.41,
+      "rank": 12,
+      "metrics_count": 1,
+      "category_name": "Infrastructure"
+    },
+    {
+      "category_id": "energy-environment",
+      "score": 24.33,
+      "rank": 17,
+      "metrics_count": 2,
+      "category_name": "Energy & Environment"
+    },
+    {
+      "category_id": "crime-justice",
+      "score": 45.97,
+      "rank": 14,
+      "metrics_count": 2,
+      "category_name": "Crime & Justice"
+    },
+    {
+      "category_id": "financial-inclusion",
+      "score": 19.98,
+      "rank": 27,
+      "metrics_count": 1,
+      "category_name": "Financial Inclusion"
+    },
+    {
+      "category_id": "culture-tourism",
+      "score": 72.03,
+      "rank": 2,
+      "metrics_count": 2,
+      "category_name": "Culture, Tourism & Heritage"
+    },
+    {
+      "category_id": "demographics",
+      "score": 61.4,
+      "rank": 7,
+      "metrics_count": 3,
+      "category_name": "Demographics & Social"
+    },
+    {
+      "category_id": "digital-tech",
+      "score": 24.99,
+      "rank": 10,
+      "metrics_count": 1,
+      "category_name": "Digital & Technology"
+    },
+    {
+      "category_id": "transport",
+      "score": 21.93,
+      "rank": 32,
+      "metrics_count": 3,
+      "category_name": "Transport & Mobility"
+    },
+    {
+      "category_id": "mental-health",
+      "score": 44.08,
+      "rank": 6,
+      "metrics_count": 1,
+      "category_name": "Mental Health & Well-being"
+    }
+  ]
+}

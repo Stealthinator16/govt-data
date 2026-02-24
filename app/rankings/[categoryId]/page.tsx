@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { LeagueTable } from "@/components/league-table/league-table";
@@ -22,6 +23,29 @@ interface CategoryData {
     unit: string;
     polarity: string;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ categoryId: string }>;
+}): Promise<Metadata> {
+  const { categoryId } = await params;
+  try {
+    const content = fs.readFileSync(
+      path.join(process.cwd(), `public/data/categories/${categoryId}.json`),
+      "utf-8"
+    );
+    const data = JSON.parse(content) as CategoryData;
+    const desc = `${data.rankings.length} states ranked by ${data.category.name.toLowerCase()} metrics.`;
+    return {
+      title: `${data.category.name} Rankings`,
+      description: desc,
+      openGraph: { title: `${data.category.name} Rankings`, description: desc },
+    };
+  } catch {
+    return { title: "Category Rankings" };
+  }
 }
 
 // Pre-render all category pages

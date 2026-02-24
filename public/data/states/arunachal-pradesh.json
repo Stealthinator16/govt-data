@@ -1,0 +1,130 @@
+{
+  "year": 2021,
+  "state": {
+    "id": "arunachal-pradesh",
+    "name": "Arunachal Pradesh",
+    "type": "state",
+    "region": "Northeast",
+    "population": 1383727,
+    "area_sq_km": 83743
+  },
+  "overall": {
+    "score": 35.96,
+    "rank": 32,
+    "tier": "Developing"
+  },
+  "categories": [
+    {
+      "category_id": "economy",
+      "score": 32.4,
+      "rank": 28,
+      "metrics_count": 11,
+      "category_name": "Economy & Income"
+    },
+    {
+      "category_id": "employment",
+      "score": 35.31,
+      "rank": 30,
+      "metrics_count": 6,
+      "category_name": "Employment & Labour"
+    },
+    {
+      "category_id": "education",
+      "score": 31.2,
+      "rank": 29,
+      "metrics_count": 5,
+      "category_name": "Education"
+    },
+    {
+      "category_id": "health",
+      "score": 46.39,
+      "rank": 25,
+      "metrics_count": 4,
+      "category_name": "Health & Healthcare"
+    },
+    {
+      "category_id": "women-gender",
+      "score": 50.62,
+      "rank": 17,
+      "metrics_count": 4,
+      "category_name": "Women & Gender"
+    },
+    {
+      "category_id": "children-youth",
+      "score": 49.48,
+      "rank": 23,
+      "metrics_count": 3,
+      "category_name": "Children & Youth"
+    },
+    {
+      "category_id": "agriculture",
+      "score": 43.21,
+      "rank": 4,
+      "metrics_count": 2,
+      "category_name": "Agriculture & Food"
+    },
+    {
+      "category_id": "industry",
+      "score": 0.27,
+      "rank": 31,
+      "metrics_count": 3,
+      "category_name": "Industry & Manufacturing"
+    },
+    {
+      "category_id": "infrastructure",
+      "score": 71.9,
+      "rank": 23,
+      "metrics_count": 2,
+      "category_name": "Infrastructure"
+    },
+    {
+      "category_id": "energy-environment",
+      "score": 52.84,
+      "rank": 5,
+      "metrics_count": 2,
+      "category_name": "Energy & Environment"
+    },
+    {
+      "category_id": "crime-justice",
+      "score": 33.14,
+      "rank": 25,
+      "metrics_count": 2,
+      "category_name": "Crime & Justice"
+    },
+    {
+      "category_id": "financial-inclusion",
+      "score": 33.53,
+      "rank": 20,
+      "metrics_count": 1,
+      "category_name": "Financial Inclusion"
+    },
+    {
+      "category_id": "culture-tourism",
+      "score": 7.58,
+      "rank": 26,
+      "metrics_count": 2,
+      "category_name": "Culture, Tourism & Heritage"
+    },
+    {
+      "category_id": "demographics",
+      "score": 39.13,
+      "rank": 32,
+      "metrics_count": 3,
+      "category_name": "Demographics & Social"
+    },
+    {
+      "category_id": "digital-tech",
+      "score": 5.23,
+      "rank": 26,
+      "metrics_count": 1,
+      "category_name": "Digital & Technology"
+    },
+    {
+      "category_id": "transport",
+      "score": 43.06,
+      "rank": 20,
+      "metrics_count": 3,
+      "category_name": "Transport & Mobility"
+    }
+  ]
+}

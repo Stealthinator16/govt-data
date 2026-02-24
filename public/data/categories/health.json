@@ -1,0 +1,335 @@
+{
+  "year": 2021,
+  "category": {
+    "id": "health",
+    "name": "Health & Healthcare"
+  },
+  "rankings": [
+    {
+      "state_id": "puducherry",
+      "score": 97.17,
+      "rank": 1,
+      "metrics_count": 4,
+      "state_name": "Puducherry",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "andaman-nicobar",
+      "score": 90.66,
+      "rank": 2,
+      "metrics_count": 4,
+      "state_name": "Andaman & Nicobar Islands",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "goa",
+      "score": 90.26,
+      "rank": 3,
+      "metrics_count": 4,
+      "state_name": "Goa",
+      "state_type": "state"
+    },
+    {
+      "state_id": "chandigarh",
+      "score": 89.17,
+      "rank": 4,
+      "metrics_count": 4,
+      "state_name": "Chandigarh",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "kerala",
+      "score": 86.05,
+      "rank": 5,
+      "metrics_count": 6,
+      "state_name": "Kerala",
+      "state_type": "state"
+    },
+    {
+      "state_id": "lakshadweep",
+      "score": 82.08,
+      "rank": 6,
+      "metrics_count": 4,
+      "state_name": "Lakshadweep",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "delhi",
+      "score": 80.02,
+      "rank": 7,
+      "metrics_count": 5,
+      "state_name": "Delhi",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "sikkim",
+      "score": 74.79,
+      "rank": 8,
+      "metrics_count": 4,
+      "state_name": "Sikkim",
+      "state_type": "state"
+    },
+    {
+      "state_id": "tamil-nadu",
+      "score": 72.94,
+      "rank": 9,
+      "metrics_count": 6,
+      "state_name": "Tamil Nadu",
+      "state_type": "state"
+    },
+    {
+      "state_id": "manipur",
+      "score": 65.49,
+      "rank": 10,
+      "metrics_count": 4,
+      "state_name": "Manipur",
+      "state_type": "state"
+    },
+    {
+      "state_id": "jammu-kashmir",
+      "score": 64.5,
+      "rank": 11,
+      "metrics_count": 5,
+      "state_name": "Jammu & Kashmir",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "mizoram",
+      "score": 63.98,
+      "rank": 12,
+      "metrics_count": 4,
+      "state_name": "Mizoram",
+      "state_type": "state"
+    },
+    {
+      "state_id": "maharashtra",
+      "score": 63.55,
+      "rank": 13,
+      "metrics_count": 6,
+      "state_name": "Maharashtra",
+      "state_type": "state"
+    },
+    {
+      "state_id": "punjab",
+      "score": 58.35,
+      "rank": 14,
+      "metrics_count": 6,
+      "state_name": "Punjab",
+      "state_type": "state"
+    },
+    {
+      "state_id": "himachal-pradesh",
+      "score": 57.3,
+      "rank": 15,
+      "metrics_count": 5,
+      "state_name": "Himachal Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "telangana",
+      "score": 56.92,
+      "rank": 16,
+      "metrics_count": 6,
+      "state_name": "Telangana",
+      "state_type": "state"
+    },
+    {
+      "state_id": "andhra-pradesh",
+      "score": 56.6,
+      "rank": 17,
+      "metrics_count": 6,
+      "state_name": "Andhra Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "ladakh",
+      "score": 53.49,
+      "rank": 18,
+      "metrics_count": 4,
+      "state_name": "Ladakh",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "west-bengal",
+      "score": 52.32,
+      "rank": 19,
+      "metrics_count": 6,
+      "state_name": "West Bengal",
+      "state_type": "state"
+    },
+    {
+      "state_id": "karnataka",
+      "score": 52.19,
+      "rank": 20,
+      "metrics_count": 6,
+      "state_name": "Karnataka",
+      "state_type": "state"
+    },
+    {
+      "state_id": "uttarakhand",
+      "score": 48.96,
+      "rank": 21,
+      "metrics_count": 6,
+      "state_name": "Uttarakhand",
+      "state_type": "state"
+    },
+    {
+      "state_id": "gujarat",
+      "score": 48.58,
+      "rank": 22,
+      "metrics_count": 6,
+      "state_name": "Gujarat",
+      "state_type": "state"
+    },
+    {
+      "state_id": "tripura",
+      "score": 47.92,
+      "rank": 23,
+      "metrics_count": 4,
+      "state_name": "Tripura",
+      "state_type": "state"
+    },
+    {
+      "state_id": "nagaland",
+      "score": 47.14,
+      "rank": 24,
+      "metrics_count": 4,
+      "state_name": "Nagaland",
+      "state_type": "state"
+    },
+    {
+      "state_id": "arunachal-pradesh",
+      "score": 46.39,
+      "rank": 25,
+      "metrics_count": 4,
+      "state_name": "Arunachal Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "haryana",
+      "score": 45.69,
+      "rank": 26,
+      "metrics_count": 6,
+      "state_name": "Haryana",
+      "state_type": "state"
+    },
+    {
+      "state_id": "dadra-nagar-haveli-daman-diu",
+      "score": 43.43,
+      "rank": 27,
+      "metrics_count": 4,
+      "state_name": "Dadra & Nagar Haveli and Daman & Diu",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "rajasthan",
+      "score": 41.23,
+      "rank": 28,
+      "metrics_count": 6,
+      "state_name": "Rajasthan",
+      "state_type": "state"
+    },
+    {
+      "state_id": "jharkhand",
+      "score": 40.86,
+      "rank": 29,
+      "metrics_count": 6,
+      "state_name": "Jharkhand",
+      "state_type": "state"
+    },
+    {
+      "state_id": "odisha",
+      "score": 38.72,
+      "rank": 30,
+      "metrics_count": 6,
+      "state_name": "Odisha",
+      "state_type": "state"
+    },
+    {
+      "state_id": "bihar",
+      "score": 29.03,
+      "rank": 31,
+      "metrics_count": 6,
+      "state_name": "Bihar",
+      "state_type": "state"
+    },
+    {
+      "state_id": "chhattisgarh",
+      "score": 22.37,
+      "rank": 32,
+      "metrics_count": 6,
+      "state_name": "Chhattisgarh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "assam",
+      "score": 20.78,
+      "rank": 33,
+      "metrics_count": 6,
+      "state_name": "Assam",
+      "state_type": "state"
+    },
+    {
+      "state_id": "madhya-pradesh",
+      "score": 20.49,
+      "rank": 34,
+      "metrics_count": 6,
+      "state_name": "Madhya Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "uttar-pradesh",
+      "score": 16.11,
+      "rank": 35,
+      "metrics_count": 6,
+      "state_name": "Uttar Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "meghalaya",
+      "score": 11.41,
+      "rank": 36,
+      "metrics_count": 4,
+      "state_name": "Meghalaya",
+      "state_type": "state"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "hlt-hospital-beds",
+      "name": "Hospital Beds per 1000 Population",
+      "unit": "per 1000",
+      "polarity": "positive"
+    },
+    {
+      "id": "hlt-imr",
+      "name": "Infant Mortality Rate",
+      "unit": "per 1000 live births",
+      "polarity": "negative"
+    },
+    {
+      "id": "hlt-institutional-delivery",
+      "name": "Institutional Delivery Rate",
+      "unit": "%",
+      "polarity": "positive"
+    },
+    {
+      "id": "hlt-life-expectancy",
+      "name": "Life Expectancy at Birth",
+      "unit": "years",
+      "polarity": "positive"
+    },
+    {
+      "id": "hlt-mmr",
+      "name": "Maternal Mortality Ratio",
+      "unit": "per 100000 live births",
+      "polarity": "negative"
+    },
+    {
+      "id": "hlt-stunting",
+      "name": "Stunting Prevalence (Children <5)",
+      "unit": "%",
+      "polarity": "negative"
+    }
+  ]
+}

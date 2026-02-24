@@ -1,0 +1,137 @@
+{
+  "year": 2021,
+  "state": {
+    "id": "delhi",
+    "name": "Delhi",
+    "type": "ut",
+    "region": "North",
+    "population": 16787941,
+    "area_sq_km": 1484
+  },
+  "overall": {
+    "score": 56.46,
+    "rank": 1,
+    "tier": "Rising"
+  },
+  "categories": [
+    {
+      "category_id": "economy",
+      "score": 72.05,
+      "rank": 1,
+      "metrics_count": 10,
+      "category_name": "Economy & Income"
+    },
+    {
+      "category_id": "employment",
+      "score": 44.27,
+      "rank": 26,
+      "metrics_count": 6,
+      "category_name": "Employment & Labour"
+    },
+    {
+      "category_id": "education",
+      "score": 72.5,
+      "rank": 4,
+      "metrics_count": 5,
+      "category_name": "Education"
+    },
+    {
+      "category_id": "health",
+      "score": 80.02,
+      "rank": 7,
+      "metrics_count": 5,
+      "category_name": "Health & Healthcare"
+    },
+    {
+      "category_id": "women-gender",
+      "score": 22.02,
+      "rank": 36,
+      "metrics_count": 4,
+      "category_name": "Women & Gender"
+    },
+    {
+      "category_id": "children-youth",
+      "score": 61.68,
+      "rank": 13,
+      "metrics_count": 3,
+      "category_name": "Children & Youth"
+    },
+    {
+      "category_id": "elderly",
+      "score": 96.91,
+      "rank": 2,
+      "metrics_count": 1,
+      "category_name": "Elderly"
+    },
+    {
+      "category_id": "prices",
+      "score": 98.61,
+      "rank": 3,
+      "metrics_count": 1,
+      "category_name": "Prices & Cost of Living"
+    },
+    {
+      "category_id": "industry",
+      "score": 4.65,
+      "rank": 22,
+      "metrics_count": 3,
+      "category_name": "Industry & Manufacturing"
+    },
+    {
+      "category_id": "infrastructure",
+      "score": 47.57,
+      "rank": 31,
+      "metrics_count": 2,
+      "category_name": "Infrastructure"
+    },
+    {
+      "category_id": "energy-environment",
+      "score": 17.21,
+      "rank": 26,
+      "metrics_count": 2,
+      "category_name": "Energy & Environment"
+    },
+    {
+      "category_id": "crime-justice",
+      "score": 27.98,
+      "rank": 29,
+      "metrics_count": 1,
+      "category_name": "Crime & Justice"
+    },
+    {
+      "category_id": "financial-inclusion",
+      "score": 45.04,
+      "rank": 12,
+      "metrics_count": 1,
+      "category_name": "Financial Inclusion"
+    },
+    {
+      "category_id": "culture-tourism",
+      "score": 37.16,
+      "rank": 9,
+      "metrics_count": 2,
+      "category_name": "Culture, Tourism & Heritage"
+    },
+    {
+      "category_id": "demographics",
+      "score": 59.85,
+      "rank": 8,
+      "metrics_count": 3,
+      "category_name": "Demographics & Social"
+    },
+    {
+      "category_id": "digital-tech",
+      "score": 100,
+      "rank": 1,
+      "metrics_count": 1,
+      "category_name": "Digital & Technology"
+    },
+    {
+      "category_id": "transport",
+      "score": 72.34,
+      "rank": 2,
+      "metrics_count": 3,
+      "category_name": "Transport & Mobility"
+    }
+  ]
+}

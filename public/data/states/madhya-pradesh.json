@@ -1,0 +1,151 @@
+{
+  "year": 2021,
+  "state": {
+    "id": "madhya-pradesh",
+    "name": "Madhya Pradesh",
+    "type": "state",
+    "region": "Central",
+    "population": 72626809,
+    "area_sq_km": 308252
+  },
+  "overall": {
+    "score": 39.68,
+    "rank": 25,
+    "tier": "Developing"
+  },
+  "categories": [
+    {
+      "category_id": "economy",
+      "score": 31.47,
+      "rank": 31,
+      "metrics_count": 11,
+      "category_name": "Economy & Income"
+    },
+    {
+      "category_id": "employment",
+      "score": 67.22,
+      "rank": 6,
+      "metrics_count": 6,
+      "category_name": "Employment & Labour"
+    },
+    {
+      "category_id": "education",
+      "score": 28.16,
+      "rank": 30,
+      "metrics_count": 5,
+      "category_name": "Education"
+    },
+    {
+      "category_id": "health",
+      "score": 20.49,
+      "rank": 34,
+      "metrics_count": 6,
+      "category_name": "Health & Healthcare"
+    },
+    {
+      "category_id": "women-gender",
+      "score": 46.62,
+      "rank": 21,
+      "metrics_count": 4,
+      "category_name": "Women & Gender"
+    },
+    {
+      "category_id": "children-youth",
+      "score": 37.5,
+      "rank": 30,
+      "metrics_count": 3,
+      "category_name": "Children & Youth"
+    },
+    {
+      "category_id": "elderly",
+      "score": 33.06,
+      "rank": 17,
+      "metrics_count": 1,
+      "category_name": "Elderly"
+    },
+    {
+      "category_id": "prices",
+      "score": 67.54,
+      "rank": 16,
+      "metrics_count": 1,
+      "category_name": "Prices & Cost of Living"
+    },
+    {
+      "category_id": "agriculture",
+      "score": 33.54,
+      "rank": 8,
+      "metrics_count": 2,
+      "category_name": "Agriculture & Food"
+    },
+    {
+      "category_id": "industry",
+      "score": 18.45,
+      "rank": 13,
+      "metrics_count": 3,
+      "category_name": "Industry & Manufacturing"
+    },
+    {
+      "category_id": "infrastructure",
+      "score": 60.26,
+      "rank": 25,
+      "metrics_count": 2,
+      "category_name": "Infrastructure"
+    },
+    {
+      "category_id": "energy-environment",
+      "score": 20.05,
+      "rank": 22,
+      "metrics_count": 2,
+      "category_name": "Energy & Environment"
+    },
+    {
+      "category_id": "crime-justice",
+      "score": 29.54,
+      "rank": 26,
+      "metrics_count": 2,
+      "category_name": "Crime & Justice"
+    },
+    {
+      "category_id": "financial-inclusion",
+      "score": 81.3,
+      "rank": 4,
+      "metrics_count": 1,
+      "category_name": "Financial Inclusion"
+    },
+    {
+      "category_id": "culture-tourism",
+      "score": 37.55,
+      "rank": 8,
+      "metrics_count": 2,
+      "category_name": "Culture, Tourism & Heritage"
+    },
+    {
+      "category_id": "demographics",
+      "score": 46.83,
+      "rank": 23,
+      "metrics_count": 3,
+      "category_name": "Demographics & Social"
+    },
+    {
+      "category_id": "digital-tech",
+      "score": 9.02,
+      "rank": 19,
+      "metrics_count": 1,
+      "category_name": "Digital & Technology"
+    },
+    {
+      "category_id": "transport",
+      "score": 20.6,
+      "rank": 33,
+      "metrics_count": 3,
+      "category_name": "Transport & Mobility"
+    },
+    {
+      "category_id": "mental-health",
+      "score": 64.66,
+      "rank": 3,
+      "metrics_count": 1,
+      "category_name": "Mental Health & Well-being"
+    }
+  ]
+}

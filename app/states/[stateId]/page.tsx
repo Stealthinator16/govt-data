@@ -5,6 +5,8 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { TierBadge } from "@/components/league-table/tier-badge";
 import { ScoreBar } from "@/components/league-table/score-bar";
+import { CategoryRadar } from "@/components/charts/category-radar";
+import type { Metadata } from "next";
 import type { Tier } from "@/lib/types";
 
 interface StateData {
@@ -25,6 +27,31 @@ interface StateData {
     metrics_count: number;
     category_name: string;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ stateId: string }>;
+}): Promise<Metadata> {
+  const { stateId } = await params;
+  try {
+    const content = fs.readFileSync(
+      path.join(process.cwd(), `public/data/states/${stateId}.json`),
+      "utf-8"
+    );
+    const data = JSON.parse(content) as StateData;
+    const desc = data.overall
+      ? `${data.state.name} ranks #${data.overall.rank} with a score of ${data.overall.score.toFixed(1)} across 27 categories.`
+      : `State profile for ${data.state.name}.`;
+    return {
+      title: data.state.name,
+      description: desc,
+      openGraph: { title: data.state.name, description: desc },
+    };
+  } catch {
+    return { title: "State Profile" };
+  }
 }
 
 export function generateStaticParams() {
@@ -105,6 +132,28 @@ export default async function StateProfilePage({
               </div>
             )}
           </div>
+
+          {/* Radar Chart */}
+          {overall && categories.filter((c) => c.score > 0).length >= 3 && (
+            <div className="mt-8">
+              <h2 className="text-xl font-semibold mb-4">Performance Radar</h2>
+              <div className="rounded-lg border p-4">
+                <CategoryRadar
+                  categories={categories.map((c) => ({
+                    category_name: c.category_name,
+                    score: c.score,
+                    rank: c.rank,
+                  }))}
+                  tierColor={
+                    overall.tier === "Champion" ? "#10b981"
+                    : overall.tier === "Contender" ? "#3b82f6"
+                    : overall.tier === "Rising" ? "#f59e0b"
+                    : "#f87171"
+                  }
+                />
+              </div>
+            </div>
+          )}
 
           {/* Category Breakdown */}
           <div className="mt-8">

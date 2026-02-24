@@ -7,6 +7,7 @@ import { MetricBarChart } from "@/components/charts/metric-bar-chart";
 import { ScoreDistribution } from "@/components/charts/score-distribution";
 import { formatNumber } from "@/lib/format";
 import { getTier, TIER_CONFIG } from "@/lib/constants";
+import type { Metadata } from "next";
 import type { Tier } from "@/lib/types";
 
 interface MetricData {
@@ -29,6 +30,29 @@ interface MetricData {
     norm_score: number;
     rank: number;
   }>;
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ metricId: string }>;
+}): Promise<Metadata> {
+  const { metricId } = await params;
+  try {
+    const content = fs.readFileSync(
+      path.join(process.cwd(), `public/data/metrics/${metricId}.json`),
+      "utf-8"
+    );
+    const data = JSON.parse(content) as MetricData;
+    const desc = `${data.metric.name} (${data.metric.unit}) — Source: ${data.metric.source}. ${data.metric.polarity === "positive" ? "Higher is better" : "Lower is better"}.`;
+    return {
+      title: data.metric.name,
+      description: desc,
+      openGraph: { title: data.metric.name, description: desc },
+    };
+  } catch {
+    return { title: "Metric" };
+  }
 }
 
 export function generateStaticParams() {

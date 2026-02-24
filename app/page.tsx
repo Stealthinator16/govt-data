@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { LeagueTable } from "@/components/league-table/league-table";
 import { CategoryCard } from "@/components/shared/category-card";
+import { LazyIndiaMap } from "@/components/map/lazy-india-map";
 
 interface OverallData {
   year: number;
@@ -89,6 +90,14 @@ export default function Home() {
               <span>|</span>
               <span>{rankings.length} States & UTs ranked</span>
             </div>
+          </div>
+        </section>
+
+        {/* India Map */}
+        <section className="border-b">
+          <div className="mx-auto max-w-3xl px-4 py-8">
+            <h2 className="text-xl font-semibold mb-4 text-center">State Performance Map</h2>
+            <LazyIndiaMap rankings={rankings} />
           </div>
         </section>
 

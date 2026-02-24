@@ -1,0 +1,205 @@
+{
+  "year": 2021,
+  "category": {
+    "id": "elderly",
+    "name": "Elderly"
+  },
+  "rankings": [
+    {
+      "state_id": "jammu-kashmir",
+      "score": 100,
+      "rank": 1,
+      "metrics_count": 1,
+      "state_name": "Jammu & Kashmir",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "delhi",
+      "score": 96.91,
+      "rank": 2,
+      "metrics_count": 1,
+      "state_name": "Delhi",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "punjab",
+      "score": 88.05,
+      "rank": 3,
+      "metrics_count": 1,
+      "state_name": "Punjab",
+      "state_type": "state"
+    },
+    {
+      "state_id": "himachal-pradesh",
+      "score": 79.18,
+      "rank": 4,
+      "metrics_count": 1,
+      "state_name": "Himachal Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "tamil-nadu",
+      "score": 72.08,
+      "rank": 5,
+      "metrics_count": 1,
+      "state_name": "Tamil Nadu",
+      "state_type": "state"
+    },
+    {
+      "state_id": "kerala",
+      "score": 66.76,
+      "rank": 6,
+      "metrics_count": 1,
+      "state_name": "Kerala",
+      "state_type": "state"
+    },
+    {
+      "state_id": "odisha",
+      "score": 66.76,
+      "rank": 7,
+      "metrics_count": 1,
+      "state_name": "Odisha",
+      "state_type": "state"
+    },
+    {
+      "state_id": "maharashtra",
+      "score": 63.21,
+      "rank": 8,
+      "metrics_count": 1,
+      "state_name": "Maharashtra",
+      "state_type": "state"
+    },
+    {
+      "state_id": "gujarat",
+      "score": 56.12,
+      "rank": 9,
+      "metrics_count": 1,
+      "state_name": "Gujarat",
+      "state_type": "state"
+    },
+    {
+      "state_id": "uttarakhand",
+      "score": 54.35,
+      "rank": 10,
+      "metrics_count": 1,
+      "state_name": "Uttarakhand",
+      "state_type": "state"
+    },
+    {
+      "state_id": "west-bengal",
+      "score": 54.35,
+      "rank": 11,
+      "metrics_count": 1,
+      "state_name": "West Bengal",
+      "state_type": "state"
+    },
+    {
+      "state_id": "haryana",
+      "score": 52.57,
+      "rank": 12,
+      "metrics_count": 1,
+      "state_name": "Haryana",
+      "state_type": "state"
+    },
+    {
+      "state_id": "rajasthan",
+      "score": 52.57,
+      "rank": 13,
+      "metrics_count": 1,
+      "state_name": "Rajasthan",
+      "state_type": "state"
+    },
+    {
+      "state_id": "andhra-pradesh",
+      "score": 49.02,
+      "rank": 14,
+      "metrics_count": 1,
+      "state_name": "Andhra Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "telangana",
+      "score": 38.38,
+      "rank": 15,
+      "metrics_count": 1,
+      "state_name": "Telangana",
+      "state_type": "state"
+    },
+    {
+      "state_id": "karnataka",
+      "score": 33.06,
+      "rank": 16,
+      "metrics_count": 1,
+      "state_name": "Karnataka",
+      "state_type": "state"
+    },
+    {
+      "state_id": "madhya-pradesh",
+      "score": 33.06,
+      "rank": 17,
+      "metrics_count": 1,
+      "state_name": "Madhya Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "assam",
+      "score": 29.51,
+      "rank": 18,
+      "metrics_count": 1,
+      "state_name": "Assam",
+      "state_type": "state"
+    },
+    {
+      "state_id": "jharkhand",
+      "score": 29.51,
+      "rank": 19,
+      "metrics_count": 1,
+      "state_name": "Jharkhand",
+      "state_type": "state"
+    },
+    {
+      "state_id": "uttar-pradesh",
+      "score": 24.19,
+      "rank": 20,
+      "metrics_count": 1,
+      "state_name": "Uttar Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "bihar",
+      "score": 8.23,
+      "rank": 21,
+      "metrics_count": 1,
+      "state_name": "Bihar",
+      "state_type": "state"
+    },
+    {
+      "state_id": "chhattisgarh",
+      "score": 0,
+      "rank": 22,
+      "metrics_count": 1,
+      "state_name": "Chhattisgarh",
+      "state_type": "state"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "eld-dependency-ratio",
+      "name": "Old-Age Dependency Ratio",
+      "unit": "ratio",
+      "polarity": "negative"
+    },
+    {
+      "id": "eld-life-expectancy-60",
+      "name": "Life Expectancy at Age 60",
+      "unit": "years",
+      "polarity": "positive"
+    },
+    {
+      "id": "eld-pension-coverage",
+      "name": "Pension Coverage (60+)",
+      "unit": "%",
+      "polarity": "positive"
+    }
+  ]
+}

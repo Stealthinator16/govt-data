@@ -1,0 +1,116 @@
+{
+  "year": 2021,
+  "state": {
+    "id": "lakshadweep",
+    "name": "Lakshadweep",
+    "type": "ut",
+    "region": "Islands",
+    "population": 64473,
+    "area_sq_km": 32
+  },
+  "overall": {
+    "score": 47.84,
+    "rank": 11,
+    "tier": "Rising"
+  },
+  "categories": [
+    {
+      "category_id": "economy",
+      "score": 59.62,
+      "rank": 5,
+      "metrics_count": 4,
+      "category_name": "Economy & Income"
+    },
+    {
+      "category_id": "employment",
+      "score": 9.12,
+      "rank": 36,
+      "metrics_count": 6,
+      "category_name": "Employment & Labour"
+    },
+    {
+      "category_id": "education",
+      "score": 50.44,
+      "rank": 18,
+      "metrics_count": 5,
+      "category_name": "Education"
+    },
+    {
+      "category_id": "health",
+      "score": 82.08,
+      "rank": 6,
+      "metrics_count": 4,
+      "category_name": "Health & Healthcare"
+    },
+    {
+      "category_id": "women-gender",
+      "score": 51.79,
+      "rank": 15,
+      "metrics_count": 3,
+      "category_name": "Women & Gender"
+    },
+    {
+      "category_id": "children-youth",
+      "score": 92.32,
+      "rank": 1,
+      "metrics_count": 2,
+      "category_name": "Children & Youth"
+    },
+    {
+      "category_id": "prices",
+      "score": 50.15,
+      "rank": 21,
+      "metrics_count": 1,
+      "category_name": "Prices & Cost of Living"
+    },
+    {
+      "category_id": "infrastructure",
+      "score": 44.74,
+      "rank": 32,
+      "metrics_count": 2,
+      "category_name": "Infrastructure"
+    },
+    {
+      "category_id": "energy-environment",
+      "score": 58.34,
+      "rank": 2,
+      "metrics_count": 2,
+      "category_name": "Energy & Environment"
+    },
+    {
+      "category_id": "financial-inclusion",
+      "score": 5.31,
+      "rank": 34,
+      "metrics_count": 1,
+      "category_name": "Financial Inclusion"
+    },
+    {
+      "category_id": "culture-tourism",
+      "score": 13.95,
+      "rank": 20,
+      "metrics_count": 1,
+      "category_name": "Culture, Tourism & Heritage"
+    },
+    {
+      "category_id": "demographics",
+      "score": 82.47,
+      "rank": 1,
+      "metrics_count": 3,
+      "category_name": "Demographics & Social"
+    },
+    {
+      "category_id": "digital-tech",
+      "score": 19.12,
+      "rank": 13,
+      "metrics_count": 1,
+      "category_name": "Digital & Technology"
+    },
+    {
+      "category_id": "transport",
+      "score": 50.36,
+      "rank": 12,
+      "metrics_count": 3,
+      "category_name": "Transport & Mobility"
+    }
+  ]
+}

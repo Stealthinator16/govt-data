@@ -1,0 +1,130 @@
+{
+  "year": 2021,
+  "state": {
+    "id": "dadra-nagar-haveli-daman-diu",
+    "name": "Dadra & Nagar Haveli and Daman & Diu",
+    "type": "ut",
+    "region": "West",
+    "population": 585764,
+    "area_sq_km": 603
+  },
+  "overall": {
+    "score": 48.87,
+    "rank": 9,
+    "tier": "Rising"
+  },
+  "categories": [
+    {
+      "category_id": "economy",
+      "score": 36.97,
+      "rank": 21,
+      "metrics_count": 4,
+      "category_name": "Economy & Income"
+    },
+    {
+      "category_id": "employment",
+      "score": 83.2,
+      "rank": 2,
+      "metrics_count": 6,
+      "category_name": "Employment & Labour"
+    },
+    {
+      "category_id": "education",
+      "score": 43.21,
+      "rank": 22,
+      "metrics_count": 4,
+      "category_name": "Education"
+    },
+    {
+      "category_id": "health",
+      "score": 43.43,
+      "rank": 27,
+      "metrics_count": 4,
+      "category_name": "Health & Healthcare"
+    },
+    {
+      "category_id": "women-gender",
+      "score": 50.01,
+      "rank": 19,
+      "metrics_count": 3,
+      "category_name": "Women & Gender"
+    },
+    {
+      "category_id": "children-youth",
+      "score": 54.91,
+      "rank": 18,
+      "metrics_count": 3,
+      "category_name": "Children & Youth"
+    },
+    {
+      "category_id": "prices",
+      "score": 53.46,
+      "rank": 19,
+      "metrics_count": 1,
+      "category_name": "Prices & Cost of Living"
+    },
+    {
+      "category_id": "industry",
+      "score": 10.18,
+      "rank": 19,
+      "metrics_count": 3,
+      "category_name": "Industry & Manufacturing"
+    },
+    {
+      "category_id": "infrastructure",
+      "score": 98.74,
+      "rank": 4,
+      "metrics_count": 2,
+      "category_name": "Infrastructure"
+    },
+    {
+      "category_id": "energy-environment",
+      "score": 66.95,
+      "rank": 1,
+      "metrics_count": 2,
+      "category_name": "Energy & Environment"
+    },
+    {
+      "category_id": "crime-justice",
+      "score": 68.76,
+      "rank": 7,
+      "metrics_count": 1,
+      "category_name": "Crime & Justice"
+    },
+    {
+      "category_id": "financial-inclusion",
+      "score": 45.41,
+      "rank": 11,
+      "metrics_count": 1,
+      "category_name": "Financial Inclusion"
+    },
+    {
+      "category_id": "culture-tourism",
+      "score": 18.25,
+      "rank": 16,
+      "metrics_count": 2,
+      "category_name": "Culture, Tourism & Heritage"
+    },
+    {
+      "category_id": "demographics",
+      "score": 43.65,
+      "rank": 26,
+      "metrics_count": 3,
+      "category_name": "Demographics & Social"
+    },
+    {
+      "category_id": "digital-tech",
+      "score": 10.06,
+      "rank": 18,
+      "metrics_count": 1,
+      "category_name": "Digital & Technology"
+    },
+    {
+      "category_id": "transport",
+      "score": 54.77,
+      "rank": 8,
+      "metrics_count": 3,
+      "category_name": "Transport & Mobility"
+    }
+  ]
+}

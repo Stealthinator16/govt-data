@@ -1,0 +1,383 @@
+{
+  "year": 2021,
+  "category": {
+    "id": "economy",
+    "name": "Economy & Income"
+  },
+  "rankings": [
+    {
+      "state_id": "delhi",
+      "score": 72.05,
+      "rank": 1,
+      "metrics_count": 10,
+      "state_name": "Delhi",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "sikkim",
+      "score": 69.05,
+      "rank": 2,
+      "metrics_count": 11,
+      "state_name": "Sikkim",
+      "state_type": "state"
+    },
+    {
+      "state_id": "goa",
+      "score": 67.83,
+      "rank": 3,
+      "metrics_count": 11,
+      "state_name": "Goa",
+      "state_type": "state"
+    },
+    {
+      "state_id": "chandigarh",
+      "score": 66.26,
+      "rank": 4,
+      "metrics_count": 7,
+      "state_name": "Chandigarh",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "lakshadweep",
+      "score": 59.62,
+      "rank": 5,
+      "metrics_count": 4,
+      "state_name": "Lakshadweep",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "tamil-nadu",
+      "score": 56.03,
+      "rank": 6,
+      "metrics_count": 11,
+      "state_name": "Tamil Nadu",
+      "state_type": "state"
+    },
+    {
+      "state_id": "maharashtra",
+      "score": 54.97,
+      "rank": 7,
+      "metrics_count": 11,
+      "state_name": "Maharashtra",
+      "state_type": "state"
+    },
+    {
+      "state_id": "telangana",
+      "score": 54.23,
+      "rank": 8,
+      "metrics_count": 11,
+      "state_name": "Telangana",
+      "state_type": "state"
+    },
+    {
+      "state_id": "karnataka",
+      "score": 51.62,
+      "rank": 9,
+      "metrics_count": 11,
+      "state_name": "Karnataka",
+      "state_type": "state"
+    },
+    {
+      "state_id": "gujarat",
+      "score": 50.61,
+      "rank": 10,
+      "metrics_count": 11,
+      "state_name": "Gujarat",
+      "state_type": "state"
+    },
+    {
+      "state_id": "puducherry",
+      "score": 50.57,
+      "rank": 11,
+      "metrics_count": 8,
+      "state_name": "Puducherry",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "haryana",
+      "score": 50.44,
+      "rank": 12,
+      "metrics_count": 11,
+      "state_name": "Haryana",
+      "state_type": "state"
+    },
+    {
+      "state_id": "uttarakhand",
+      "score": 47.47,
+      "rank": 13,
+      "metrics_count": 11,
+      "state_name": "Uttarakhand",
+      "state_type": "state"
+    },
+    {
+      "state_id": "andaman-nicobar",
+      "score": 47.46,
+      "rank": 14,
+      "metrics_count": 7,
+      "state_name": "Andaman & Nicobar Islands",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "andhra-pradesh",
+      "score": 45.36,
+      "rank": 15,
+      "metrics_count": 11,
+      "state_name": "Andhra Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "ladakh",
+      "score": 44.52,
+      "rank": 16,
+      "metrics_count": 7,
+      "state_name": "Ladakh",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "kerala",
+      "score": 43.45,
+      "rank": 17,
+      "metrics_count": 11,
+      "state_name": "Kerala",
+      "state_type": "state"
+    },
+    {
+      "state_id": "himachal-pradesh",
+      "score": 42.67,
+      "rank": 18,
+      "metrics_count": 11,
+      "state_name": "Himachal Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "odisha",
+      "score": 39.65,
+      "rank": 19,
+      "metrics_count": 11,
+      "state_name": "Odisha",
+      "state_type": "state"
+    },
+    {
+      "state_id": "uttar-pradesh",
+      "score": 37.96,
+      "rank": 20,
+      "metrics_count": 11,
+      "state_name": "Uttar Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "dadra-nagar-haveli-daman-diu",
+      "score": 36.97,
+      "rank": 21,
+      "metrics_count": 4,
+      "state_name": "Dadra & Nagar Haveli and Daman & Diu",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "punjab",
+      "score": 36.69,
+      "rank": 22,
+      "metrics_count": 11,
+      "state_name": "Punjab",
+      "state_type": "state"
+    },
+    {
+      "state_id": "tripura",
+      "score": 36.58,
+      "rank": 23,
+      "metrics_count": 11,
+      "state_name": "Tripura",
+      "state_type": "state"
+    },
+    {
+      "state_id": "rajasthan",
+      "score": 36.07,
+      "rank": 24,
+      "metrics_count": 11,
+      "state_name": "Rajasthan",
+      "state_type": "state"
+    },
+    {
+      "state_id": "assam",
+      "score": 34.5,
+      "rank": 25,
+      "metrics_count": 11,
+      "state_name": "Assam",
+      "state_type": "state"
+    },
+    {
+      "state_id": "mizoram",
+      "score": 33.76,
+      "rank": 26,
+      "metrics_count": 11,
+      "state_name": "Mizoram",
+      "state_type": "state"
+    },
+    {
+      "state_id": "chhattisgarh",
+      "score": 33.71,
+      "rank": 27,
+      "metrics_count": 11,
+      "state_name": "Chhattisgarh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "arunachal-pradesh",
+      "score": 32.4,
+      "rank": 28,
+      "metrics_count": 11,
+      "state_name": "Arunachal Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "manipur",
+      "score": 32.16,
+      "rank": 29,
+      "metrics_count": 11,
+      "state_name": "Manipur",
+      "state_type": "state"
+    },
+    {
+      "state_id": "nagaland",
+      "score": 32.11,
+      "rank": 30,
+      "metrics_count": 11,
+      "state_name": "Nagaland",
+      "state_type": "state"
+    },
+    {
+      "state_id": "madhya-pradesh",
+      "score": 31.47,
+      "rank": 31,
+      "metrics_count": 11,
+      "state_name": "Madhya Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "jammu-kashmir",
+      "score": 30.45,
+      "rank": 32,
+      "metrics_count": 9,
+      "state_name": "Jammu & Kashmir",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "jharkhand",
+      "score": 29.71,
+      "rank": 33,
+      "metrics_count": 11,
+      "state_name": "Jharkhand",
+      "state_type": "state"
+    },
+    {
+      "state_id": "west-bengal",
+      "score": 29.13,
+      "rank": 34,
+      "metrics_count": 11,
+      "state_name": "West Bengal",
+      "state_type": "state"
+    },
+    {
+      "state_id": "meghalaya",
+      "score": 26.8,
+      "rank": 35,
+      "metrics_count": 11,
+      "state_name": "Meghalaya",
+      "state_type": "state"
+    },
+    {
+      "state_id": "bihar",
+      "score": 21.44,
+      "rank": 36,
+      "metrics_count": 11,
+      "state_name": "Bihar",
+      "state_type": "state"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "eco-agriculture-share",
+      "name": "Agriculture Sector Share of GSDP",
+      "unit": "%",
+      "polarity": "negative"
+    },
+    {
+      "id": "eco-capital-expenditure",
+      "name": "Capital Expenditure as % of Total Expenditure",
+      "unit": "%",
+      "polarity": "positive"
+    },
+    {
+      "id": "eco-credit-deposit",
+      "name": "Credit-Deposit Ratio",
+      "unit": "ratio",
+      "polarity": "positive"
+    },
+    {
+      "id": "eco-debt-gsdp",
+      "name": "State Debt to GSDP Ratio",
+      "unit": "%",
+      "polarity": "negative"
+    },
+    {
+      "id": "eco-fiscal-deficit",
+      "name": "Fiscal Deficit as % of GSDP",
+      "unit": "%",
+      "polarity": "negative"
+    },
+    {
+      "id": "eco-gsdp-absolute",
+      "name": "GSDP (Absolute)",
+      "unit": "Cr INR",
+      "polarity": "positive"
+    },
+    {
+      "id": "eco-gsdp-growth",
+      "name": "GSDP Growth Rate",
+      "unit": "%",
+      "polarity": "positive"
+    },
+    {
+      "id": "eco-gsdp-per-capita",
+      "name": "GSDP Per Capita",
+      "unit": "INR",
+      "polarity": "positive"
+    },
+    {
+      "id": "eco-gst-per-capita",
+      "name": "GST Collection Per Capita",
+      "unit": "INR",
+      "polarity": "positive"
+    },
+    {
+      "id": "eco-industry-share",
+      "name": "Industry Sector Share of GSDP",
+      "unit": "%",
+      "polarity": "positive"
+    },
+    {
+      "id": "eco-own-tax-revenue",
+      "name": "Own Tax Revenue as % of GSDP",
+      "unit": "%",
+      "polarity": "positive"
+    },
+    {
+      "id": "eco-per-capita-consumption",
+      "name": "Per Capita Consumption Expenditure",
+      "unit": "INR/month",
+      "polarity": "positive"
+    },
+    {
+      "id": "eco-poverty-headcount",
+      "name": "Poverty Headcount Ratio",
+      "unit": "%",
+      "polarity": "negative"
+    },
+    {
+      "id": "eco-services-share",
+      "name": "Services Sector Share of GSDP",
+      "unit": "%",
+      "polarity": "positive"
+    }
+  ]
+}

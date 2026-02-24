@@ -10,9 +10,20 @@
  */
 import { execSync } from "child_process";
 
+const USE_SAMPLE_DATA = process.env.USE_SAMPLE_DATA === "true";
+
+const ingestStep = USE_SAMPLE_DATA
+  ? { name: "Seed Sample Data", script: "scripts/seed-sample-data.ts" }
+  : { name: "Ingest MoSPI Data", script: "scripts/ingest-mospi.ts" };
+
+const csvStep = USE_SAMPLE_DATA
+  ? null
+  : { name: "Ingest CSV Data", script: "scripts/ingest-csv.ts" };
+
 const steps = [
   { name: "Seed Reference Data", script: "scripts/seed-reference.ts" },
-  { name: "Ingest MoSPI Data", script: "scripts/ingest-mospi.ts" },
+  ingestStep,
+  ...(csvStep ? [csvStep] : []),
   { name: "Compute Scores", script: "scripts/compute-scores.ts" },
   { name: "Validate Data", script: "scripts/validate-data.ts" },
   { name: "Generate JSON", script: "scripts/generate-json.ts" },

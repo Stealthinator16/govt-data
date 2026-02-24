@@ -1,0 +1,191 @@
+{
+  "year": 2021,
+  "metric": {
+    "id": "hlt-life-expectancy",
+    "name": "Life Expectancy at Birth",
+    "unit": "years",
+    "source": "SRS",
+    "polarity": "positive",
+    "category_id": "health",
+    "category_name": "Health & Healthcare",
+    "weight": 1.2
+  },
+  "rankings": [
+    {
+      "state_id": "delhi",
+      "state_name": "Delhi",
+      "state_type": "ut",
+      "raw_value": 74.9,
+      "norm_score": 100,
+      "rank": 1
+    },
+    {
+      "state_id": "kerala",
+      "state_name": "Kerala",
+      "state_type": "state",
+      "raw_value": 74.8,
+      "norm_score": 99.39,
+      "rank": 2
+    },
+    {
+      "state_id": "jammu-kashmir",
+      "state_name": "Jammu & Kashmir",
+      "state_type": "ut",
+      "raw_value": 74.2,
+      "norm_score": 93.04,
+      "rank": 3
+    },
+    {
+      "state_id": "himachal-pradesh",
+      "state_name": "Himachal Pradesh",
+      "state_type": "state",
+      "raw_value": 73.2,
+      "norm_score": 82.47,
+      "rank": 4
+    },
+    {
+      "state_id": "tamil-nadu",
+      "state_name": "Tamil Nadu",
+      "state_type": "state",
+      "raw_value": 72.8,
+      "norm_score": 78.25,
+      "rank": 5
+    },
+    {
+      "state_id": "maharashtra",
+      "state_name": "Maharashtra",
+      "state_type": "state",
+      "raw_value": 72.6,
+      "norm_score": 76.13,
+      "rank": 6
+    },
+    {
+      "state_id": "west-bengal",
+      "state_name": "West Bengal",
+      "state_type": "state",
+      "raw_value": 72.1,
+      "norm_score": 70.85,
+      "rank": 7
+    },
+    {
+      "state_id": "punjab",
+      "state_name": "Punjab",
+      "state_type": "state",
+      "raw_value": 71.3,
+      "norm_score": 62.39,
+      "rank": 8
+    },
+    {
+      "state_id": "uttarakhand",
+      "state_name": "Uttarakhand",
+      "state_type": "state",
+      "raw_value": 70.5,
+      "norm_score": 53.93,
+      "rank": 9
+    },
+    {
+      "state_id": "andhra-pradesh",
+      "state_name": "Andhra Pradesh",
+      "state_type": "state",
+      "raw_value": 70.3,
+      "norm_score": 51.82,
+      "rank": 10
+    },
+    {
+      "state_id": "odisha",
+      "state_name": "Odisha",
+      "state_type": "state",
+      "raw_value": 70.3,
+      "norm_score": 51.82,
+      "rank": 11
+    },
+    {
+      "state_id": "telangana",
+      "state_name": "Telangana",
+      "state_type": "state",
+      "raw_value": 70.1,
+      "norm_score": 49.7,
+      "rank": 12
+    },
+    {
+      "state_id": "gujarat",
+      "state_name": "Gujarat",
+      "state_type": "state",
+      "raw_value": 69.9,
+      "norm_score": 47.59,
+      "rank": 13
+    },
+    {
+      "state_id": "karnataka",
+      "state_name": "Karnataka",
+      "state_type": "state",
+      "raw_value": 69.5,
+      "norm_score": 43.36,
+      "rank": 14
+    },
+    {
+      "state_id": "rajasthan",
+      "state_name": "Rajasthan",
+      "state_type": "state",
+      "raw_value": 69.4,
+      "norm_score": 42.3,
+      "rank": 15
+    },
+    {
+      "state_id": "jharkhand",
+      "state_name": "Jharkhand",
+      "state_type": "state",
+      "raw_value": 69.3,
+      "norm_score": 41.25,
+      "rank": 16
+    },
+    {
+      "state_id": "bihar",
+      "state_name": "Bihar",
+      "state_type": "state",
+      "raw_value": 69.2,
+      "norm_score": 40.19,
+      "rank": 17
+    },
+    {
+      "state_id": "haryana",
+      "state_name": "Haryana",
+      "state_type": "state",
+      "raw_value": 68.9,
+      "norm_score": 37.02,
+      "rank": 18
+    },
+    {
+      "state_id": "assam",
+      "state_name": "Assam",
+      "state_type": "state",
+      "raw_value": 68,
+      "norm_score": 27.51,
+      "rank": 19
+    },
+    {
+      "state_id": "madhya-pradesh",
+      "state_name": "Madhya Pradesh",
+      "state_type": "state",
+      "raw_value": 67.2,
+      "norm_score": 19.05,
+      "rank": 20
+    },
+    {
+      "state_id": "uttar-pradesh",
+      "state_name": "Uttar Pradesh",
+      "state_type": "state",
+      "raw_value": 66.5,
+      "norm_score": 11.65,
+      "rank": 21
+    },
+    {
+      "state_id": "chhattisgarh",
+      "state_name": "Chhattisgarh",
+      "state_type": "state",
+      "raw_value": 64.6,
+      "norm_score": 0,
+      "rank": 22
+    }
+  ]
+}

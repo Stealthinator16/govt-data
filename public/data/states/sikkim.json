@@ -1,0 +1,144 @@
+{
+  "year": 2021,
+  "state": {
+    "id": "sikkim",
+    "name": "Sikkim",
+    "type": "state",
+    "region": "Northeast",
+    "population": 610577,
+    "area_sq_km": 7096
+  },
+  "overall": {
+    "score": 45.24,
+    "rank": 18,
+    "tier": "Rising"
+  },
+  "categories": [
+    {
+      "category_id": "economy",
+      "score": 69.05,
+      "rank": 2,
+      "metrics_count": 11,
+      "category_name": "Economy & Income"
+    },
+    {
+      "category_id": "employment",
+      "score": 92.26,
+      "rank": 1,
+      "metrics_count": 6,
+      "category_name": "Employment & Labour"
+    },
+    {
+      "category_id": "education",
+      "score": 67.51,
+      "rank": 7,
+      "metrics_count": 5,
+      "category_name": "Education"
+    },
+    {
+      "category_id": "health",
+      "score": 74.79,
+      "rank": 8,
+      "metrics_count": 4,
+      "category_name": "Health & Healthcare"
+    },
+    {
+      "category_id": "women-gender",
+      "score": 67.93,
+      "rank": 2,
+      "metrics_count": 4,
+      "category_name": "Women & Gender"
+    },
+    {
+      "category_id": "children-youth",
+      "score": 76.84,
+      "rank": 8,
+      "metrics_count": 3,
+      "category_name": "Children & Youth"
+    },
+    {
+      "category_id": "prices",
+      "score": 13.29,
+      "rank": 31,
+      "metrics_count": 1,
+      "category_name": "Prices & Cost of Living"
+    },
+    {
+      "category_id": "agriculture",
+      "score": 24.09,
+      "rank": 16,
+      "metrics_count": 2,
+      "category_name": "Agriculture & Food"
+    },
+    {
+      "category_id": "industry",
+      "score": 1.69,
+      "rank": 26,
+      "metrics_count": 3,
+      "category_name": "Industry & Manufacturing"
+    },
+    {
+      "category_id": "infrastructure",
+      "score": 88.95,
+      "rank": 15,
+      "metrics_count": 2,
+      "category_name": "Infrastructure"
+    },
+    {
+      "category_id": "energy-environment",
+      "score": 33.34,
+      "rank": 14,
+      "metrics_count": 2,
+      "category_name": "Energy & Environment"
+    },
+    {
+      "category_id": "crime-justice",
+      "score": 81.98,
+      "rank": 6,
+      "metrics_count": 1,
+      "category_name": "Crime & Justice"
+    },
+    {
+      "category_id": "financial-inclusion",
+      "score": 7.03,
+      "rank": 32,
+      "metrics_count": 1,
+      "category_name": "Financial Inclusion"
+    },
+    {
+      "category_id": "culture-tourism",
+      "score": 22.58,
+      "rank": 14,
+      "metrics_count": 2,
+      "category_name": "Culture, Tourism & Heritage"
+    },
+    {
+      "category_id": "demographics",
+      "score": 54.01,
+      "rank": 16,
+      "metrics_count": 3,
+      "category_name": "Demographics & Social"
+    },
+    {
+      "category_id": "digital-tech",
+      "score": 0,
+      "rank": 36,
+      "metrics_count": 1,
+      "category_name": "Digital & Technology"
+    },
+    {
+      "category_id": "transport",
+      "score": 38.92,
+      "rank": 23,
+      "metrics_count": 3,
+      "category_name": "Transport & Mobility"
+    },
+    {
+      "category_id": "mental-health",
+      "score": 0,
+      "rank": 12,
+      "metrics_count": 1,
+      "category_name": "Mental Health & Well-being"
+    }
+  ]
+}

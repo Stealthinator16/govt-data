@@ -36,8 +36,11 @@ This document captures mistakes, fixes, and patterns discovered during developme
 - Tiers: Champion (>=75), Contender (60-74), Rising (45-59), Developing (<45)
 
 ### MoSPI MCP Server
-- URL: https://mcp.mospi.gov.in/sse (SSE transport)
-- 4-step workflow: know_about → get_indicators → get_metadata → get_data
+- URL: `https://mcp.mospi.gov.in/` (trailing slash required)
+- Transport: **streamable-http** (NOT SSE — `/sse` path returns 404)
+- SDK import: `StreamableHTTPClientTransport` from `@modelcontextprotocol/sdk/client/streamableHttp.js`
+- 4-step workflow: `1_know_about_mospi_api` → `2_get_indicators` → `3_get_metadata` → `4_get_data`
+- **Critical**: Filter codes for `4_get_data` MUST come from `3_get_metadata` response — cannot be hardcoded or guessed
 - 7 datasets: PLFS, CPI, WPI, IIP, NAS, ASI, Energy
 - Returns JSON with nested structure — needs flattening before DB insertion
 
@@ -69,7 +72,7 @@ This document captures mistakes, fixes, and patterns discovered during developme
 2. **Dynamic routes**: Must use `generateStaticParams()` to pre-render all state/category pages.
 3. **better-sqlite3 in Next.js**: Only works in server components / build scripts. Never import in client components.
 4. **India TopoJSON**: State boundaries file at `data/geo/india-states.topojson`. State IDs must match the `id` field in the states table.
-5. **MoSPI MCP**: The SSE endpoint may be slow. Script should handle timeouts gracefully.
+5. **MoSPI MCP**: Uses streamable-http at root URL, not SSE. Rate-limit calls (500ms delay). Filter codes must come from metadata step 3.
 6. **react-simple-maps peer deps**: Requires `--legacy-peer-deps` or `.npmrc` with `legacy-peer-deps=true` because it declares peer dependency on React 16/17/18, not React 19. Works fine at runtime despite the warning.
 7. **Next.js App Router params**: In Next.js 15+, `params` in dynamic route components is a `Promise`. Must be `await`ed: `const { stateId } = await params;`
 
@@ -89,11 +92,40 @@ This document captures mistakes, fixes, and patterns discovered during developme
 **Fix**: Added `.npmrc` with `legacy-peer-deps=true`. The library works fine with React 19.
 **Prevention**: Always add `.npmrc` with `legacy-peer-deps=true` when using libraries that haven't updated peer deps.
 
-### Mistake 3: MoSPI MCP server connection failed
-**What happened**: The SSE endpoint at `https://mcp.mospi.gov.in/sse` returned "Not Found" on direct curl and ECONNRESET via MCP SDK.
-**Impact**: Could not fetch real government data for initial build.
-**Workaround**: Created `scripts/seed-sample-data.ts` with realistic synthetic data (state development tiers × metric ranges). Allows full UI development while MCP issues are resolved.
-**Next steps**: Debug MCP connection — may need different URL, auth headers, or the server may have changed its endpoint.
+### Mistake 3: MoSPI MCP server connection failed (RESOLVED)
+**What happened**: Used `SSEClientTransport` connecting to `https://mcp.mospi.gov.in/sse` — returned 404.
+**Root cause**: The server uses **streamable-http** transport at the root URL (`/`), not SSE at `/sse`.
+**Fix**: Switched to `StreamableHTTPClientTransport` with URL `https://mcp.mospi.gov.in/` (trailing slash).
+**Also**: Filter values must be discovered via `3_get_metadata` — hardcoded human-readable filter strings don't work. Use filter code maps from metadata responses.
+**Prevention**: Always test the MCP transport type with a raw curl before writing ingestion code. The streamable-http protocol uses `POST` with `Accept: application/json, text/event-stream` headers.
+
+### Lesson 4: MoSPI dataset state-level availability
+**Confirmed state-level data:**
+- **PLFS** — 8 indicators (LFPR, WPR, UR, worker distribution, employment conditions, regular wage, casual wage, self-employment earnings). Full 36-state coverage, annual data from 2017-2023.
+- **CPI** — Consumer Price Index by state (base_year=2012). 36 states, monthly data 2013-2025. Use December (month_code=12) as annual snapshot. Note: CPI `4_get_data` filters do NOT accept `dataset`/`level` — use only the `api_params` from `3_get_metadata`.
+- **ASI** — Annual Survey of Industries. 57 indicators (factories, workers, capital, GVA, wages). 36+ states, annual 2009-2023. Use `nic_code=99999` for all industries.
+
+**National-only (NO state data):**
+- **NAS** — National Account Statistics (GDP/GVA). Only national-level aggregates.
+- **IIP** — Index of Industrial Production. Uses categories not indicators. No state dimension.
+- **WPI** — Wholesale Price Index. Hierarchical commodity codes. No state dimension.
+- **ENERGY** — Energy Balance. Supply/consumption only. No state dimension.
+
+### Lesson 5: compute-scores.ts year selection
+**Problem**: Using `MAX(year)` for scoring picked 2025, but only CPI had data there. Most metrics had latest data in 2020-2023.
+**Fix**: Changed to `ORDER BY COUNT(DISTINCT metric_id) DESC, year DESC` — picks the year with the best metric coverage. Also updated validate-data.ts to match.
+
+### Lesson 6: compute-scores.ts sector/gender NULL filter
+**Problem**: PLFS data has `sector=NULL`, but CPI/ASI data has `sector="Combined"`. The query `WHERE sector IS NULL` excluded all CPI/ASI rows.
+**Fix**: Changed to a `ROW_NUMBER()` window function that prefers NULL disaggregation but falls back to any row.
+
+### Lesson 7: Null values from MoSPI parsed as zero
+**Problem**: CPI returned `"index": null` for Arunachal Pradesh (no data collected). The parser did `parseFloat(item.index || "0")` — the `||` fallback converted null to "0", inserting bogus zero values.
+**Fix**: Check `item.field == null || item.field === ""` before parseFloat, and skip the row. Applied to all three parsers (PLFS, CPI, ASI).
+**Prevention**: Never use `parseFloat(x || "0")` for API data. Always check for null/empty explicitly first, then skip missing data.
+
+### Lesson 8: MoSPI state name spelling variants
+CPI uses standard spellings, but ASI uses "Chattisgarh" (single H) and "Dadra & Nagar Havelli" (double L). Always add spelling variants to `STATE_NAME_MAP` when adding a new dataset.
 
 ---
 
@@ -115,6 +147,24 @@ npx next build                       # Generate static site
 3. Add data source (MoSPI mapping in `scripts/ingest-mospi.ts` or CSV config)
 4. Run ingestion + scoring + JSON export
 5. No code changes needed for UI — it reads from scores dynamically
+
+## Data Sourcing
+
+### Lesson: NEVER fabricate government data
+**Problem**: When asked to create CSV files with government data, the instinct is to generate "realistic-looking" numbers. These are FAKE data even if they look plausible.
+**Fix**: Always search the web for real data from government sources. Use WebSearch/WebFetch to find actual published tables. If data can't be found online, create template CSVs with headers only and let the user fill in real data.
+**Key sources for Indian government data**:
+- NFHS-5 factsheets: GitHub `pratapvardhan/NFHS-5` has all 131 indicators in CSV
+- Census 2011: Wikipedia and census2011.co.in have excellent compiled tables
+- NCRB: PDFs locked but PMC research articles cite complete state-wise tables
+- BPR&D police data: UK government report compiles state-wise figures
+- FSI forest cover: geographyhost.com has complete ISFR data
+- DPIIT startups: PIB press releases have complete state-wise counts
+- PMJDY: pmjdy.gov.in has live state-wise statistics
+- MoRTH accidents: PIB press releases have complete fatality counts
+- ASI heritage sites: PIB/Ministry of Culture press releases have state-wise counts
+- SRS life tables: Only cover 22 major states (population >10M)
+**Data locked behind PDFs/dashboards (need manual extraction)**: TRAI telecom, CPCB solid waste, JJM tap water, Swachh Survekshan scores, voter turnout by state assembly
 
 ## How to Add a New Page/Route
 

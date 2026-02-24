@@ -140,16 +140,6 @@
     "is_featured": true
   },
   {
-    "id": "eco-gini",
-    "category_id": "economy",
-    "name": "Gini Coefficient",
-    "unit": "index",
-    "source": "World Bank / MoSPI",
-    "polarity": "negative",
-    "weight": 0.8,
-    "is_featured": true
-  },
-  {
     "id": "emp-lfpr-total",
     "category_id": "employment",
     "name": "Labour Force Participation Rate (Total)",
@@ -208,6 +198,66 @@
     "polarity": "positive",
     "weight": 0.8,
     "is_featured": false
+  },
+  {
+    "id": "emp-wpr-total",
+    "category_id": "employment",
+    "name": "Worker Population Ratio",
+    "unit": "%",
+    "source": "MoSPI PLFS",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": false
+  },
+  {
+    "id": "emp-regular-wage",
+    "category_id": "employment",
+    "name": "Average Monthly Earnings (Regular)",
+    "unit": "INR/month",
+    "source": "MoSPI PLFS",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": false
+  },
+  {
+    "id": "prices-cpi-general",
+    "category_id": "prices",
+    "name": "Consumer Price Index (General)",
+    "unit": "index",
+    "source": "MoSPI CPI",
+    "polarity": "negative",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "ind-factories",
+    "category_id": "industry",
+    "name": "Number of Registered Factories",
+    "unit": "count",
+    "source": "MoSPI ASI",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": false
+  },
+  {
+    "id": "ind-factory-workers",
+    "category_id": "industry",
+    "name": "Factory Workers (Total)",
+    "unit": "count",
+    "source": "MoSPI ASI",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": true
+  },
+  {
+    "id": "ind-factory-gva",
+    "category_id": "industry",
+    "name": "Factory Gross Value Added",
+    "unit": "INR lakhs",
+    "source": "MoSPI ASI",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
   },
   {
     "id": "edu-literacy-total",
@@ -318,5 +368,686 @@
     "polarity": "positive",
     "weight": 1.0,
     "is_featured": true
+  },
+
+  {
+    "id": "wgn-female-lfpr",
+    "category_id": "women-gender",
+    "name": "Female Labour Force Participation Rate",
+    "unit": "%",
+    "source": "MoSPI PLFS",
+    "polarity": "positive",
+    "weight": 1.5,
+    "is_featured": true
+  },
+  {
+    "id": "wgn-sex-ratio",
+    "category_id": "women-gender",
+    "name": "Sex Ratio at Birth",
+    "unit": "females per 1000 males",
+    "source": "SRS/NFHS",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "wgn-women-elected",
+    "category_id": "women-gender",
+    "name": "Women Elected Representatives (%)",
+    "unit": "%",
+    "source": "ECI/State Election Commissions",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "wgn-crimes-against-women",
+    "category_id": "women-gender",
+    "name": "Crimes Against Women Rate",
+    "unit": "per 100000 women",
+    "source": "NCRB",
+    "polarity": "negative",
+    "weight": 1.5,
+    "is_featured": true
+  },
+
+  {
+    "id": "cyd-child-marriage",
+    "category_id": "children-youth",
+    "name": "Child Marriage Rate (Women 20-24 married before 18)",
+    "unit": "%",
+    "source": "NFHS",
+    "polarity": "negative",
+    "weight": 1.5,
+    "is_featured": true
+  },
+  {
+    "id": "cyd-child-labour",
+    "category_id": "children-youth",
+    "name": "Child Labour Rate (5-14 years)",
+    "unit": "%",
+    "source": "Census/PLFS",
+    "polarity": "negative",
+    "weight": 1.5,
+    "is_featured": true
+  },
+  {
+    "id": "cyd-u5-mortality",
+    "category_id": "children-youth",
+    "name": "Under-5 Mortality Rate",
+    "unit": "per 1000 live births",
+    "source": "SRS",
+    "polarity": "negative",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "cyd-full-immunization",
+    "category_id": "children-youth",
+    "name": "Full Immunization Coverage (12-23 months)",
+    "unit": "%",
+    "source": "NFHS",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": false
+  },
+
+  {
+    "id": "eld-dependency-ratio",
+    "category_id": "elderly",
+    "name": "Old-Age Dependency Ratio",
+    "unit": "ratio",
+    "source": "Census",
+    "polarity": "negative",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "eld-pension-coverage",
+    "category_id": "elderly",
+    "name": "Pension Coverage (60+)",
+    "unit": "%",
+    "source": "MoRD",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "eld-life-expectancy-60",
+    "category_id": "elderly",
+    "name": "Life Expectancy at Age 60",
+    "unit": "years",
+    "source": "SRS",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+
+  {
+    "id": "agr-food-grain-production",
+    "category_id": "agriculture",
+    "name": "Food Grain Production Per Capita",
+    "unit": "kg",
+    "source": "MoA&FW",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "agr-gross-irrigated-area",
+    "category_id": "agriculture",
+    "name": "Gross Irrigated Area as % of Cropped Area",
+    "unit": "%",
+    "source": "MoA&FW",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "agr-crop-insurance",
+    "category_id": "agriculture",
+    "name": "Crop Insurance Coverage",
+    "unit": "%",
+    "source": "PMFBY",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": false
+  },
+  {
+    "id": "agr-farmer-income",
+    "category_id": "agriculture",
+    "name": "Average Monthly Farm Household Income",
+    "unit": "INR",
+    "source": "MoSPI SAS",
+    "polarity": "positive",
+    "weight": 1.5,
+    "is_featured": true
+  },
+
+  {
+    "id": "inf-road-density",
+    "category_id": "infrastructure",
+    "name": "Road Density",
+    "unit": "km per 100 sq km",
+    "source": "MoRTH",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "inf-rural-road-connectivity",
+    "category_id": "infrastructure",
+    "name": "Rural Road Connectivity (PMGSY)",
+    "unit": "%",
+    "source": "PMGSY",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "inf-household-tap-water",
+    "category_id": "infrastructure",
+    "name": "Households with Tap Water Connection",
+    "unit": "%",
+    "source": "JJM Dashboard",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "inf-household-electricity",
+    "category_id": "infrastructure",
+    "name": "Household Electrification Rate",
+    "unit": "%",
+    "source": "Saubhagya",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": false
+  },
+
+  {
+    "id": "ene-renewable-share",
+    "category_id": "energy-environment",
+    "name": "Renewable Energy Share of Installed Capacity",
+    "unit": "%",
+    "source": "MNRE/CEA",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "ene-forest-cover",
+    "category_id": "energy-environment",
+    "name": "Forest Cover as % of Geographical Area",
+    "unit": "%",
+    "source": "FSI ISFR",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "ene-per-capita-electricity",
+    "category_id": "energy-environment",
+    "name": "Per Capita Electricity Consumption",
+    "unit": "kWh",
+    "source": "CEA",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": true
+  },
+  {
+    "id": "ene-air-quality",
+    "category_id": "energy-environment",
+    "name": "Annual Average PM2.5 Concentration",
+    "unit": "µg/m³",
+    "source": "CPCB",
+    "polarity": "negative",
+    "weight": 1.0,
+    "is_featured": false
+  },
+
+  {
+    "id": "crm-total-crime-rate",
+    "category_id": "crime-justice",
+    "name": "Total Cognizable Crime Rate",
+    "unit": "per 100000",
+    "source": "NCRB",
+    "polarity": "negative",
+    "weight": 1.5,
+    "is_featured": true
+  },
+  {
+    "id": "crm-murder-rate",
+    "category_id": "crime-justice",
+    "name": "Murder Rate",
+    "unit": "per 100000",
+    "source": "NCRB",
+    "polarity": "negative",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "crm-police-strength",
+    "category_id": "crime-justice",
+    "name": "Police Personnel per 100000 Population",
+    "unit": "per 100000",
+    "source": "NCRB/BPR&D",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": false
+  },
+  {
+    "id": "crm-chargesheet-rate",
+    "category_id": "crime-justice",
+    "name": "Chargesheet Filing Rate",
+    "unit": "%",
+    "source": "NCRB",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+
+  {
+    "id": "gov-voter-turnout",
+    "category_id": "governance",
+    "name": "Voter Turnout (Last Assembly Election)",
+    "unit": "%",
+    "source": "ECI",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "gov-ease-of-business",
+    "category_id": "governance",
+    "name": "Ease of Doing Business Score",
+    "unit": "score",
+    "source": "DPIIT",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "gov-pds-coverage",
+    "category_id": "governance",
+    "name": "PDS Coverage (NFSA Beneficiaries)",
+    "unit": "%",
+    "source": "DFPD",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+
+  {
+    "id": "fin-bank-branches",
+    "category_id": "financial-inclusion",
+    "name": "Bank Branches per 100000 Population",
+    "unit": "per 100000",
+    "source": "RBI",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "fin-jan-dhan-accounts",
+    "category_id": "financial-inclusion",
+    "name": "Jan Dhan Accounts per 1000 Adults",
+    "unit": "per 1000",
+    "source": "PMJDY",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "fin-digital-payments",
+    "category_id": "financial-inclusion",
+    "name": "Digital Payment Transactions Per Capita",
+    "unit": "count",
+    "source": "NPCI/RBI",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+
+  {
+    "id": "spt-olympic-medals",
+    "category_id": "sports",
+    "name": "National Games Medal Tally (per million pop.)",
+    "unit": "per million",
+    "source": "SAI",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "spt-sports-infra",
+    "category_id": "sports",
+    "name": "Sports Stadiums and Complexes per Million",
+    "unit": "per million",
+    "source": "MoYA&S",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "spt-fit-india",
+    "category_id": "sports",
+    "name": "Fit India School Certification Rate",
+    "unit": "%",
+    "source": "MoYA&S",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": false
+  },
+
+  {
+    "id": "clt-domestic-tourists",
+    "category_id": "culture-tourism",
+    "name": "Domestic Tourist Visits Per Capita",
+    "unit": "per capita",
+    "source": "MoT",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "clt-foreign-tourists",
+    "category_id": "culture-tourism",
+    "name": "Foreign Tourist Visits",
+    "unit": "count",
+    "source": "MoT",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": true
+  },
+  {
+    "id": "clt-heritage-sites",
+    "category_id": "culture-tourism",
+    "name": "ASI-Protected Heritage Sites",
+    "unit": "count",
+    "source": "ASI",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": false
+  },
+
+  {
+    "id": "dem-urbanization",
+    "category_id": "demographics",
+    "name": "Urbanization Rate",
+    "unit": "%",
+    "source": "Census",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "dem-population-density",
+    "category_id": "demographics",
+    "name": "Population Density",
+    "unit": "per sq km",
+    "source": "Census",
+    "polarity": "negative",
+    "weight": 0.5,
+    "is_featured": true
+  },
+  {
+    "id": "dem-decadal-growth",
+    "category_id": "demographics",
+    "name": "Decadal Population Growth Rate",
+    "unit": "%",
+    "source": "Census",
+    "polarity": "negative",
+    "weight": 0.8,
+    "is_featured": true
+  },
+
+  {
+    "id": "dig-internet-subscribers",
+    "category_id": "digital-tech",
+    "name": "Internet Subscribers per 100 Population",
+    "unit": "per 100",
+    "source": "TRAI",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "dig-broadband-subscribers",
+    "category_id": "digital-tech",
+    "name": "Broadband Subscribers per 100 Population",
+    "unit": "per 100",
+    "source": "TRAI",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "dig-startup-density",
+    "category_id": "digital-tech",
+    "name": "Recognized Startups per Million Population",
+    "unit": "per million",
+    "source": "DPIIT",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+
+  {
+    "id": "trn-vehicle-density",
+    "category_id": "transport",
+    "name": "Registered Motor Vehicles per 1000 Population",
+    "unit": "per 1000",
+    "source": "MoRTH",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "trn-road-accidents",
+    "category_id": "transport",
+    "name": "Road Accident Fatalities per 100000 Population",
+    "unit": "per 100000",
+    "source": "MoRTH",
+    "polarity": "negative",
+    "weight": 1.5,
+    "is_featured": true
+  },
+  {
+    "id": "trn-nh-length",
+    "category_id": "transport",
+    "name": "National Highway Length per 1000 sq km",
+    "unit": "km per 1000 sq km",
+    "source": "MoRTH/NHAI",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": false
+  },
+
+  {
+    "id": "med-newspaper-circulation",
+    "category_id": "media",
+    "name": "Newspaper Circulation per 1000 Population",
+    "unit": "per 1000",
+    "source": "RNI",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "med-tv-households",
+    "category_id": "media",
+    "name": "TV-Owning Households",
+    "unit": "%",
+    "source": "BARC/Census",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": true
+  },
+
+  {
+    "id": "mig-inter-state-migration",
+    "category_id": "migration",
+    "name": "Inter-State Migration Rate",
+    "unit": "%",
+    "source": "Census",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "mig-remittance-share",
+    "category_id": "migration",
+    "name": "Domestic Remittances as % of GSDP",
+    "unit": "%",
+    "source": "RBI/NSSO",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": true
+  },
+
+  {
+    "id": "civ-ngo-density",
+    "category_id": "civil-society",
+    "name": "Registered NGOs per 100000 Population",
+    "unit": "per 100000",
+    "source": "NGO Darpan",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "civ-cooperative-societies",
+    "category_id": "civil-society",
+    "name": "Cooperative Societies per 100000 Population",
+    "unit": "per 100000",
+    "source": "MoC",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": true
+  },
+
+  {
+    "id": "urb-swachh-score",
+    "category_id": "urban-quality",
+    "name": "Swachh Survekshan Average City Score",
+    "unit": "score",
+    "source": "MoHUA",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "urb-sanitation-coverage",
+    "category_id": "urban-quality",
+    "name": "Urban Household Sanitation Coverage",
+    "unit": "%",
+    "source": "SBM-Urban",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "urb-solid-waste-processing",
+    "category_id": "urban-quality",
+    "name": "Municipal Solid Waste Processing Rate",
+    "unit": "%",
+    "source": "CPCB",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+
+  {
+    "id": "mhl-suicide-rate",
+    "category_id": "mental-health",
+    "name": "Suicide Rate",
+    "unit": "per 100000",
+    "source": "NCRB",
+    "polarity": "negative",
+    "weight": 1.5,
+    "is_featured": true
+  },
+  {
+    "id": "mhl-psychiatrists",
+    "category_id": "mental-health",
+    "name": "Psychiatrists per 100000 Population",
+    "unit": "per 100000",
+    "source": "NIMHANS/NHP",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "mhl-mental-health-facilities",
+    "category_id": "mental-health",
+    "name": "District Mental Health Programme Coverage",
+    "unit": "%",
+    "source": "MoHFW",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": false
+  },
+
+  {
+    "id": "dis-disability-prevalence",
+    "category_id": "disability",
+    "name": "Disability Prevalence Rate",
+    "unit": "%",
+    "source": "Census/NSO",
+    "polarity": "negative",
+    "weight": 0.5,
+    "is_featured": true
+  },
+  {
+    "id": "dis-disability-employment",
+    "category_id": "disability",
+    "name": "Disability Employment Rate",
+    "unit": "%",
+    "source": "NSO/PLFS",
+    "polarity": "positive",
+    "weight": 1.2,
+    "is_featured": true
+  },
+  {
+    "id": "dis-accessible-buildings",
+    "category_id": "disability",
+    "name": "Government Buildings with Accessibility Features",
+    "unit": "%",
+    "source": "DEPwD",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": false
+  },
+
+  {
+    "id": "tel-wireless-subscribers",
+    "category_id": "telecom",
+    "name": "Wireless Subscribers per 100 Population",
+    "unit": "per 100",
+    "source": "TRAI",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "tel-tower-density",
+    "category_id": "telecom",
+    "name": "Telecom Tower Density",
+    "unit": "per 100 sq km",
+    "source": "TRAI/DoT",
+    "polarity": "positive",
+    "weight": 1.0,
+    "is_featured": true
+  },
+  {
+    "id": "tel-avg-data-usage",
+    "category_id": "telecom",
+    "name": "Average Monthly Data Usage per Subscriber",
+    "unit": "GB",
+    "source": "TRAI",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": false
   }
 ]

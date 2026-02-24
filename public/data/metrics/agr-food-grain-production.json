@@ -1,0 +1,247 @@
+{
+  "year": 2021,
+  "metric": {
+    "id": "agr-food-grain-production",
+    "name": "Food Grain Production Per Capita",
+    "unit": "kg",
+    "source": "MoA&FW",
+    "polarity": "positive",
+    "category_id": "agriculture",
+    "category_name": "Agriculture & Food",
+    "weight": 1.2
+  },
+  "rankings": [
+    {
+      "state_id": "punjab",
+      "state_name": "Punjab",
+      "state_type": "state",
+      "raw_value": 1174.7,
+      "norm_score": 100,
+      "rank": 1
+    },
+    {
+      "state_id": "haryana",
+      "state_name": "Haryana",
+      "state_type": "state",
+      "raw_value": 727.8,
+      "norm_score": 77.67,
+      "rank": 2
+    },
+    {
+      "state_id": "telangana",
+      "state_name": "Telangana",
+      "state_type": "state",
+      "raw_value": 566.8,
+      "norm_score": 59.39,
+      "rank": 3
+    },
+    {
+      "state_id": "madhya-pradesh",
+      "state_name": "Madhya Pradesh",
+      "state_type": "state",
+      "raw_value": 548.6,
+      "norm_score": 57.32,
+      "rank": 4
+    },
+    {
+      "state_id": "chhattisgarh",
+      "state_name": "Chhattisgarh",
+      "state_type": "state",
+      "raw_value": 418.9,
+      "norm_score": 42.59,
+      "rank": 5
+    },
+    {
+      "state_id": "rajasthan",
+      "state_name": "Rajasthan",
+      "state_type": "state",
+      "raw_value": 338.3,
+      "norm_score": 33.44,
+      "rank": 6
+    },
+    {
+      "state_id": "uttar-pradesh",
+      "state_name": "Uttar Pradesh",
+      "state_type": "state",
+      "raw_value": 296.7,
+      "norm_score": 28.72,
+      "rank": 7
+    },
+    {
+      "state_id": "odisha",
+      "state_name": "Odisha",
+      "state_type": "state",
+      "raw_value": 262.1,
+      "norm_score": 24.79,
+      "rank": 8
+    },
+    {
+      "state_id": "himachal-pradesh",
+      "state_name": "Himachal Pradesh",
+      "state_type": "state",
+      "raw_value": 222.9,
+      "norm_score": 20.34,
+      "rank": 9
+    },
+    {
+      "state_id": "tripura",
+      "state_name": "Tripura",
+      "state_type": "state",
+      "raw_value": 217.8,
+      "norm_score": 19.76,
+      "rank": 10
+    },
+    {
+      "state_id": "arunachal-pradesh",
+      "state_name": "Arunachal Pradesh",
+      "state_type": "state",
+      "raw_value": 216.8,
+      "norm_score": 19.65,
+      "rank": 11
+    },
+    {
+      "state_id": "karnataka",
+      "state_name": "Karnataka",
+      "state_type": "state",
+      "raw_value": 208.4,
+      "norm_score": 18.69,
+      "rank": 12
+    },
+    {
+      "state_id": "west-bengal",
+      "state_name": "West Bengal",
+      "state_type": "state",
+      "raw_value": 206.2,
+      "norm_score": 18.44,
+      "rank": 13
+    },
+    {
+      "state_id": "bihar",
+      "state_name": "Bihar",
+      "state_type": "state",
+      "raw_value": 192.5,
+      "norm_score": 16.89,
+      "rank": 14
+    },
+    {
+      "state_id": "mizoram",
+      "state_name": "Mizoram",
+      "state_type": "state",
+      "raw_value": 182.3,
+      "norm_score": 15.73,
+      "rank": 15
+    },
+    {
+      "state_id": "andhra-pradesh",
+      "state_name": "Andhra Pradesh",
+      "state_type": "state",
+      "raw_value": 182.2,
+      "norm_score": 15.72,
+      "rank": 16
+    },
+    {
+      "state_id": "assam",
+      "state_name": "Assam",
+      "state_type": "state",
+      "raw_value": 175,
+      "norm_score": 14.9,
+      "rank": 17
+    },
+    {
+      "state_id": "uttarakhand",
+      "state_name": "Uttarakhand",
+      "state_type": "state",
+      "raw_value": 171.5,
+      "norm_score": 14.5,
+      "rank": 18
+    },
+    {
+      "state_id": "meghalaya",
+      "state_name": "Meghalaya",
+      "state_type": "state",
+      "raw_value": 168.5,
+      "norm_score": 14.16,
+      "rank": 19
+    },
+    {
+      "state_id": "gujarat",
+      "state_name": "Gujarat",
+      "state_type": "state",
+      "raw_value": 166.8,
+      "norm_score": 13.97,
+      "rank": 20
+    },
+    {
+      "state_id": "sikkim",
+      "state_name": "Sikkim",
+      "state_type": "state",
+      "raw_value": 163.8,
+      "norm_score": 13.63,
+      "rank": 21
+    },
+    {
+      "state_id": "nagaland",
+      "state_name": "Nagaland",
+      "state_type": "state",
+      "raw_value": 151.6,
+      "norm_score": 12.24,
+      "rank": 22
+    },
+    {
+      "state_id": "manipur",
+      "state_name": "Manipur",
+      "state_type": "state",
+      "raw_value": 140.1,
+      "norm_score": 10.94,
+      "rank": 23
+    },
+    {
+      "state_id": "maharashtra",
+      "state_name": "Maharashtra",
+      "state_type": "state",
+      "raw_value": 129.3,
+      "norm_score": 9.71,
+      "rank": 24
+    },
+    {
+      "state_id": "tamil-nadu",
+      "state_name": "Tamil Nadu",
+      "state_type": "state",
+      "raw_value": 128.5,
+      "norm_score": 9.62,
+      "rank": 25
+    },
+    {
+      "state_id": "jammu-kashmir",
+      "state_name": "Jammu & Kashmir",
+      "state_type": "ut",
+      "raw_value": 122.3,
+      "norm_score": 8.91,
+      "rank": 26
+    },
+    {
+      "state_id": "jharkhand",
+      "state_name": "Jharkhand",
+      "state_type": "state",
+      "raw_value": 107.9,
+      "norm_score": 7.28,
+      "rank": 27
+    },
+    {
+      "state_id": "goa",
+      "state_name": "Goa",
+      "state_type": "state",
+      "raw_value": 61.7,
+      "norm_score": 2.03,
+      "rank": 28
+    },
+    {
+      "state_id": "kerala",
+      "state_name": "Kerala",
+      "state_type": "state",
+      "raw_value": 21,
+      "norm_score": 0,
+      "rank": 29
+    }
+  ]
+}

@@ -1,10 +1,17 @@
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { TierBadge } from "@/components/league-table/tier-badge";
 import type { Tier } from "@/lib/types";
+
+export const metadata: Metadata = {
+  title: "All States & UTs",
+  description:
+    "Browse all 36 Indian states and union territories grouped by region, with scores and tier rankings.",
+};
 
 interface OverallData {
   year: number;

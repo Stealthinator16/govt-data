@@ -1,0 +1,144 @@
+{
+  "year": 2021,
+  "state": {
+    "id": "jammu-kashmir",
+    "name": "Jammu & Kashmir",
+    "type": "ut",
+    "region": "North",
+    "population": 12267032,
+    "area_sq_km": 42241
+  },
+  "overall": {
+    "score": 45.76,
+    "rank": 16,
+    "tier": "Rising"
+  },
+  "categories": [
+    {
+      "category_id": "economy",
+      "score": 30.45,
+      "rank": 32,
+      "metrics_count": 9,
+      "category_name": "Economy & Income"
+    },
+    {
+      "category_id": "employment",
+      "score": 65.84,
+      "rank": 8,
+      "metrics_count": 6,
+      "category_name": "Employment & Labour"
+    },
+    {
+      "category_id": "education",
+      "score": 23.2,
+      "rank": 33,
+      "metrics_count": 5,
+      "category_name": "Education"
+    },
+    {
+      "category_id": "health",
+      "score": 64.5,
+      "rank": 11,
+      "metrics_count": 5,
+      "category_name": "Health & Healthcare"
+    },
+    {
+      "category_id": "women-gender",
+      "score": 52.08,
+      "rank": 13,
+      "metrics_count": 4,
+      "category_name": "Women & Gender"
+    },
+    {
+      "category_id": "children-youth",
+      "score": 84,
+      "rank": 3,
+      "metrics_count": 3,
+      "category_name": "Children & Youth"
+    },
+    {
+      "category_id": "elderly",
+      "score": 100,
+      "rank": 1,
+      "metrics_count": 1,
+      "category_name": "Elderly"
+    },
+    {
+      "category_id": "prices",
+      "score": 25.71,
+      "rank": 30,
+      "metrics_count": 1,
+      "category_name": "Prices & Cost of Living"
+    },
+    {
+      "category_id": "agriculture",
+      "score": 37.69,
+      "rank": 6,
+      "metrics_count": 2,
+      "category_name": "Agriculture & Food"
+    },
+    {
+      "category_id": "industry",
+      "score": 2.63,
+      "rank": 24,
+      "metrics_count": 3,
+      "category_name": "Industry & Manufacturing"
+    },
+    {
+      "category_id": "infrastructure",
+      "score": 92.41,
+      "rank": 11,
+      "metrics_count": 1,
+      "category_name": "Infrastructure"
+    },
+    {
+      "category_id": "energy-environment",
+      "score": 13.01,
+      "rank": 32,
+      "metrics_count": 2,
+      "category_name": "Energy & Environment"
+    },
+    {
+      "category_id": "crime-justice",
+      "score": 93.85,
+      "rank": 4,
+      "metrics_count": 1,
+      "category_name": "Crime & Justice"
+    },
+    {
+      "category_id": "financial-inclusion",
+      "score": 10.5,
+      "rank": 31,
+      "metrics_count": 1,
+      "category_name": "Financial Inclusion"
+    },
+    {
+      "category_id": "culture-tourism",
+      "score": 21.43,
+      "rank": 15,
+      "metrics_count": 2,
+      "category_name": "Culture, Tourism & Heritage"
+    },
+    {
+      "category_id": "demographics",
+      "score": 43.62,
+      "rank": 27,
+      "metrics_count": 3,
+      "category_name": "Demographics & Social"
+    },
+    {
+      "category_id": "digital-tech",
+      "score": 11.03,
+      "rank": 17,
+      "metrics_count": 1,
+      "category_name": "Digital & Technology"
+    },
+    {
+      "category_id": "transport",
+      "score": 51.7,
+      "rank": 11,
+      "metrics_count": 3,
+      "category_name": "Transport & Mobility"
+    }
+  ]
+}

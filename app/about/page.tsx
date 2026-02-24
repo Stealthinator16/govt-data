@@ -1,5 +1,12 @@
+import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
+
+export const metadata: Metadata = {
+  title: "About",
+  description:
+    "Methodology, data sources, and limitations behind the National Premier League state rankings.",
+};
 
 export default function AboutPage() {
   return (
@@ -104,10 +111,6 @@ export default function AboutPage() {
                 <p>
                   • Rankings simplify complex realities. Use them as a starting point for deeper
                   analysis, not as definitive judgments.
-                </p>
-                <p>
-                  • Currently showing sample data during development. Real data integration is
-                  in progress.
                 </p>
               </div>
             </section>

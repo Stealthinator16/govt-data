@@ -4,6 +4,8 @@ import { useState, useEffect } from "react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScoreBar } from "@/components/league-table/score-bar";
+import { CompareRadar } from "@/components/charts/compare-radar";
+import { CATEGORIES } from "@/lib/constants";
 
 interface CompareData {
   year: number;
@@ -26,9 +28,12 @@ export default function ComparePage() {
   const stateAName = data?.states.find((s) => s.id === stateA)?.name ?? "";
   const stateBName = data?.states.find((s) => s.id === stateB)?.name ?? "";
 
+  const catNameMap = new Map<string, string>(CATEGORIES.map((c) => [c.id, c.name]));
+
   const categories = stateA && stateB && data
     ? Object.keys(data.scores[stateA] ?? {}).map((catId) => ({
         id: catId,
+        name: catNameMap.get(catId) ?? catId.replace(/-/g, " "),
         scoreA: data.scores[stateA]?.[catId] ?? 0,
         scoreB: data.scores[stateB]?.[catId] ?? 0,
       }))
@@ -88,6 +93,16 @@ export default function ComparePage() {
                   <h2 className="text-xl font-semibold mb-4">
                     {stateAName} vs {stateBName}
                   </h2>
+
+                  {/* Radar overlay */}
+                  <div className="rounded-lg border p-4 mb-6">
+                    <CompareRadar
+                      categories={categories}
+                      nameA={stateAName}
+                      nameB={stateBName}
+                    />
+                  </div>
+
                   <div className="rounded-lg border overflow-x-auto">
                     <table className="w-full text-sm">
                       <thead>
@@ -103,8 +118,8 @@ export default function ComparePage() {
                           const diff = cat.scoreA - cat.scoreB;
                           return (
                             <tr key={cat.id} className="border-b last:border-0">
-                              <td className="py-3 px-4 font-medium capitalize">
-                                {cat.id.replace(/-/g, " ")}
+                              <td className="py-3 px-4 font-medium">
+                                {cat.name}
                               </td>
                               <td className="py-3 px-4">
                                 <ScoreBar score={cat.scoreA} />

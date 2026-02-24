@@ -10,6 +10,7 @@ import {
   Cell,
   ReferenceLine,
 } from "recharts";
+import { useChartColors } from "@/lib/use-chart-colors";
 
 interface ScoreDistributionProps {
   scores: number[]; // normalized scores (0-100)
@@ -34,6 +35,8 @@ function DistTooltip({ active, payload }: { active?: boolean; payload?: Array<{ 
 }
 
 export function ScoreDistribution({ scores }: ScoreDistributionProps) {
+  const { grid, tick } = useChartColors();
+
   // Bucket scores into 10-point bins
   const bins = Array.from({ length: 10 }, (_, i) => ({
     label: `${i * 10}`,
@@ -53,10 +56,10 @@ export function ScoreDistribution({ scores }: ScoreDistributionProps) {
     <div style={{ width: "100%", height: 180 }}>
       <ResponsiveContainer>
         <BarChart data={bins} margin={{ left: 0, right: 10, top: 10, bottom: 5 }}>
-          <XAxis dataKey="label" tick={{ fontSize: 11 }} label={{ value: "Score", position: "insideBottomRight", offset: -5, fontSize: 11 }} />
-          <YAxis tick={{ fontSize: 11 }} allowDecimals={false} label={{ value: "States", angle: -90, position: "insideLeft", fontSize: 11 }} />
+          <XAxis dataKey="label" tick={{ fontSize: 11, fill: tick }} label={{ value: "Score", position: "insideBottomRight", offset: -5, fontSize: 11, fill: tick }} />
+          <YAxis tick={{ fontSize: 11, fill: tick }} allowDecimals={false} label={{ value: "States", angle: -90, position: "insideLeft", fontSize: 11, fill: tick }} />
           <Tooltip content={<DistTooltip />} />
-          <ReferenceLine x={`${Math.floor(mean / 10) * 10}`} stroke="#6b7280" strokeDasharray="4 4" label={{ value: `Avg ${mean.toFixed(0)}`, position: "top", fontSize: 11 }} />
+          <ReferenceLine x={`${Math.floor(mean / 10) * 10}`} stroke={grid} strokeDasharray="4 4" label={{ value: `Avg ${mean.toFixed(0)}`, position: "top", fontSize: 11, fill: tick }} />
           <Bar dataKey="count" radius={[4, 4, 0, 0]} maxBarSize={40}>
             {bins.map((bin) => (
               <Cell key={bin.label} fill={getTierColor(bin.midpoint)} />

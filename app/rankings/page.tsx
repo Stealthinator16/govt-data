@@ -1,8 +1,15 @@
 import fs from "fs";
 import path from "path";
+import type { Metadata } from "next";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { LeagueTable } from "@/components/league-table/league-table";
+
+export const metadata: Metadata = {
+  title: "Overall Rankings",
+  description:
+    "All 36 Indian states and union territories ranked by overall development score across 27 categories.",
+};
 
 interface OverallData {
   year: number;

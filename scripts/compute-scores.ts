@@ -19,12 +19,18 @@ function main() {
   db.pragma("journal_mode = WAL");
   db.pragma("foreign_keys = ON");
 
-  // Get the latest year with data
+  // Pick the year with the most metric coverage (not just max year)
   const yearRow = db
-    .prepare("SELECT MAX(year) as year FROM data_points")
-    .get() as { year: number | null };
+    .prepare(
+      `SELECT year, COUNT(DISTINCT metric_id) as metric_count
+       FROM data_points
+       GROUP BY year
+       ORDER BY metric_count DESC, year DESC
+       LIMIT 1`
+    )
+    .get() as { year: number; metric_count: number } | null;
 
-  if (!yearRow?.year) {
+  if (!yearRow) {
     console.log("No data found in data_points. Run ingestion first.");
     db.close();
     return;
@@ -67,12 +73,22 @@ function main() {
   const stateMetricScores: Record<string, Record<string, { score: number; weight: number }[]>> = {};
 
   for (const metric of metrics) {
-    // Get all state values for this metric (latest data, no disaggregation)
+    // Get one value per state for this metric.
+    // Prefer rows with null disaggregation fields; fall back to "Combined"/"Person" aggregates.
+    // Use GROUP BY to deduplicate, picking MIN(value) as a stable tiebreaker.
     const dataPoints = db
       .prepare(
-        `SELECT state_id, value FROM data_points
-         WHERE metric_id = ? AND year = ?
-         AND gender IS NULL AND sector IS NULL AND age_group IS NULL AND social_group IS NULL
+        `SELECT state_id, value FROM (
+           SELECT state_id, value,
+             ROW_NUMBER() OVER (
+               PARTITION BY state_id
+               ORDER BY
+                 CASE WHEN gender IS NULL AND sector IS NULL AND age_group IS NULL AND social_group IS NULL THEN 0 ELSE 1 END,
+                 ROWID DESC
+             ) AS rn
+           FROM data_points
+           WHERE metric_id = ? AND year = ?
+         ) WHERE rn = 1
          ORDER BY state_id`
       )
       .all(metric.id, year) as Array<{ state_id: string; value: number }>;

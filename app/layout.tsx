@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { SearchDialog } from "@/components/search/search-dialog";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,10 +13,26 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const BASE_URL = "https://npl.vercel.app";
+
 export const metadata: Metadata = {
-  title: "National Premier League — Indian State Rankings",
+  metadataBase: new URL(BASE_URL),
+  title: {
+    default: "National Premier League — Indian State Rankings",
+    template: "%s | NPL",
+  },
   description:
     "Ranking and comparing Indian states across every measurable dimension of human life. 27 categories, 1000+ metrics, 36 states and UTs.",
+  openGraph: {
+    type: "website",
+    siteName: "National Premier League",
+    title: "National Premier League — Indian State Rankings",
+    description:
+      "Ranking and comparing Indian states across every measurable dimension of human life. 27 categories, 1000+ metrics, 36 states and UTs.",
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
@@ -29,6 +46,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased min-h-screen flex flex-col`}
       >
         {children}
+        <SearchDialog />
       </body>
     </html>
   );

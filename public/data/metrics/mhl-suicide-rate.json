@@ -1,0 +1,111 @@
+{
+  "year": 2021,
+  "metric": {
+    "id": "mhl-suicide-rate",
+    "name": "Suicide Rate",
+    "unit": "per 100000",
+    "source": "NCRB",
+    "polarity": "negative",
+    "category_id": "mental-health",
+    "category_name": "Mental Health & Well-being",
+    "weight": 1.5
+  },
+  "rankings": [
+    {
+      "state_id": "bihar",
+      "state_name": "Bihar",
+      "state_type": "state",
+      "raw_value": 0.6,
+      "norm_score": 100,
+      "rank": 1
+    },
+    {
+      "state_id": "andhra-pradesh",
+      "state_name": "Andhra Pradesh",
+      "state_type": "state",
+      "raw_value": 16.8,
+      "norm_score": 67.49,
+      "rank": 2
+    },
+    {
+      "state_id": "madhya-pradesh",
+      "state_name": "Madhya Pradesh",
+      "state_type": "state",
+      "raw_value": 17.9,
+      "norm_score": 64.66,
+      "rank": 3
+    },
+    {
+      "state_id": "maharashtra",
+      "state_name": "Maharashtra",
+      "state_type": "state",
+      "raw_value": 18.1,
+      "norm_score": 64.15,
+      "rank": 4
+    },
+    {
+      "state_id": "karnataka",
+      "state_name": "Karnataka",
+      "state_type": "state",
+      "raw_value": 20.2,
+      "norm_score": 58.74,
+      "rank": 5
+    },
+    {
+      "state_id": "tamil-nadu",
+      "state_name": "Tamil Nadu",
+      "state_type": "state",
+      "raw_value": 25.9,
+      "norm_score": 44.08,
+      "rank": 6
+    },
+    {
+      "state_id": "telangana",
+      "state_name": "Telangana",
+      "state_type": "state",
+      "raw_value": 26.2,
+      "norm_score": 43.31,
+      "rank": 7
+    },
+    {
+      "state_id": "chhattisgarh",
+      "state_name": "Chhattisgarh",
+      "state_type": "state",
+      "raw_value": 28.2,
+      "norm_score": 38.16,
+      "rank": 8
+    },
+    {
+      "state_id": "kerala",
+      "state_name": "Kerala",
+      "state_type": "state",
+      "raw_value": 28.5,
+      "norm_score": 37.39,
+      "rank": 9
+    },
+    {
+      "state_id": "puducherry",
+      "state_name": "Puducherry",
+      "state_type": "ut",
+      "raw_value": 29.7,
+      "norm_score": 34.3,
+      "rank": 10
+    },
+    {
+      "state_id": "andaman-nicobar",
+      "state_name": "Andaman & Nicobar Islands",
+      "state_type": "ut",
+      "raw_value": 42.8,
+      "norm_score": 0.6,
+      "rank": 11
+    },
+    {
+      "state_id": "sikkim",
+      "state_name": "Sikkim",
+      "state_type": "state",
+      "raw_value": 43.1,
+      "norm_score": 0,
+      "rank": 12
+    }
+  ]
+}

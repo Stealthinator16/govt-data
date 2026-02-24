@@ -1,0 +1,137 @@
+{
+  "year": 2021,
+  "state": {
+    "id": "andaman-nicobar",
+    "name": "Andaman & Nicobar Islands",
+    "type": "ut",
+    "region": "Islands",
+    "population": 380581,
+    "area_sq_km": 8249
+  },
+  "overall": {
+    "score": 44.69,
+    "rank": 19,
+    "tier": "Developing"
+  },
+  "categories": [
+    {
+      "category_id": "economy",
+      "score": 47.46,
+      "rank": 14,
+      "metrics_count": 7,
+      "category_name": "Economy & Income"
+    },
+    {
+      "category_id": "employment",
+      "score": 44.76,
+      "rank": 24,
+      "metrics_count": 6,
+      "category_name": "Employment & Labour"
+    },
+    {
+      "category_id": "education",
+      "score": 53.97,
+      "rank": 14,
+      "metrics_count": 5,
+      "category_name": "Education"
+    },
+    {
+      "category_id": "health",
+      "score": 90.66,
+      "rank": 2,
+      "metrics_count": 4,
+      "category_name": "Health & Healthcare"
+    },
+    {
+      "category_id": "women-gender",
+      "score": 45.36,
+      "rank": 24,
+      "metrics_count": 3,
+      "category_name": "Women & Gender"
+    },
+    {
+      "category_id": "children-youth",
+      "score": 60.5,
+      "rank": 14,
+      "metrics_count": 3,
+      "category_name": "Children & Youth"
+    },
+    {
+      "category_id": "prices",
+      "score": 11.63,
+      "rank": 32,
+      "metrics_count": 1,
+      "category_name": "Prices & Cost of Living"
+    },
+    {
+      "category_id": "industry",
+      "score": 0,
+      "rank": 35,
+      "metrics_count": 3,
+      "category_name": "Industry & Manufacturing"
+    },
+    {
+      "category_id": "infrastructure",
+      "score": 87.24,
+      "rank": 17,
+      "metrics_count": 2,
+      "category_name": "Infrastructure"
+    },
+    {
+      "category_id": "energy-environment",
+      "score": 52.41,
+      "rank": 7,
+      "metrics_count": 2,
+      "category_name": "Energy & Environment"
+    },
+    {
+      "category_id": "crime-justice",
+      "score": 96.99,
+      "rank": 3,
+      "metrics_count": 1,
+      "category_name": "Crime & Justice"
+    },
+    {
+      "category_id": "financial-inclusion",
+      "score": 5.88,
+      "rank": 33,
+      "metrics_count": 1,
+      "category_name": "Financial Inclusion"
+    },
+    {
+      "category_id": "culture-tourism",
+      "score": 15.08,
+      "rank": 19,
+      "metrics_count": 1,
+      "category_name": "Culture, Tourism & Heritage"
+    },
+    {
+      "category_id": "demographics",
+      "score": 66.23,
+      "rank": 4,
+      "metrics_count": 3,
+      "category_name": "Demographics & Social"
+    },
+    {
+      "category_id": "digital-tech",
+      "score": 25.36,
+      "rank": 9,
+      "metrics_count": 1,
+      "category_name": "Digital & Technology"
+    },
+    {
+      "category_id": "transport",
+      "score": 55.59,
+      "rank": 6,
+      "metrics_count": 3,
+      "category_name": "Transport & Mobility"
+    },
+    {
+      "category_id": "mental-health",
+      "score": 0.6,
+      "rank": 11,
+      "metrics_count": 1,
+      "category_name": "Mental Health & Well-being"
+    }
+  ]
+}

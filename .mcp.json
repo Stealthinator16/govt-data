@@ -2,7 +2,7 @@
   "mcpServers": {
     "mospi": {
       "type": "streamable-http",
-      "url": "https://mcp.mospi.gov.in"
+      "url": "https://mcp.mospi.gov.in/"
     }
   }
 }

@@ -1,0 +1,111 @@
+{
+  "year": 2020,
+  "metric": {
+    "id": "emp-regular-wage",
+    "name": "Average Monthly Earnings (Regular)",
+    "unit": "INR/month",
+    "source": "MoSPI PLFS",
+    "polarity": "positive",
+    "category_id": "employment",
+    "category_name": "Employment & Labour",
+    "weight": 0.8
+  },
+  "rankings": [
+    {
+      "state_id": "andaman-nicobar",
+      "state_name": "Andaman & Nicobar Islands",
+      "state_type": "ut",
+      "raw_value": 38861.2,
+      "norm_score": 100,
+      "rank": 1
+    },
+    {
+      "state_id": "arunachal-pradesh",
+      "state_name": "Arunachal Pradesh",
+      "state_type": "state",
+      "raw_value": 26476.4,
+      "norm_score": 56.14,
+      "rank": 2
+    },
+    {
+      "state_id": "goa",
+      "state_name": "Goa",
+      "state_type": "state",
+      "raw_value": 23154.1,
+      "norm_score": 41.05,
+      "rank": 3
+    },
+    {
+      "state_id": "delhi",
+      "state_name": "Delhi",
+      "state_type": "ut",
+      "raw_value": 22175.4,
+      "norm_score": 36.61,
+      "rank": 4
+    },
+    {
+      "state_id": "chandigarh",
+      "state_name": "Chandigarh",
+      "state_type": "ut",
+      "raw_value": 21340.4,
+      "norm_score": 32.82,
+      "rank": 5
+    },
+    {
+      "state_id": "haryana",
+      "state_name": "Haryana",
+      "state_type": "state",
+      "raw_value": 19072.9,
+      "norm_score": 22.52,
+      "rank": 6
+    },
+    {
+      "state_id": "assam",
+      "state_name": "Assam",
+      "state_type": "state",
+      "raw_value": 17623.4,
+      "norm_score": 15.94,
+      "rank": 7
+    },
+    {
+      "state_id": "andhra-pradesh",
+      "state_name": "Andhra Pradesh",
+      "state_type": "state",
+      "raw_value": 17223.5,
+      "norm_score": 14.12,
+      "rank": 8
+    },
+    {
+      "state_id": "gujarat",
+      "state_name": "Gujarat",
+      "state_type": "state",
+      "raw_value": 16736.8,
+      "norm_score": 11.91,
+      "rank": 9
+    },
+    {
+      "state_id": "chhattisgarh",
+      "state_name": "Chhattisgarh",
+      "state_type": "state",
+      "raw_value": 15313.5,
+      "norm_score": 5.45,
+      "rank": 10
+    },
+    {
+      "state_id": "bihar",
+      "state_name": "Bihar",
+      "state_type": "state",
+      "raw_value": 15243.9,
+      "norm_score": 5.13,
+      "rank": 11
+    },
+    {
+      "state_id": "dadra-nagar-haveli-daman-diu",
+      "state_name": "Dadra & Nagar Haveli and Daman & Diu",
+      "state_type": "ut",
+      "raw_value": 13794.7,
+      "norm_score": 0,
+      "rank": 12
+    }
+  ]
+}

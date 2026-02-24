@@ -17,17 +17,25 @@ function main() {
   const db = new Database(DB_PATH, { readonly: true });
   let warnings = 0;
 
+  // Use the year with best metric coverage (matches compute-scores logic)
   const yearRow = db
-    .prepare("SELECT MAX(year) as year FROM data_points")
-    .get() as { year: number | null };
+    .prepare(
+      `SELECT year, COUNT(DISTINCT metric_id) as metric_count
+       FROM data_points
+       GROUP BY year
+       ORDER BY metric_count DESC, year DESC
+       LIMIT 1`
+    )
+    .get() as { year: number; metric_count: number } | null;
 
-  if (!yearRow?.year) {
+  if (!yearRow) {
     console.log("ERROR: No data found.");
     db.close();
     process.exit(1);
   }
 
   const year = yearRow.year;
+  console.log(`Using year ${year} (${yearRow.metric_count} metrics)\n`);
 
   // Check 1: States with data
   const statesWithData = db

@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
   Cell,
 } from "recharts";
+import { useChartColors } from "@/lib/use-chart-colors";
 
 interface MetricRanking {
   state_id: string;
@@ -46,6 +47,8 @@ function CustomTooltip({ active, payload }: { active?: boolean; payload?: Array<
 }
 
 export function MetricBarChart({ rankings, unit }: MetricBarChartProps) {
+  const { tick } = useChartColors();
+
   // Sort by rank (best first)
   const data = [...rankings].sort((a, b) => a.rank - b.rank);
 
@@ -58,14 +61,14 @@ export function MetricBarChart({ rankings, unit }: MetricBarChartProps) {
         <BarChart data={data} layout="vertical" margin={{ left: 10, right: 30, top: 5, bottom: 5 }}>
           <XAxis
             type="number"
-            tick={{ fontSize: 12 }}
-            label={{ value: unit, position: "insideBottomRight", offset: -5, fontSize: 12 }}
+            tick={{ fontSize: 12, fill: tick }}
+            label={{ value: unit, position: "insideBottomRight", offset: -5, fontSize: 12, fill: tick }}
           />
           <YAxis
             type="category"
             dataKey="state_name"
             width={160}
-            tick={{ fontSize: 11 }}
+            tick={{ fontSize: 11, fill: tick }}
           />
           <Tooltip content={<CustomTooltip />} />
           <Bar dataKey="raw_value" radius={[0, 4, 4, 0]} maxBarSize={22}>

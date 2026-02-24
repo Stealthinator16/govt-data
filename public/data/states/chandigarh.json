@@ -1,0 +1,130 @@
+{
+  "year": 2021,
+  "state": {
+    "id": "chandigarh",
+    "name": "Chandigarh",
+    "type": "ut",
+    "region": "North",
+    "population": 1055450,
+    "area_sq_km": 114
+  },
+  "overall": {
+    "score": 55.11,
+    "rank": 2,
+    "tier": "Rising"
+  },
+  "categories": [
+    {
+      "category_id": "economy",
+      "score": 66.26,
+      "rank": 4,
+      "metrics_count": 7,
+      "category_name": "Economy & Income"
+    },
+    {
+      "category_id": "employment",
+      "score": 41.67,
+      "rank": 28,
+      "metrics_count": 6,
+      "category_name": "Employment & Labour"
+    },
+    {
+      "category_id": "education",
+      "score": 74.59,
+      "rank": 3,
+      "metrics_count": 5,
+      "category_name": "Education"
+    },
+    {
+      "category_id": "health",
+      "score": 89.17,
+      "rank": 4,
+      "metrics_count": 4,
+      "category_name": "Health & Healthcare"
+    },
+    {
+      "category_id": "women-gender",
+      "score": 25.71,
+      "rank": 34,
+      "metrics_count": 3,
+      "category_name": "Women & Gender"
+    },
+    {
+      "category_id": "children-youth",
+      "score": 73.68,
+      "rank": 10,
+      "metrics_count": 2,
+      "category_name": "Children & Youth"
+    },
+    {
+      "category_id": "prices",
+      "score": 100,
+      "rank": 1,
+      "metrics_count": 1,
+      "category_name": "Prices & Cost of Living"
+    },
+    {
+      "category_id": "industry",
+      "score": 0.4,
+      "rank": 29,
+      "metrics_count": 3,
+      "category_name": "Industry & Manufacturing"
+    },
+    {
+      "category_id": "infrastructure",
+      "score": 52.32,
+      "rank": 29,
+      "metrics_count": 2,
+      "category_name": "Infrastructure"
+    },
+    {
+      "category_id": "energy-environment",
+      "score": 19.2,
+      "rank": 24,
+      "metrics_count": 2,
+      "category_name": "Energy & Environment"
+    },
+    {
+      "category_id": "crime-justice",
+      "score": 62.48,
+      "rank": 9,
+      "metrics_count": 1,
+      "category_name": "Crime & Justice"
+    },
+    {
+      "category_id": "financial-inclusion",
+      "score": 30.42,
+      "rank": 23,
+      "metrics_count": 1,
+      "category_name": "Financial Inclusion"
+    },
+    {
+      "category_id": "culture-tourism",
+      "score": 5.83,
+      "rank": 30,
+      "metrics_count": 1,
+      "category_name": "Culture, Tourism & Heritage"
+    },
+    {
+      "category_id": "demographics",
+      "score": 65.34,
+      "rank": 6,
+      "metrics_count": 3,
+      "category_name": "Demographics & Social"
+    },
+    {
+      "category_id": "digital-tech",
+      "score": 84.8,
+      "rank": 2,
+      "metrics_count": 1,
+      "category_name": "Digital & Technology"
+    },
+    {
+      "category_id": "transport",
+      "score": 89.84,
+      "rank": 1,
+      "metrics_count": 3,
+      "category_name": "Transport & Mobility"
+    }
+  ]
+}

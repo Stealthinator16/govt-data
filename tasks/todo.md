@@ -16,21 +16,21 @@
 - [x] Build /about page (methodology, sources, tiers)
 - [x] **Verify**: `next build` generates 71 static pages, all routes work
 
-## Phase 1: Core UI
+## Phase 1: Core UI ✓
 - [x] Build LeagueTable component (sorting, score bars, tier badges)
-- [ ] Build IndiaMap choropleth (react-simple-maps) — needs india-states.topojson
-- [ ] Add map to homepage layout
-- [ ] Build /states/[stateId] radar chart (Recharts)
-- [ ] Add more categories with real metric definitions (expand metrics.json beyond 32)
-- [ ] Cmd+K search (cmdk)
-- [ ] **Verify**: Navigate between homepage, rankings, state profiles; map is interactive
+- [x] Build IndiaMap choropleth (react-simple-maps)
+- [x] Add map to homepage layout
+- [x] Build /states/[stateId] radar chart (Recharts)
+- [x] Add more categories with real metric definitions (103 metrics across all 27 categories)
+- [x] Cmd+K search (cmdk)
+- [x] **Verify**: Navigate between homepage, rankings, state profiles; map is interactive (174 pages)
 
 ## Phase 2: Comparison + More Data
 - [x] Generate JSON bundles for client-side use
 - [x] Build /compare page with two-state selector + diff table
-- [ ] Add radar overlay chart to /compare
-- [ ] Add CSV ingestion for NFHS, NCRB, UDISE+
-- [ ] Expand to 10+ categories with real data
+- [x] Add radar overlay chart to /compare
+- [x] Add CSV ingestion for NFHS, NCRB, UDISE+
+- [x] Expand to 19 categories with real data (59/103 metrics, 12 new CSV files)
 - [ ] Add bar charts and sparklines
 - [ ] **Verify**: Compare any two states across all populated categories
 
@@ -50,8 +50,9 @@
 - [ ] **Verify**: Push to main triggers build + deploy; data is fresh
 
 ## Status Summary
-- **Phase 0**: COMPLETE — foundation working, 71 pages generating
-- **Phase 1**: PARTIAL — core components done, map and search pending
-- **Phase 2**: PARTIAL — compare page works, charts and real data pending
+- **Phase 0**: COMPLETE — foundation working
+- **Phase 1**: COMPLETE — map, radar, search, 103 metrics across all 27 categories
+- **Phase 2**: PARTIAL — compare radar done, more CSV data sources + bar charts pending
 - **Phase 3**: NOT STARTED
 - **Phase 4**: PARTIAL — pipeline and validation done, deployment pending
+- **Build**: 174 static pages generating

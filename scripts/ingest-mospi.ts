@@ -1,141 +1,429 @@
 /**
  * MoSPI MCP Ingestion Script
  *
- * Connects to the MoSPI MCP server (https://mcp.mospi.gov.in/sse) and fetches
- * data from available datasets using the 4-step workflow:
+ * Connects to the MoSPI MCP server (https://mcp.mospi.gov.in/) using
+ * streamable-http transport and fetches state-level data via the 4-step workflow:
  * 1. know_about_mospi_api() → dataset list
  * 2. get_indicators(dataset) → indicator list
- * 3. get_metadata(dataset, indicator) → filter values
+ * 3. get_metadata(dataset, indicator_code) → filter code maps
  * 4. get_data(dataset, filters) → actual data
  *
- * Transforms and inserts data into the SQLite database.
+ * Fetches state-level data from:
+ * - PLFS (employment): LFPR, WPR, unemployment, wages, worker distribution
+ * - CPI (prices): General Consumer Price Index by state
+ * - ASI (industry): Factories, workers, Gross Value Added by state
+ *
+ * Datasets without state-level data: NAS, IIP, WPI, ENERGY (all national-only).
  */
 import { Client } from "@modelcontextprotocol/sdk/client/index.js";
-import { SSEClientTransport } from "@modelcontextprotocol/sdk/client/sse.js";
+import { StreamableHTTPClientTransport } from "@modelcontextprotocol/sdk/client/streamableHttp.js";
 import Database from "better-sqlite3";
 import fs from "fs";
 import path from "path";
+import { resolveStateId } from "../lib/state-names";
 
 const DB_PATH = path.join(process.cwd(), "data", "npl.db");
-const MCP_URL = "https://mcp.mospi.gov.in/sse";
+const MCP_URL = "https://mcp.mospi.gov.in/";
+const CACHE_DIR = path.join(process.cwd(), "data", "cache", "mospi");
+const CALL_DELAY_MS = 500;
+const PAGE_LIMIT = 500; // Fetch up to 500 rows per call to get all states
 
-// State name mapping: MoSPI names → our state IDs
-const STATE_NAME_MAP: Record<string, string> = {
-  "andhra pradesh": "andhra-pradesh",
-  "arunachal pradesh": "arunachal-pradesh",
-  "assam": "assam",
-  "bihar": "bihar",
-  "chhattisgarh": "chhattisgarh",
-  "goa": "goa",
-  "gujarat": "gujarat",
-  "haryana": "haryana",
-  "himachal pradesh": "himachal-pradesh",
-  "jharkhand": "jharkhand",
-  "karnataka": "karnataka",
-  "kerala": "kerala",
-  "madhya pradesh": "madhya-pradesh",
-  "maharashtra": "maharashtra",
-  "manipur": "manipur",
-  "meghalaya": "meghalaya",
-  "mizoram": "mizoram",
-  "nagaland": "nagaland",
-  "odisha": "odisha",
-  "orissa": "odisha",
-  "punjab": "punjab",
-  "rajasthan": "rajasthan",
-  "sikkim": "sikkim",
-  "tamil nadu": "tamil-nadu",
-  "telangana": "telangana",
-  "tripura": "tripura",
-  "uttar pradesh": "uttar-pradesh",
-  "uttarakhand": "uttarakhand",
-  "uttaranchal": "uttarakhand",
-  "west bengal": "west-bengal",
-  "andaman & nicobar islands": "andaman-nicobar",
-  "andaman and nicobar islands": "andaman-nicobar",
-  "a & n islands": "andaman-nicobar",
-  "chandigarh": "chandigarh",
-  "dadra & nagar haveli and daman & diu": "dadra-nagar-haveli-daman-diu",
-  "dadra and nagar haveli": "dadra-nagar-haveli-daman-diu",
-  "daman and diu": "dadra-nagar-haveli-daman-diu",
-  "d & n haveli and daman & diu": "dadra-nagar-haveli-daman-diu",
-  "nct of delhi": "delhi",
-  "delhi": "delhi",
-  "jammu & kashmir": "jammu-kashmir",
-  "jammu and kashmir": "jammu-kashmir",
-  "ladakh": "ladakh",
-  "lakshadweep": "lakshadweep",
-  "puducherry": "puducherry",
-  "pondicherry": "puducherry",
-};
-
-function resolveStateId(name: string): string | null {
-  const normalized = name.toLowerCase().trim();
-  // Direct match
-  if (STATE_NAME_MAP[normalized]) return STATE_NAME_MAP[normalized];
-  // Fuzzy: try removing extra spaces
-  const cleaned = normalized.replace(/\s+/g, " ");
-  if (STATE_NAME_MAP[cleaned]) return STATE_NAME_MAP[cleaned];
-  // Skip "all india" or aggregate rows
-  if (cleaned.includes("all india") || cleaned === "india" || cleaned === "all states") return null;
-  console.warn(`  Unknown state name: "${name}"`);
-  return null;
-}
-
-// Metric mapping: which MoSPI indicators map to our metric IDs
+// Each metric mapping specifies exact filter codes from the MoSPI API metadata.
+// These codes come from 3_get_metadata() responses.
 interface MetricMapping {
   metricId: string;
   dataset: string;
-  indicator: string;
-  filters?: Record<string, string>;
+  filters: Record<string, string>;
+  // Which parser to use (default: "plfs")
+  parser?: "plfs" | "cpi" | "asi";
 }
 
+// PLFS filter code reference (from 3_get_metadata responses):
+// indicator_code: 1=LFPR, 2=WPR, 3=UR, 4=worker_distribution, 5=employment_conditions, 6=regular_wage, 7=casual_wage, 8=self_employment_earnings
+// frequency_code: 1=Annual, 2=Quarterly, 3=Monthly
+// age_code: 1="15 years and above", 2="15-29 years", 3="15-59 years", 4="all"
+// gender_code: 1=male, 2=female, 3=person
+// sector_code: 1=rural, 2=urban, 3="rural + urban"
+// education_code: 10="all"
+// religion_code: 1="all"
+// social_category_code: 1="all"
+// broad_status_employment_code: 1=self-employed OAW, 2=self-employed helper, 3=all self-employed, 4=regular_wage/salary, 5=casual_labour, 6=all
+
 const METRIC_MAPPINGS: MetricMapping[] = [
-  // NAS (National Accounts Statistics)
-  {
-    metricId: "eco-gsdp-per-capita",
-    dataset: "National Account Statistics",
-    indicator: "Per Capita NSDP",
-    filters: { "Price Type": "Current Prices" },
-  },
-  {
-    metricId: "eco-gsdp-absolute",
-    dataset: "National Account Statistics",
-    indicator: "GSDP",
-    filters: { "Price Type": "Current Prices" },
-  },
-  {
-    metricId: "eco-gsdp-growth",
-    dataset: "National Account Statistics",
-    indicator: "Growth Rate of GSDP",
-    filters: { "Price Type": "Constant Prices" },
-  },
-  // PLFS (Periodic Labour Force Survey)
+  // PLFS: Labour Force Participation Rate — Person, 15+, rural+urban
   {
     metricId: "emp-lfpr-total",
-    dataset: "Periodic Labour Force Survey",
-    indicator: "Labour Force Participation Rate",
-    filters: { "Age Group": "15 years & above", "Sex": "Person" },
+    dataset: "PLFS",
+    filters: {
+      indicator_code: "1",
+      frequency_code: "1",
+      age_code: "1",
+      gender_code: "3",
+      sector_code: "3",
+      education_code: "10",
+      religion_code: "1",
+      social_category_code: "1",
+      Format: "JSON",
+      limit: String(PAGE_LIMIT),
+    },
   },
+  // PLFS: Labour Force Participation Rate — Female, 15+
   {
     metricId: "emp-lfpr-female",
-    dataset: "Periodic Labour Force Survey",
-    indicator: "Labour Force Participation Rate",
-    filters: { "Age Group": "15 years & above", "Sex": "Female" },
+    dataset: "PLFS",
+    filters: {
+      indicator_code: "1",
+      frequency_code: "1",
+      age_code: "1",
+      gender_code: "2",
+      sector_code: "3",
+      education_code: "10",
+      religion_code: "1",
+      social_category_code: "1",
+      Format: "JSON",
+      limit: String(PAGE_LIMIT),
+    },
   },
+  // PLFS: Unemployment Rate — Person, 15+
   {
     metricId: "emp-unemployment",
-    dataset: "Periodic Labour Force Survey",
-    indicator: "Unemployment Rate",
-    filters: { "Age Group": "15 years & above", "Sex": "Person" },
+    dataset: "PLFS",
+    filters: {
+      indicator_code: "3",
+      frequency_code: "1",
+      age_code: "1",
+      gender_code: "3",
+      sector_code: "3",
+      education_code: "10",
+      religion_code: "1",
+      social_category_code: "1",
+      Format: "JSON",
+      limit: String(PAGE_LIMIT),
+    },
   },
+  // PLFS: Youth Unemployment Rate — Person, 15-29
   {
     metricId: "emp-youth-unemployment",
-    dataset: "Periodic Labour Force Survey",
-    indicator: "Unemployment Rate",
-    filters: { "Age Group": "15-29 years", "Sex": "Person" },
+    dataset: "PLFS",
+    filters: {
+      indicator_code: "3",
+      frequency_code: "1",
+      age_code: "2",
+      gender_code: "3",
+      sector_code: "3",
+      education_code: "10",
+      religion_code: "1",
+      social_category_code: "1",
+      Format: "JSON",
+      limit: String(PAGE_LIMIT),
+    },
+  },
+  // PLFS: Worker distribution — regular wage/salary, person
+  // indicator_code=4, broad_status_employment_code=4 (regular wage/salary)
+  {
+    metricId: "emp-regular-salaried",
+    dataset: "PLFS",
+    filters: {
+      indicator_code: "4",
+      frequency_code: "1",
+      broad_status_employment_code: "4",
+      gender_code: "3",
+      sector_code: "3",
+      broad_industry_work_code: "4",
+      enterprise_type_code: "9",
+      enterprise_size_code: "6",
+      Format: "JSON",
+      limit: String(PAGE_LIMIT),
+    },
+  },
+  // PLFS: Average daily wage from casual labour — person, rural+urban
+  // indicator_code=7, gender_code=3, sector_code=3
+  {
+    metricId: "emp-avg-daily-wage",
+    dataset: "PLFS",
+    filters: {
+      indicator_code: "7",
+      frequency_code: "1",
+      gender_code: "3",
+      sector_code: "3",
+      Format: "JSON",
+      limit: String(PAGE_LIMIT),
+    },
+  },
+  // PLFS: Worker Population Ratio — Person, 15+, rural+urban
+  {
+    metricId: "emp-wpr-total",
+    dataset: "PLFS",
+    filters: {
+      indicator_code: "2",
+      frequency_code: "1",
+      age_code: "1",
+      gender_code: "3",
+      sector_code: "3",
+      education_code: "10",
+      religion_code: "1",
+      social_category_code: "1",
+      Format: "JSON",
+      limit: String(PAGE_LIMIT),
+    },
+  },
+  // PLFS: Average monthly earnings from regular wage/salary employment — Person
+  {
+    metricId: "emp-regular-wage",
+    dataset: "PLFS",
+    filters: {
+      indicator_code: "6",
+      frequency_code: "1",
+      gender_code: "3",
+      sector_code: "3",
+      Format: "JSON",
+      limit: String(PAGE_LIMIT),
+    },
+  },
+
+  // === CPI (Consumer Price Index) ===
+  // base_year=2012, series=Current, sector_code=3 (Combined), group_code=0 (General)
+  // CPI uses a different response format: { state, year, month, index, inflation }
+  {
+    metricId: "prices-cpi-general",
+    dataset: "CPI",
+    parser: "cpi",
+    filters: {
+      base_year: "2012",
+      series: "Current",
+      month_code: "12", // December (annual snapshot)
+      sector_code: "3",
+      group_code: "0",
+      subgroup_code: "0.99",
+      Format: "JSON",
+      limit: String(PAGE_LIMIT),
+    },
+  },
+
+  // === ASI (Annual Survey of Industries) ===
+  // classification_year=2008, sector_code=Combined, nic_code=99999 (all industries), nic_type=2-digit
+  // ASI uses a different response format: { state, year, indicator, value }
+  {
+    metricId: "ind-factories",
+    dataset: "ASI",
+    parser: "asi",
+    filters: {
+      classification_year: "2008",
+      sector_code: "Combined",
+      indicator_code: "1", // Number of Factories
+      nic_code: "99999",
+      nic_type: "2-digit",
+      Format: "JSON",
+      limit: String(PAGE_LIMIT),
+    },
+  },
+  {
+    metricId: "ind-factory-workers",
+    dataset: "ASI",
+    parser: "asi",
+    filters: {
+      classification_year: "2008",
+      sector_code: "Combined",
+      indicator_code: "32", // Total Number of Workers
+      nic_code: "99999",
+      nic_type: "2-digit",
+      Format: "JSON",
+      limit: String(PAGE_LIMIT),
+    },
+  },
+  {
+    metricId: "ind-factory-gva",
+    dataset: "ASI",
+    parser: "asi",
+    filters: {
+      classification_year: "2008",
+      sector_code: "Combined",
+      indicator_code: "19", // Gross Value Added
+      nic_code: "99999",
+      nic_type: "2-digit",
+      Format: "JSON",
+      limit: String(PAGE_LIMIT),
+    },
   },
 ];
+
+function delay(ms: number): Promise<void> {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
+function cacheWrite(name: string, data: string) {
+  fs.mkdirSync(CACHE_DIR, { recursive: true });
+  const safeName = name.replace(/[^a-zA-Z0-9_-]/g, "_");
+  fs.writeFileSync(path.join(CACHE_DIR, `${safeName}.json`), data, "utf-8");
+}
+
+function extractTextContent(result: unknown): string {
+  const r = result as { content?: Array<{ type: string; text?: string }> };
+  if (r?.content) {
+    return r.content
+      .filter((c) => c.type === "text")
+      .map((c) => c.text || "")
+      .join("\n");
+  }
+  return JSON.stringify(result);
+}
+
+interface DataRow {
+  metric_id: string;
+  state_id: string | null;
+  year: number;
+  period: string | null;
+  value: number;
+  gender: string | null;
+  sector: string | null;
+  age_group: string | null;
+  social_group: string | null;
+  status: string;
+  source_ref: string;
+}
+
+function parseYear(yearStr: string): number {
+  // Handle "2023-24" format → 2023
+  const match = yearStr.match(/^(\d{4})/);
+  return match ? parseInt(match[1]) : 0;
+}
+
+function parsePLFSResponse(content: string, metricId: string): DataRow[] {
+  const rows: DataRow[] = [];
+
+  try {
+    const parsed = JSON.parse(content);
+    const data = parsed.data || parsed;
+    if (!Array.isArray(data)) return rows;
+
+    for (const item of data) {
+      const stateName = item.state || item.State || item["State/UT"] || "";
+      const stateId = resolveStateId(stateName);
+      if (!stateId) continue; // Skip "All India" and unknown states
+
+      const yearStr = item.year || item.Year || "";
+      const year = parseYear(yearStr);
+      if (year === 0) continue;
+
+      const rawVal = item.value ?? item.Value;
+      if (rawVal == null || rawVal === "") continue;
+      const value = parseFloat(rawVal);
+      if (isNaN(value)) continue;
+
+      rows.push({
+        metric_id: metricId,
+        state_id: stateId,
+        year,
+        period: yearStr,
+        value,
+        gender: item.gender || item.Gender || null,
+        sector: item.sector || item.Sector || null,
+        age_group: item.AgeGroup || item.age_group || null,
+        social_group: item.socialGroup || null,
+        status: "final",
+        source_ref: "MoSPI PLFS",
+      });
+    }
+  } catch {
+    console.warn(`    Failed to parse response as JSON`);
+  }
+
+  return rows;
+}
+
+// CPI response: { baseyear, year, month, state, sector, group, subgroup, index, inflation, status }
+// We use the "index" field as the value.
+function parseCPIResponse(content: string, metricId: string): DataRow[] {
+  const rows: DataRow[] = [];
+
+  try {
+    const parsed = JSON.parse(content);
+    const data = parsed.data || parsed;
+    if (!Array.isArray(data)) return rows;
+
+    for (const item of data) {
+      const stateName = item.state || "";
+      const stateId = resolveStateId(stateName);
+      if (!stateId) continue;
+
+      const year = typeof item.year === "number" ? item.year : parseInt(item.year);
+      if (!year || isNaN(year)) continue;
+
+      if (item.index == null || item.index === "") continue;
+      const value = parseFloat(item.index);
+      if (isNaN(value)) continue;
+
+      rows.push({
+        metric_id: metricId,
+        state_id: stateId,
+        year,
+        period: `${year}-${item.month || ""}`.trim(),
+        value,
+        gender: null,
+        sector: item.sector || null,
+        age_group: null,
+        social_group: null,
+        status: item.status === "F" ? "final" : "provisional",
+        source_ref: "MoSPI CPI",
+      });
+    }
+  } catch {
+    console.warn(`    Failed to parse CPI response as JSON`);
+  }
+
+  return rows;
+}
+
+// ASI response: { nic_classification, year, state, sector, indicator, nic_code, nic_description, nic_type, value, unit }
+function parseASIResponse(content: string, metricId: string): DataRow[] {
+  const rows: DataRow[] = [];
+
+  try {
+    const parsed = JSON.parse(content);
+    const data = parsed.data || parsed;
+    if (!Array.isArray(data)) return rows;
+
+    for (const item of data) {
+      const stateName = item.state || "";
+      const stateId = resolveStateId(stateName);
+      if (!stateId) continue;
+
+      const yearStr = item.year || "";
+      const year = parseYear(yearStr);
+      if (year === 0) continue;
+
+      if (item.value == null || item.value === "") continue;
+      const value = parseFloat(item.value);
+      if (isNaN(value)) continue;
+
+      rows.push({
+        metric_id: metricId,
+        state_id: stateId,
+        year,
+        period: yearStr,
+        value,
+        gender: null,
+        sector: item.sector || null,
+        age_group: null,
+        social_group: null,
+        status: "final",
+        source_ref: "MoSPI ASI",
+      });
+    }
+  } catch {
+    console.warn(`    Failed to parse ASI response as JSON`);
+  }
+
+  return rows;
+}
+
+function parseResponse(content: string, metricId: string, parser: string): DataRow[] {
+  switch (parser) {
+    case "cpi": return parseCPIResponse(content, metricId);
+    case "asi": return parseASIResponse(content, metricId);
+    default: return parsePLFSResponse(content, metricId);
+  }
+}
 
 async function main() {
   console.log("=== MoSPI MCP Ingestion ===\n");
@@ -152,83 +440,71 @@ async function main() {
   const logId = log.lastInsertRowid;
 
   let totalRows = 0;
+  let succeeded = 0;
+  let failed = 0;
 
   try {
     // Connect to MCP server
     console.log("Connecting to MoSPI MCP server...");
-    const transport = new SSEClientTransport(new URL(MCP_URL));
+    const transport = new StreamableHTTPClientTransport(new URL(MCP_URL));
     const client = new Client({ name: "npl-ingestion", version: "1.0.0" });
     await client.connect(transport);
     console.log("Connected!\n");
 
-    // Step 1: Discover available datasets
+    // Step 1: Discover (required by API before other calls)
     console.log("Step 1: Discovering datasets...");
     const discovery = await client.callTool({
       name: "1_know_about_mospi_api",
       arguments: {},
     });
-    console.log("Available datasets discovered.\n");
+    cacheWrite("1_discovery", extractTextContent(discovery));
+    console.log("Datasets discovered.\n");
+    await delay(CALL_DELAY_MS);
 
-    // Process each metric mapping
+    // Prepare insert statement
+    const insertStmt = db.prepare(`
+      INSERT OR REPLACE INTO data_points
+        (metric_id, state_id, year, period, value, gender, sector, age_group, social_group, status, source_ref)
+      VALUES
+        (@metric_id, @state_id, @year, @period, @value, @gender, @sector, @age_group, @social_group, @status, @source_ref)
+    `);
+
+    const insertBatch = db.transaction((dataRows: DataRow[]) => {
+      let count = 0;
+      for (const row of dataRows) {
+        if (row.state_id && row.value !== null && !isNaN(row.value)) {
+          insertStmt.run(row);
+          count++;
+        }
+      }
+      return count;
+    });
+
+    // Fetch all years for each metric to get a time series
     for (const mapping of METRIC_MAPPINGS) {
-      console.log(`\nFetching: ${mapping.metricId} (${mapping.indicator})`);
+      console.log(`\nFetching: ${mapping.metricId}`);
+      console.log(`  Filters: ${JSON.stringify(mapping.filters)}`);
 
       try {
-        // Step 2: Get indicators for dataset
-        const indicators = await client.callTool({
-          name: "2_get_indicators",
-          arguments: { dataset: mapping.dataset },
-        });
-
-        // Step 3: Get metadata (available states, years, filter values)
-        const metadata = await client.callTool({
-          name: "3_get_metadata",
-          arguments: {
-            dataset: mapping.dataset,
-            indicator: mapping.indicator,
-          },
-        });
-
-        // Parse metadata to find available filter values
-        const metadataContent = extractTextContent(metadata);
-
-        // Step 4: Get actual data
         const dataResult = await client.callTool({
           name: "4_get_data",
           arguments: {
             dataset: mapping.dataset,
-            indicator: mapping.indicator,
-            ...(mapping.filters || {}),
+            filters: mapping.filters,
           },
         });
-
         const dataContent = extractTextContent(dataResult);
-        const rows = parseDataResponse(dataContent, mapping.metricId);
+        cacheWrite(`data_${mapping.metricId}`, dataContent);
+        await delay(CALL_DELAY_MS);
 
-        // Insert into database
-        const insertStmt = db.prepare(`
-          INSERT OR REPLACE INTO data_points
-            (metric_id, state_id, year, period, value, gender, sector, age_group, social_group, status, source_ref)
-          VALUES
-            (@metric_id, @state_id, @year, @period, @value, @gender, @sector, @age_group, @social_group, @status, @source_ref)
-        `);
-
-        const insertBatch = db.transaction((dataRows: typeof rows) => {
-          let count = 0;
-          for (const row of dataRows) {
-            if (row.state_id && row.value !== null && !isNaN(row.value)) {
-              insertStmt.run(row);
-              count++;
-            }
-          }
-          return count;
-        });
-
+        const rows = parseResponse(dataContent, mapping.metricId, mapping.parser || "plfs");
         const inserted = insertBatch(rows);
         totalRows += inserted;
-        console.log(`  Inserted ${inserted} rows`);
+        succeeded++;
+        console.log(`  Parsed ${rows.length} rows, inserted ${inserted} (with valid state IDs)`);
       } catch (err) {
-        console.error(`  Error fetching ${mapping.metricId}:`, (err as Error).message);
+        console.error(`  Error: ${(err as Error).message}`);
+        failed++;
       }
     }
 
@@ -249,111 +525,8 @@ async function main() {
     "UPDATE ingestion_log SET status = 'completed', rows_added = ?, completed_at = datetime('now') WHERE id = ?"
   ).run(totalRows, logId);
 
-  console.log(`\n=== Done: ${totalRows} total rows ingested ===`);
+  console.log(`\n=== Done: ${totalRows} total rows ingested (${succeeded} metrics ok, ${failed} failed) ===`);
   db.close();
-}
-
-function extractTextContent(result: unknown): string {
-  const r = result as { content?: Array<{ type: string; text?: string }> };
-  if (r?.content) {
-    return r.content
-      .filter((c) => c.type === "text")
-      .map((c) => c.text || "")
-      .join("\n");
-  }
-  return JSON.stringify(result);
-}
-
-function parseDataResponse(
-  content: string,
-  metricId: string
-): Array<{
-  metric_id: string;
-  state_id: string | null;
-  year: number;
-  period: string | null;
-  value: number;
-  gender: string | null;
-  sector: string | null;
-  age_group: string | null;
-  social_group: string | null;
-  status: string;
-  source_ref: string;
-}> {
-  const rows: ReturnType<typeof parseDataResponse> = [];
-
-  // Try parsing as JSON first
-  try {
-    const data = JSON.parse(content);
-    if (Array.isArray(data)) {
-      for (const item of data) {
-        const stateName = item.State || item.state || item["State/UT"] || item.state_ut || "";
-        const stateId = resolveStateId(stateName);
-        const year = parseInt(item.Year || item.year || item.period || "0");
-        const value = parseFloat(item.Value || item.value || item.data || "0");
-
-        if (year > 0) {
-          rows.push({
-            metric_id: metricId,
-            state_id: stateId,
-            year,
-            period: item.Period || item.period || null,
-            value,
-            gender: item.Sex || item.Gender || null,
-            sector: item.Sector || item.Area || null,
-            age_group: item["Age Group"] || item.age_group || null,
-            social_group: item["Social Group"] || null,
-            status: "final",
-            source_ref: "MoSPI MCP",
-          });
-        }
-      }
-      return rows;
-    }
-  } catch {
-    // Not JSON, try parsing as table/text
-  }
-
-  // Try parsing as text table (pipe-separated or tab-separated)
-  const lines = content.split("\n").filter((l) => l.trim());
-  if (lines.length > 1) {
-    const sep = lines[0].includes("|") ? "|" : "\t";
-    const headers = lines[0].split(sep).map((h) => h.trim().toLowerCase());
-
-    const stateIdx = headers.findIndex((h) =>
-      ["state", "state/ut", "state_ut", "states", "region"].includes(h)
-    );
-    const valueIdx = headers.findIndex((h) => ["value", "data", "figure"].includes(h));
-    const yearIdx = headers.findIndex((h) => ["year", "period", "time"].includes(h));
-
-    if (stateIdx >= 0 && (valueIdx >= 0 || headers.length > stateIdx + 1)) {
-      for (let i = 1; i < lines.length; i++) {
-        const cols = lines[i].split(sep).map((c) => c.trim());
-        const stateName = cols[stateIdx] || "";
-        const stateId = resolveStateId(stateName);
-        const value = parseFloat(cols[valueIdx >= 0 ? valueIdx : stateIdx + 1] || "0");
-        const year = yearIdx >= 0 ? parseInt(cols[yearIdx]) : 2023;
-
-        if (!isNaN(value)) {
-          rows.push({
-            metric_id: metricId,
-            state_id: stateId,
-            year,
-            period: null,
-            value,
-            gender: null,
-            sector: null,
-            age_group: null,
-            social_group: null,
-            status: "final",
-            source_ref: "MoSPI MCP",
-          });
-        }
-      }
-    }
-  }
-
-  return rows;
 }
 
 main().catch(console.error);
