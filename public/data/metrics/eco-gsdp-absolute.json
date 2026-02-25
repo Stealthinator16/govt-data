@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "economy",
     "category_name": "Economy & Income",
-    "weight": 0.5
+    "weight": 0.5,
+    "description": "Total Gross State Domestic Product in crore rupees. Measures the overall size of a state's economy.",
+    "source_url": "https://www.mospi.gov.in/publication/national-accounts-statistics-2025"
   },
   "rankings": [
     {

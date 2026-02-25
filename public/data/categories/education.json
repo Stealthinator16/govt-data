@@ -299,31 +299,46 @@
       "id": "edu-female-literacy",
       "name": "Female Literacy Rate",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "Census/NFHS",
+      "source_url": "https://censusindia.gov.in/",
+      "description": "Percentage of women aged 7+ who can read and write. A key measure of gender equity in education."
     },
     {
       "id": "edu-ger-higher",
       "name": "Gross Enrollment Ratio (Higher Education)",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "AISHE",
+      "source_url": "https://aishe.gov.in/",
+      "description": "Enrollment in higher education as a share of the 18-23 age group. Reflects access to colleges and universities."
     },
     {
       "id": "edu-ger-secondary",
       "name": "Gross Enrollment Ratio (Secondary)",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "UDISE+",
+      "source_url": "https://udiseplus.gov.in/",
+      "description": "Total secondary school enrollment as a percentage of the eligible age group population. Measures access to secondary education."
     },
     {
       "id": "edu-literacy-total",
       "name": "Literacy Rate (Total)",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "Census/NFHS",
+      "source_url": "https://censusindia.gov.in/",
+      "description": "Percentage of population aged 7+ that can read and write. A foundational indicator of educational attainment."
     },
     {
       "id": "edu-pupil-teacher",
       "name": "Pupil-Teacher Ratio (Elementary)",
       "unit": "ratio",
-      "polarity": "negative"
+      "polarity": "negative",
+      "source": "UDISE+",
+      "source_url": "https://udiseplus.gov.in/",
+      "description": "Number of students per teacher at the elementary level. Lower ratios indicate better teacher availability and classroom attention."
     }
   ]
 }

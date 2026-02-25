@@ -8,7 +8,9 @@
     "polarity": "negative",
     "category_id": "prices",
     "category_name": "Prices & Cost of Living",
-    "weight": 1.2
+    "weight": 1.2,
+    "description": "Weighted average price level of a basket of consumer goods and services. Higher values relative to base year indicate greater inflation pressure.",
+    "source_url": "https://www.mospi.gov.in/cpi"
   },
   "rankings": [
     {

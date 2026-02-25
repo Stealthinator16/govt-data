@@ -299,25 +299,37 @@
       "id": "ene-air-quality",
       "name": "Annual Average PM2.5 Concentration",
       "unit": "µg/m³",
-      "polarity": "negative"
+      "polarity": "negative",
+      "source": "CPCB",
+      "source_url": "https://cpcb.nic.in/",
+      "description": "Average concentration of fine particulate matter (PM2.5) in the air. Lower values indicate better air quality and reduced health risks."
     },
     {
       "id": "ene-forest-cover",
       "name": "Forest Cover as % of Geographical Area",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "FSI ISFR",
+      "source_url": "https://fsi.nic.in/",
+      "description": "Share of a state's land area under forest cover as assessed by satellite imagery. Critical for biodiversity and climate resilience."
     },
     {
       "id": "ene-per-capita-electricity",
       "name": "Per Capita Electricity Consumption",
       "unit": "kWh",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "CEA",
+      "source_url": "https://cea.nic.in/",
+      "description": "Total electricity consumed divided by population. Reflects both industrial activity and household energy access."
     },
     {
       "id": "ene-renewable-share",
       "name": "Renewable Energy Share of Installed Capacity",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "MNRE/CEA",
+      "source_url": "https://cea.nic.in/",
+      "description": "Percentage of total installed power capacity from renewable sources like solar, wind, and biomass. Measures progress in energy transition."
     }
   ]
 }

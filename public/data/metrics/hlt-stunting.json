@@ -8,7 +8,9 @@
     "polarity": "negative",
     "category_id": "health",
     "category_name": "Health & Healthcare",
-    "weight": 1.2
+    "weight": 1.2,
+    "description": "Percentage of children under 5 who are too short for their age. Indicates chronic malnutrition and poor early childhood conditions.",
+    "source_url": "https://rchiips.org/nfhs/"
   },
   "rankings": [
     {

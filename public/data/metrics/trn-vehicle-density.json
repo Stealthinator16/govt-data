@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "transport",
     "category_name": "Transport & Mobility",
-    "weight": 1
+    "weight": 1,
+    "description": "Number of registered motor vehicles per 1,000 people. Indicates personal mobility levels and economic activity.",
+    "source_url": "https://morth.nic.in/"
   },
   "rankings": [
     {

@@ -299,19 +299,28 @@
       "id": "dig-broadband-subscribers",
       "name": "Broadband Subscribers per 100 Population",
       "unit": "per 100",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "TRAI",
+      "source_url": "https://trai.gov.in/",
+      "description": "Number of broadband connections per 100 people. Indicates access to high-speed internet needed for modern services and remote work."
     },
     {
       "id": "dig-internet-subscribers",
       "name": "Internet Subscribers per 100 Population",
       "unit": "per 100",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "TRAI",
+      "source_url": "https://trai.gov.in/",
+      "description": "Number of internet connections per 100 people. Measures digital connectivity and access to online services."
     },
     {
       "id": "dig-startup-density",
       "name": "Recognized Startups per Million Population",
       "unit": "per million",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "DPIIT",
+      "source_url": "https://dpiit.gov.in/",
+      "description": "DPIIT-recognized startups per million people. Reflects the entrepreneurial ecosystem and innovation capacity of a state."
     }
   ]
 }

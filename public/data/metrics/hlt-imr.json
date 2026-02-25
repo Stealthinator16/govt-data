@@ -8,7 +8,9 @@
     "polarity": "negative",
     "category_id": "health",
     "category_name": "Health & Healthcare",
-    "weight": 1.5
+    "weight": 1.5,
+    "description": "Number of infant deaths per 1,000 live births before age one. A core indicator of healthcare access and maternal-child health outcomes.",
+    "source_url": "https://censusindia.gov.in/census.website/data/SRSP"
   },
   "rankings": [
     {

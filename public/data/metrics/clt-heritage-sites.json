@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "culture-tourism",
     "category_name": "Culture, Tourism & Heritage",
-    "weight": 0.8
+    "weight": 0.8,
+    "description": "Number of monuments and sites protected by the Archaeological Survey of India. Reflects the state's historical and cultural heritage density.",
+    "source_url": "https://asi.nic.in/"
   },
   "rankings": [
     {

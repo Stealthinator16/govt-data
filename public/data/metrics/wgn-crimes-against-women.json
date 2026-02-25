@@ -8,7 +8,9 @@
     "polarity": "negative",
     "category_id": "women-gender",
     "category_name": "Women & Gender",
-    "weight": 1.5
+    "weight": 1.5,
+    "description": "Reported crimes against women per 100,000 female population. Reflects both the prevalence of gender-based violence and reporting rates.",
+    "source_url": "https://ncrb.gov.in/"
   },
   "rankings": [
     {

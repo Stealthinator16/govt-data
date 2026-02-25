@@ -283,7 +283,10 @@
       "id": "prices-cpi-general",
       "name": "Consumer Price Index (General)",
       "unit": "index",
-      "polarity": "negative"
+      "polarity": "negative",
+      "source": "MoSPI CPI",
+      "source_url": "https://www.mospi.gov.in/cpi",
+      "description": "Weighted average price level of a basket of consumer goods and services. Higher values relative to base year indicate greater inflation pressure."
     }
   ]
 }

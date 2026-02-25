@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "energy-environment",
     "category_name": "Energy & Environment",
-    "weight": 0.8
+    "weight": 0.8,
+    "description": "Total electricity consumed divided by population. Reflects both industrial activity and household energy access.",
+    "source_url": "https://cea.nic.in/"
   },
   "rankings": [
     {

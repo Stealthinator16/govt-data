@@ -11,7 +11,7 @@ export function ScoreBar({ score }: { score: number }) {
   };
 
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center gap-2" title={`Score: ${score.toFixed(1)} / 100 (${tier} tier)`}>
       <div className="h-2 w-24 rounded-full bg-muted overflow-hidden">
         <div
           className={cn("h-full rounded-full transition-all", colors[tier])}

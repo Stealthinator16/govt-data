@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "women-gender",
     "category_name": "Women & Gender",
-    "weight": 1
+    "weight": 1,
+    "description": "Percentage of elected state legislators who are women. Measures women's political representation in governance.",
+    "source_url": "https://eci.gov.in/"
   },
   "rankings": [
     {

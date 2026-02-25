@@ -291,25 +291,37 @@
       "id": "crm-chargesheet-rate",
       "name": "Chargesheet Filing Rate",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "NCRB",
+      "source_url": "https://ncrb.gov.in/",
+      "description": "Percentage of investigated cases in which a chargesheet was filed. Reflects the efficiency and thoroughness of police investigations."
     },
     {
       "id": "crm-murder-rate",
       "name": "Murder Rate",
       "unit": "per 100000",
-      "polarity": "negative"
+      "polarity": "negative",
+      "source": "NCRB",
+      "source_url": "https://ncrb.gov.in/",
+      "description": "Reported murders per 100,000 population. One of the most reliable crime statistics due to high reporting rates."
     },
     {
       "id": "crm-police-strength",
       "name": "Police Personnel per 100000 Population",
       "unit": "per 100000",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "NCRB/BPR&D",
+      "source_url": "https://ncrb.gov.in/",
+      "description": "Number of police personnel per 100,000 people. Indicates the state's capacity to maintain law enforcement and public safety."
     },
     {
       "id": "crm-total-crime-rate",
       "name": "Total Cognizable Crime Rate",
       "unit": "per 100000",
-      "polarity": "negative"
+      "polarity": "negative",
+      "source": "NCRB",
+      "source_url": "https://ncrb.gov.in/",
+      "description": "Total cognizable crimes reported per 100,000 population. A broad measure of law and order conditions in a state."
     }
   ]
 }

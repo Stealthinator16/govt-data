@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "economy",
     "category_name": "Economy & Income",
-    "weight": 0.6
+    "weight": 0.6,
+    "description": "Goods and Services Tax collected per person. Reflects consumption levels and the formalization of a state's economy.",
+    "source_url": "https://gstcouncil.gov.in/gst-revenue"
   },
   "rankings": [
     {

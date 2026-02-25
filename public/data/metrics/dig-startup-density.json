@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "digital-tech",
     "category_name": "Digital & Technology",
-    "weight": 1
+    "weight": 1,
+    "description": "DPIIT-recognized startups per million people. Reflects the entrepreneurial ecosystem and innovation capacity of a state.",
+    "source_url": "https://dpiit.gov.in/"
   },
   "rankings": [
     {

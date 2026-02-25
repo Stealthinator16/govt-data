@@ -27,6 +27,8 @@ export interface Metric {
   weight: number;
   disaggregations: string | null; // JSON string
   is_featured: boolean;
+  description: string | null;
+  source_url: string | null;
 }
 
 // Data types

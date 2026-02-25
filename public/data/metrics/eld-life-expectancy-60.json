@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "elderly",
     "category_name": "Elderly",
-    "weight": 1
+    "weight": 1,
+    "description": "Average remaining years of life for a person who has reached age 60. Reflects elderly healthcare quality and living conditions.",
+    "source_url": "https://censusindia.gov.in/census.website/data/SRSP"
   },
   "rankings": [
     {

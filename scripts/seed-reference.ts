@@ -65,8 +65,8 @@ insertCategories(categories);
 // Insert metrics
 console.log(`Inserting ${metrics.length} metrics...`);
 const insertMetric = db.prepare(`
-  INSERT OR REPLACE INTO metrics (id, category_id, name, unit, source, polarity, weight, is_featured)
-  VALUES (@id, @category_id, @name, @unit, @source, @polarity, @weight, @is_featured)
+  INSERT OR REPLACE INTO metrics (id, category_id, name, unit, source, polarity, weight, is_featured, description, source_url)
+  VALUES (@id, @category_id, @name, @unit, @source, @polarity, @weight, @is_featured, @description, @source_url)
 `);
 
 const insertMetrics = db.transaction((rows: typeof metrics) => {
@@ -74,6 +74,8 @@ const insertMetrics = db.transaction((rows: typeof metrics) => {
     insertMetric.run({
       ...row,
       is_featured: row.is_featured ? 1 : 0,
+      description: row.description ?? null,
+      source_url: row.source_url ?? null,
     });
   }
 });

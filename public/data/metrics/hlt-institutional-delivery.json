@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "health",
     "category_name": "Health & Healthcare",
-    "weight": 0.8
+    "weight": 0.8,
+    "description": "Percentage of births taking place in a health facility. Higher rates reduce maternal and neonatal mortality risks.",
+    "source_url": "https://rchiips.org/nfhs/"
   },
   "rankings": [
     {

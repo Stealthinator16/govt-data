@@ -179,6 +179,16 @@ export default async function StateProfilePage({
             </div>
           </div>
 
+          {/* Source attribution */}
+          {overall && (
+            <p className="mt-6 text-xs text-muted-foreground">
+              Data aggregated from multiple government sources.{" "}
+              <a href="/about#sources" className="underline hover:text-foreground">
+                See individual metrics for specific citations.
+              </a>
+            </p>
+          )}
+
           {!overall && (
             <div className="mt-8 rounded-lg border border-dashed p-8 text-center text-muted-foreground">
               No scores available for this state yet.

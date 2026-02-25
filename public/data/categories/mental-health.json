@@ -107,19 +107,28 @@
       "id": "mhl-mental-health-facilities",
       "name": "District Mental Health Programme Coverage",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "MoHFW",
+      "source_url": "https://mohfw.gov.in/",
+      "description": "Percentage of districts covered under the District Mental Health Programme. Indicates geographic reach of public mental health services."
     },
     {
       "id": "mhl-psychiatrists",
       "name": "Psychiatrists per 100000 Population",
       "unit": "per 100000",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "NIMHANS/NHP",
+      "source_url": "https://cbhidghs.mohfw.gov.in/publications/national-health-profile",
+      "description": "Number of psychiatrists per 100,000 people. Measures the availability of specialized mental healthcare professionals."
     },
     {
       "id": "mhl-suicide-rate",
       "name": "Suicide Rate",
       "unit": "per 100000",
-      "polarity": "negative"
+      "polarity": "negative",
+      "source": "NCRB",
+      "source_url": "https://ncrb.gov.in/",
+      "description": "Reported suicides per 100,000 population. A critical indicator of mental health crisis prevalence and psychosocial distress."
     }
   ]
 }

@@ -283,19 +283,28 @@
       "id": "dem-decadal-growth",
       "name": "Decadal Population Growth Rate",
       "unit": "%",
-      "polarity": "negative"
+      "polarity": "negative",
+      "source": "Census",
+      "source_url": "https://censusindia.gov.in/",
+      "description": "Percentage increase in population over the last census decade. Faster growth can strain resources; slower growth signals demographic transition."
     },
     {
       "id": "dem-population-density",
       "name": "Population Density",
       "unit": "per sq km",
-      "polarity": "negative"
+      "polarity": "negative",
+      "source": "Census",
+      "source_url": "https://censusindia.gov.in/",
+      "description": "Number of persons per square kilometre. Very high density strains infrastructure while very low density limits service delivery."
     },
     {
       "id": "dem-urbanization",
       "name": "Urbanization Rate",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "Census",
+      "source_url": "https://censusindia.gov.in/",
+      "description": "Percentage of the state population living in urban areas. Higher urbanization generally correlates with greater economic opportunity."
     }
   ]
 }

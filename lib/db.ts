@@ -47,7 +47,9 @@ CREATE TABLE IF NOT EXISTS metrics (
   polarity TEXT NOT NULL CHECK(polarity IN ('positive', 'negative')) DEFAULT 'positive',
   weight REAL NOT NULL DEFAULT 1.0,
   disaggregations TEXT, -- JSON
-  is_featured INTEGER NOT NULL DEFAULT 0
+  is_featured INTEGER NOT NULL DEFAULT 0,
+  description TEXT,
+  source_url TEXT
 );
 
 -- Data

@@ -22,6 +22,9 @@ interface CategoryData {
     name: string;
     unit: string;
     polarity: string;
+    source?: string;
+    source_url?: string | null;
+    description?: string | null;
   }>;
 }
 
@@ -125,10 +128,22 @@ export default async function CategoryRankingsPage({
                   <a
                     key={m.id}
                     href={`/metrics/${m.id}`}
-                    className="flex items-center justify-between rounded-lg border px-4 py-3 hover:bg-muted/50 transition-colors"
+                    className="flex flex-col rounded-lg border px-4 py-3 hover:bg-muted/50 transition-colors"
                   >
-                    <span className="font-medium text-sm">{m.name}</span>
-                    <span className="text-xs text-muted-foreground">{m.unit}</span>
+                    <div className="flex items-center justify-between">
+                      <span className="font-medium text-sm">{m.name}</span>
+                      <span className="text-xs text-muted-foreground">{m.unit}</span>
+                    </div>
+                    {m.description && (
+                      <span className="text-xs text-muted-foreground mt-1 line-clamp-2">
+                        {m.description}
+                      </span>
+                    )}
+                    {m.source && (
+                      <span className="text-xs text-muted-foreground/70 mt-1">
+                        Source: {m.source}
+                      </span>
+                    )}
                   </a>
                 ))}
               </div>

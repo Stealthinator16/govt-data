@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "infrastructure",
     "category_name": "Infrastructure",
-    "weight": 1
+    "weight": 1,
+    "description": "Percentage of households with an electricity connection. A basic measure of energy access and infrastructure reach.",
+    "source_url": "https://saubhagya.gov.in/"
   },
   "rankings": [
     {

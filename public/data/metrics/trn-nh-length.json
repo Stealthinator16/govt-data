@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "transport",
     "category_name": "Transport & Mobility",
-    "weight": 0.8
+    "weight": 0.8,
+    "description": "Length of national highways per 1,000 sq km of area. Reflects the reach of the high-speed road network across a state.",
+    "source_url": "https://morth.nic.in/"
   },
   "rankings": [
     {

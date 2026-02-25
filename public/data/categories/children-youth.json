@@ -299,25 +299,37 @@
       "id": "cyd-child-labour",
       "name": "Child Labour Rate (5-14 years)",
       "unit": "%",
-      "polarity": "negative"
+      "polarity": "negative",
+      "source": "Census/PLFS",
+      "source_url": "https://censusindia.gov.in/",
+      "description": "Percentage of children aged 5-14 engaged in labour. Indicates the extent to which children are denied education and childhood."
     },
     {
       "id": "cyd-child-marriage",
       "name": "Child Marriage Rate (Women 20-24 married before 18)",
       "unit": "%",
-      "polarity": "negative"
+      "polarity": "negative",
+      "source": "NFHS",
+      "source_url": "https://rchiips.org/nfhs/",
+      "description": "Percentage of women aged 20-24 who were married before age 18. A measure of early marriage prevalence and its impact on girls' development."
     },
     {
       "id": "cyd-full-immunization",
       "name": "Full Immunization Coverage (12-23 months)",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "NFHS",
+      "source_url": "https://rchiips.org/nfhs/",
+      "description": "Percentage of children aged 12-23 months who received all basic vaccinations. Measures the reach and effectiveness of public immunization programs."
     },
     {
       "id": "cyd-u5-mortality",
       "name": "Under-5 Mortality Rate",
       "unit": "per 1000 live births",
-      "polarity": "negative"
+      "polarity": "negative",
+      "source": "SRS",
+      "source_url": "https://censusindia.gov.in/census.website/data/SRSP",
+      "description": "Deaths of children under age 5 per 1,000 live births. Captures the combined effect of nutrition, sanitation, and healthcare access."
     }
   ]
 }

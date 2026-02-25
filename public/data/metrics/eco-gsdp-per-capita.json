@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "economy",
     "category_name": "Economy & Income",
-    "weight": 1.5
+    "weight": 1.5,
+    "description": "Gross State Domestic Product divided by population. Reflects the average economic output per person — a key indicator of relative prosperity.",
+    "source_url": "https://www.mospi.gov.in/publication/national-accounts-statistics-2025"
   },
   "rankings": [
     {

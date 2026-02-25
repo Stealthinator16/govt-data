@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "economy",
     "category_name": "Economy & Income",
-    "weight": 0.7
+    "weight": 0.7,
+    "description": "Tax revenue raised by the state from its own sources as a share of GSDP. Reflects fiscal self-reliance and tax administration capacity.",
+    "source_url": "https://prsindia.org/budgets/parliament/state-finances"
   },
   "rankings": [
     {

@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "children-youth",
     "category_name": "Children & Youth",
-    "weight": 1
+    "weight": 1,
+    "description": "Percentage of children aged 12-23 months who received all basic vaccinations. Measures the reach and effectiveness of public immunization programs.",
+    "source_url": "https://rchiips.org/nfhs/"
   },
   "rankings": [
     {

@@ -8,7 +8,9 @@
     "polarity": "negative",
     "category_id": "crime-justice",
     "category_name": "Crime & Justice",
-    "weight": 1.2
+    "weight": 1.2,
+    "description": "Reported murders per 100,000 population. One of the most reliable crime statistics due to high reporting rates.",
+    "source_url": "https://ncrb.gov.in/"
   },
   "rankings": [
     {

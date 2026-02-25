@@ -8,7 +8,9 @@
     "polarity": "negative",
     "category_id": "transport",
     "category_name": "Transport & Mobility",
-    "weight": 1.5
+    "weight": 1.5,
+    "description": "Deaths from road accidents per 100,000 people. Measures road safety conditions, enforcement, and trauma care capacity.",
+    "source_url": "https://morth.nic.in/"
   },
   "rankings": [
     {

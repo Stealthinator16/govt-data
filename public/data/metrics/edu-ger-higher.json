@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "education",
     "category_name": "Education",
-    "weight": 1.2
+    "weight": 1.2,
+    "description": "Enrollment in higher education as a share of the 18-23 age group. Reflects access to colleges and universities.",
+    "source_url": "https://aishe.gov.in/"
   },
   "rankings": [
     {

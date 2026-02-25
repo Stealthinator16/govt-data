@@ -299,19 +299,28 @@
       "id": "clt-domestic-tourists",
       "name": "Domestic Tourist Visits Per Capita",
       "unit": "per capita",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "MoT",
+      "source_url": "https://tourism.gov.in/",
+      "description": "Number of domestic tourist visits divided by state population. Reflects the attractiveness and tourism infrastructure of a state."
     },
     {
       "id": "clt-foreign-tourists",
       "name": "Foreign Tourist Visits",
       "unit": "count",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "MoT",
+      "source_url": "https://tourism.gov.in/",
+      "description": "Total number of foreign tourist arrivals to the state. Indicates international appeal and tourism competitiveness."
     },
     {
       "id": "clt-heritage-sites",
       "name": "ASI-Protected Heritage Sites",
       "unit": "count",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "ASI",
+      "source_url": "https://asi.nic.in/",
+      "description": "Number of monuments and sites protected by the Archaeological Survey of India. Reflects the state's historical and cultural heritage density."
     }
   ]
 }

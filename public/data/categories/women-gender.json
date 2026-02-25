@@ -7,48 +7,56 @@
   "rankings": [
     {
       "state_id": "ladakh",
-      "score": 90,
+      "score": 87.5,
       "rank": 1,
       "metrics_count": 3,
       "state_name": "Ladakh",
       "state_type": "ut"
     },
     {
-      "state_id": "sikkim",
-      "score": 67.93,
+      "state_id": "chhattisgarh",
+      "score": 72.59,
       "rank": 2,
+      "metrics_count": 4,
+      "state_name": "Chhattisgarh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "sikkim",
+      "score": 67.92,
+      "rank": 3,
       "metrics_count": 4,
       "state_name": "Sikkim",
       "state_type": "state"
     },
     {
       "state_id": "meghalaya",
-      "score": 63.95,
-      "rank": 3,
+      "score": 63.9,
+      "rank": 4,
       "metrics_count": 4,
       "state_name": "Meghalaya",
       "state_type": "state"
     },
     {
       "state_id": "nagaland",
-      "score": 63.88,
-      "rank": 4,
+      "score": 63.83,
+      "rank": 5,
       "metrics_count": 4,
       "state_name": "Nagaland",
       "state_type": "state"
     },
     {
-      "state_id": "chhattisgarh",
-      "score": 62.5,
-      "rank": 5,
+      "state_id": "jharkhand",
+      "score": 61.97,
+      "rank": 6,
       "metrics_count": 4,
-      "state_name": "Chhattisgarh",
+      "state_name": "Jharkhand",
       "state_type": "state"
     },
     {
       "state_id": "mizoram",
-      "score": 60.07,
-      "rank": 6,
+      "score": 59.92,
+      "rank": 7,
       "metrics_count": 4,
       "state_name": "Mizoram",
       "state_type": "state"
@@ -56,110 +64,102 @@
     {
       "state_id": "himachal-pradesh",
       "score": 59.49,
-      "rank": 7,
+      "rank": 8,
       "metrics_count": 4,
       "state_name": "Himachal Pradesh",
       "state_type": "state"
     },
     {
       "state_id": "gujarat",
-      "score": 58.42,
-      "rank": 8,
+      "score": 58.27,
+      "rank": 9,
       "metrics_count": 4,
       "state_name": "Gujarat",
       "state_type": "state"
     },
     {
       "state_id": "manipur",
-      "score": 56.2,
-      "rank": 9,
+      "score": 55.98,
+      "rank": 10,
       "metrics_count": 4,
       "state_name": "Manipur",
       "state_type": "state"
     },
     {
       "state_id": "tripura",
-      "score": 54.69,
-      "rank": 10,
+      "score": 54.5,
+      "rank": 11,
       "metrics_count": 4,
       "state_name": "Tripura",
       "state_type": "state"
     },
     {
       "state_id": "puducherry",
-      "score": 52.92,
-      "rank": 11,
+      "score": 54.39,
+      "rank": 12,
       "metrics_count": 4,
       "state_name": "Puducherry",
       "state_type": "ut"
     },
     {
-      "state_id": "uttarakhand",
-      "score": 52.59,
-      "rank": 12,
-      "metrics_count": 4,
-      "state_name": "Uttarakhand",
-      "state_type": "state"
-    },
-    {
-      "state_id": "jammu-kashmir",
-      "score": 52.08,
+      "state_id": "lakshadweep",
+      "score": 53.78,
       "rank": 13,
-      "metrics_count": 4,
-      "state_name": "Jammu & Kashmir",
+      "metrics_count": 3,
+      "state_name": "Lakshadweep",
       "state_type": "ut"
     },
     {
       "state_id": "tamil-nadu",
-      "score": 52.06,
+      "score": 51.95,
       "rank": 14,
       "metrics_count": 4,
       "state_name": "Tamil Nadu",
       "state_type": "state"
     },
     {
-      "state_id": "lakshadweep",
-      "score": 51.79,
-      "rank": 15,
-      "metrics_count": 3,
-      "state_name": "Lakshadweep",
-      "state_type": "ut"
-    },
-    {
-      "state_id": "jharkhand",
-      "score": 51.45,
-      "rank": 16,
-      "metrics_count": 4,
-      "state_name": "Jharkhand",
-      "state_type": "state"
-    },
-    {
       "state_id": "arunachal-pradesh",
-      "score": 50.62,
-      "rank": 17,
+      "score": 50.57,
+      "rank": 15,
       "metrics_count": 4,
       "state_name": "Arunachal Pradesh",
       "state_type": "state"
     },
     {
+      "state_id": "uttarakhand",
+      "score": 50.43,
+      "rank": 16,
+      "metrics_count": 4,
+      "state_name": "Uttarakhand",
+      "state_type": "state"
+    },
+    {
       "state_id": "west-bengal",
-      "score": 50.27,
-      "rank": 18,
+      "score": 50.06,
+      "rank": 17,
       "metrics_count": 4,
       "state_name": "West Bengal",
       "state_type": "state"
     },
     {
       "state_id": "dadra-nagar-haveli-daman-diu",
-      "score": 50.01,
-      "rank": 19,
+      "score": 49.86,
+      "rank": 18,
       "metrics_count": 3,
       "state_name": "Dadra & Nagar Haveli and Daman & Diu",
       "state_type": "ut"
     },
     {
+      "state_id": "uttar-pradesh",
+      "score": 49,
+      "rank": 19,
+      "metrics_count": 4,
+      "state_name": "Uttar Pradesh",
+      "state_type": "state"
+    },
+    {
       "state_id": "punjab",
-      "score": 47.48,
+      "score": 47.25,
       "rank": 20,
       "metrics_count": 4,
       "state_name": "Punjab",
@@ -167,23 +167,23 @@
     },
     {
       "state_id": "madhya-pradesh",
-      "score": 46.62,
+      "score": 46.44,
       "rank": 21,
       "metrics_count": 4,
       "state_name": "Madhya Pradesh",
       "state_type": "state"
     },
     {
-      "state_id": "karnataka",
-      "score": 46.4,
+      "state_id": "kerala",
+      "score": 46,
       "rank": 22,
       "metrics_count": 4,
-      "state_name": "Karnataka",
+      "state_name": "Kerala",
       "state_type": "state"
     },
     {
       "state_id": "maharashtra",
-      "score": 45.56,
+      "score": 45.44,
       "rank": 23,
       "metrics_count": 4,
       "state_name": "Maharashtra",
@@ -191,79 +191,79 @@
     },
     {
       "state_id": "andaman-nicobar",
-      "score": 45.36,
+      "score": 45.26,
       "rank": 24,
       "metrics_count": 3,
       "state_name": "Andaman & Nicobar Islands",
       "state_type": "ut"
     },
     {
-      "state_id": "uttar-pradesh",
-      "score": 45.12,
+      "state_id": "jammu-kashmir",
+      "score": 45.21,
       "rank": 25,
       "metrics_count": 4,
-      "state_name": "Uttar Pradesh",
-      "state_type": "state"
+      "state_name": "Jammu & Kashmir",
+      "state_type": "ut"
     },
     {
-      "state_id": "kerala",
-      "score": 43.02,
+      "state_id": "karnataka",
+      "score": 44.54,
       "rank": 26,
       "metrics_count": 4,
-      "state_name": "Kerala",
-      "state_type": "state"
-    },
-    {
-      "state_id": "andhra-pradesh",
-      "score": 41.92,
-      "rank": 27,
-      "metrics_count": 4,
-      "state_name": "Andhra Pradesh",
+      "state_name": "Karnataka",
       "state_type": "state"
     },
     {
       "state_id": "bihar",
       "score": 41.81,
-      "rank": 28,
+      "rank": 27,
       "metrics_count": 4,
       "state_name": "Bihar",
       "state_type": "state"
     },
     {
-      "state_id": "assam",
-      "score": 38.43,
+      "state_id": "andhra-pradesh",
+      "score": 41.79,
+      "rank": 28,
+      "metrics_count": 4,
+      "state_name": "Andhra Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "rajasthan",
+      "score": 36.39,
       "rank": 29,
+      "metrics_count": 4,
+      "state_name": "Rajasthan",
+      "state_type": "state"
+    },
+    {
+      "state_id": "assam",
+      "score": 36.19,
+      "rank": 30,
       "metrics_count": 4,
       "state_name": "Assam",
       "state_type": "state"
     },
     {
       "state_id": "goa",
-      "score": 36.59,
-      "rank": 30,
+      "score": 35.87,
+      "rank": 31,
       "metrics_count": 4,
       "state_name": "Goa",
       "state_type": "state"
     },
     {
       "state_id": "telangana",
-      "score": 33.75,
-      "rank": 31,
+      "score": 33.62,
+      "rank": 32,
       "metrics_count": 4,
       "state_name": "Telangana",
       "state_type": "state"
     },
     {
-      "state_id": "rajasthan",
-      "score": 31.35,
-      "rank": 32,
-      "metrics_count": 4,
-      "state_name": "Rajasthan",
-      "state_type": "state"
-    },
-    {
       "state_id": "odisha",
-      "score": 29,
+      "score": 28.79,
       "rank": 33,
       "metrics_count": 4,
       "state_name": "Odisha",
@@ -271,7 +271,7 @@
     },
     {
       "state_id": "chandigarh",
-      "score": 25.71,
+      "score": 25.39,
       "rank": 34,
       "metrics_count": 3,
       "state_name": "Chandigarh",
@@ -279,7 +279,7 @@
     },
     {
       "state_id": "haryana",
-      "score": 22.17,
+      "score": 21.92,
       "rank": 35,
       "metrics_count": 4,
       "state_name": "Haryana",
@@ -287,7 +287,7 @@
     },
     {
       "state_id": "delhi",
-      "score": 22.02,
+      "score": 21.73,
       "rank": 36,
       "metrics_count": 4,
       "state_name": "Delhi",
@@ -299,25 +299,37 @@
       "id": "wgn-crimes-against-women",
       "name": "Crimes Against Women Rate",
       "unit": "per 100000 women",
-      "polarity": "negative"
+      "polarity": "negative",
+      "source": "NCRB",
+      "source_url": "https://ncrb.gov.in/",
+      "description": "Reported crimes against women per 100,000 female population. Reflects both the prevalence of gender-based violence and reporting rates."
     },
     {
       "id": "wgn-female-lfpr",
       "name": "Female Labour Force Participation Rate",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "MoSPI PLFS",
+      "source_url": "https://www.mospi.gov.in/publication/annual-report-periodic-labour-force-survey-plfs-july-2022-june-2023",
+      "description": "Share of working-age women who are employed or seeking employment. A critical indicator of women's economic empowerment."
     },
     {
       "id": "wgn-sex-ratio",
       "name": "Sex Ratio at Birth",
       "unit": "females per 1000 males",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "SRS/NFHS",
+      "source_url": "https://censusindia.gov.in/census.website/data/SRSP",
+      "description": "Number of females born per 1,000 males. Deviations from the natural ratio indicate sex-selective practices."
     },
     {
       "id": "wgn-women-elected",
       "name": "Women Elected Representatives (%)",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "ECI/State Election Commissions",
+      "source_url": "https://eci.gov.in/",
+      "description": "Percentage of elected state legislators who are women. Measures women's political representation in governance."
     }
   ]
 }

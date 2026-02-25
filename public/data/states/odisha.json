@@ -9,22 +9,22 @@
     "area_sq_km": 155707
   },
   "overall": {
-    "score": 38.15,
-    "rank": 27,
+    "score": 38.05,
+    "rank": 29,
     "tier": "Developing"
   },
   "categories": [
     {
       "category_id": "economy",
-      "score": 39.65,
-      "rank": 19,
+      "score": 39.61,
+      "rank": 20,
       "metrics_count": 11,
       "category_name": "Economy & Income"
     },
     {
       "category_id": "employment",
-      "score": 44.87,
-      "rank": 23,
+      "score": 37.52,
+      "rank": 28,
       "metrics_count": 6,
       "category_name": "Employment & Labour"
     },
@@ -37,14 +37,14 @@
     },
     {
       "category_id": "health",
-      "score": 38.72,
+      "score": 44.44,
       "rank": 30,
-      "metrics_count": 6,
+      "metrics_count": 5,
       "category_name": "Health & Healthcare"
     },
     {
       "category_id": "women-gender",
-      "score": 29,
+      "score": 28.79,
       "rank": 33,
       "metrics_count": 4,
       "category_name": "Women & Gender"

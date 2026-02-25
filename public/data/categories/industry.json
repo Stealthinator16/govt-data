@@ -291,19 +291,28 @@
       "id": "ind-factories",
       "name": "Number of Registered Factories",
       "unit": "count",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "MoSPI ASI",
+      "source_url": "https://www.mospi.gov.in/asi-summary-results",
+      "description": "Count of factories registered under the Factories Act. Indicates the scale of organized manufacturing in the state."
     },
     {
       "id": "ind-factory-gva",
       "name": "Factory Gross Value Added",
       "unit": "INR lakhs",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "MoSPI ASI",
+      "source_url": "https://www.mospi.gov.in/asi-summary-results",
+      "description": "Value added by registered factories (output minus input costs). Measures the industrial sector's contribution to the economy."
     },
     {
       "id": "ind-factory-workers",
       "name": "Factory Workers (Total)",
       "unit": "count",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "MoSPI ASI",
+      "source_url": "https://www.mospi.gov.in/asi-summary-results",
+      "description": "Total number of workers employed in registered factories. Reflects the state's industrial employment capacity."
     }
   ]
 }

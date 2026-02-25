@@ -187,19 +187,28 @@
       "id": "eld-dependency-ratio",
       "name": "Old-Age Dependency Ratio",
       "unit": "ratio",
-      "polarity": "negative"
+      "polarity": "negative",
+      "source": "Census",
+      "source_url": "https://censusindia.gov.in/",
+      "description": "Ratio of population aged 60+ to the working-age population (15-59). Higher values indicate greater economic burden on the workforce."
     },
     {
       "id": "eld-life-expectancy-60",
       "name": "Life Expectancy at Age 60",
       "unit": "years",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "SRS",
+      "source_url": "https://censusindia.gov.in/census.website/data/SRSP",
+      "description": "Average remaining years of life for a person who has reached age 60. Reflects elderly healthcare quality and living conditions."
     },
     {
       "id": "eld-pension-coverage",
       "name": "Pension Coverage (60+)",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "MoRD",
+      "source_url": "https://rural.nic.in/",
+      "description": "Share of elderly persons receiving pension benefits. Indicates the extent of social security coverage for senior citizens."
     }
   ]
 }

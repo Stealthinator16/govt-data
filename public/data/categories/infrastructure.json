@@ -299,25 +299,37 @@
       "id": "inf-household-electricity",
       "name": "Household Electrification Rate",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "Saubhagya",
+      "source_url": "https://saubhagya.gov.in/",
+      "description": "Percentage of households with an electricity connection. A basic measure of energy access and infrastructure reach."
     },
     {
       "id": "inf-household-tap-water",
       "name": "Households with Tap Water Connection",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "JJM Dashboard",
+      "source_url": "https://ejalshakti.gov.in/jjmreport/",
+      "description": "Share of rural households with a functional tap water connection under Jal Jeevan Mission. Measures access to safe drinking water."
     },
     {
       "id": "inf-road-density",
       "name": "Road Density",
       "unit": "km per 100 sq km",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "MoRTH",
+      "source_url": "https://morth.nic.in/",
+      "description": "Total road length per 100 square kilometres of area. Indicates the physical connectivity and transport infrastructure of a state."
     },
     {
       "id": "inf-rural-road-connectivity",
       "name": "Rural Road Connectivity (PMGSY)",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "PMGSY",
+      "source_url": "https://pmgsy.nic.in/",
+      "description": "Percentage of eligible rural habitations connected by all-weather roads under PMGSY. Critical for rural access to markets and services."
     }
   ]
 }

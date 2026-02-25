@@ -134,7 +134,7 @@ function main() {
   const metrics = db
     .prepare(
       `SELECT m.id, m.name, m.unit, m.source, m.polarity, m.category_id, m.weight,
-              c.name as category_name
+              m.description, m.source_url, c.name as category_name
        FROM metrics m JOIN categories c ON c.id = m.category_id
        ORDER BY c.sort_order, m.id`
     )
@@ -146,6 +146,8 @@ function main() {
     polarity: string;
     category_id: string;
     weight: number;
+    description: string | null;
+    source_url: string | null;
     category_name: string;
   }>;
 
@@ -173,6 +175,8 @@ function main() {
           category_id: metric.category_id,
           category_name: metric.category_name,
           weight: metric.weight,
+          description: metric.description,
+          source_url: metric.source_url,
         },
         rankings,
       });
@@ -190,7 +194,7 @@ function main() {
     const catData = JSON.parse(fs.readFileSync(catFilePath, "utf-8"));
     const catMetrics = metrics
       .filter((m) => m.category_id === cat.id)
-      .map((m) => ({ id: m.id, name: m.name, unit: m.unit, polarity: m.polarity }));
+      .map((m) => ({ id: m.id, name: m.name, unit: m.unit, polarity: m.polarity, source: m.source, source_url: m.source_url, description: m.description }));
 
     catData.metrics = catMetrics;
     writeJson(catFilePath, catData);

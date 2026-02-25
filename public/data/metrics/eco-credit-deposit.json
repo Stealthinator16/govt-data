@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "economy",
     "category_name": "Economy & Income",
-    "weight": 0.5
+    "weight": 0.5,
+    "description": "Ratio of bank loans disbursed to deposits held in a state. A higher ratio indicates greater local credit deployment and economic activity.",
+    "source_url": "https://rbi.org.in/scripts/AnnualPublications.aspx?head=Handbook+of+Statistics+on+Indian+States"
   },
   "rankings": [
     {

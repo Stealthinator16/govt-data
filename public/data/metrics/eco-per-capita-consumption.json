@@ -2,13 +2,15 @@
   "year": 2021,
   "metric": {
     "id": "eco-per-capita-consumption",
-    "name": "Per Capita Consumption Expenditure",
+    "name": "Rural Per Capita Consumption Expenditure",
     "unit": "INR/month",
     "source": "MoSPI HCES",
     "polarity": "positive",
     "category_id": "economy",
     "category_name": "Economy & Income",
-    "weight": 1
+    "weight": 1,
+    "description": "Average monthly household spending per person in rural areas. Based on rural MPCE from the Household Consumption Expenditure Survey 2022-23.",
+    "source_url": "https://www.mospi.gov.in/publication/factsheet-household-consumption-expenditure-survey-hces2022-23"
   },
   "rankings": [
     {

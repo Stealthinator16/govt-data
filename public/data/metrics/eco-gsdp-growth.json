@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "economy",
     "category_name": "Economy & Income",
-    "weight": 1.2
+    "weight": 1.2,
+    "description": "Year-over-year percentage change in Gross State Domestic Product at constant prices. Indicates the pace of economic expansion.",
+    "source_url": "https://www.mospi.gov.in/publication/national-accounts-statistics-2025"
   },
   "rankings": [
     {

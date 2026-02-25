@@ -8,7 +8,9 @@
     "polarity": "negative",
     "category_id": "demographics",
     "category_name": "Demographics & Social",
-    "weight": 0.8
+    "weight": 0.8,
+    "description": "Percentage increase in population over the last census decade. Faster growth can strain resources; slower growth signals demographic transition.",
+    "source_url": "https://censusindia.gov.in/"
   },
   "rankings": [
     {

@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "economy",
     "category_name": "Economy & Income",
-    "weight": 0.7
+    "weight": 0.7,
+    "description": "Share of government spending directed toward asset creation like roads and buildings. Higher ratios indicate greater investment in long-term infrastructure.",
+    "source_url": "https://prsindia.org/budgets/parliament/state-finances"
   },
   "rankings": [
     {

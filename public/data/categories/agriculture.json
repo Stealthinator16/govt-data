@@ -243,25 +243,37 @@
       "id": "agr-crop-insurance",
       "name": "Crop Insurance Coverage",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "PMFBY",
+      "source_url": "https://pmfby.gov.in/",
+      "description": "Percentage of cropped area covered under the PM Fasal Bima Yojana. Measures farmer access to risk mitigation against crop loss."
     },
     {
       "id": "agr-farmer-income",
       "name": "Average Monthly Farm Household Income",
       "unit": "INR",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "MoSPI SAS",
+      "source_url": "https://www.mospi.gov.in/agriculture-surveys",
+      "description": "Mean monthly income of agricultural households from all sources. A direct measure of farmer economic well-being."
     },
     {
       "id": "agr-food-grain-production",
       "name": "Food Grain Production Per Capita",
       "unit": "kg",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "MoA&FW",
+      "source_url": "https://agricoop.nic.in/",
+      "description": "Total food grain output divided by state population. Measures agricultural productivity and food self-sufficiency."
     },
     {
       "id": "agr-gross-irrigated-area",
       "name": "Gross Irrigated Area as % of Cropped Area",
       "unit": "%",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "MoA&FW",
+      "source_url": "https://agricoop.nic.in/",
+      "description": "Share of cultivated land with access to irrigation. Higher irrigation coverage reduces dependence on rainfall and improves crop yields."
     }
   ]
 }

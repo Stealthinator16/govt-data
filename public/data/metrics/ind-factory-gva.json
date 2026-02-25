@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "industry",
     "category_name": "Industry & Manufacturing",
-    "weight": 1
+    "weight": 1,
+    "description": "Value added by registered factories (output minus input costs). Measures the industrial sector's contribution to the economy.",
+    "source_url": "https://www.mospi.gov.in/asi-summary-results"
   },
   "rankings": [
     {

@@ -299,19 +299,28 @@
       "id": "fin-bank-branches",
       "name": "Bank Branches per 100000 Population",
       "unit": "per 100000",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "RBI",
+      "source_url": "https://rbi.org.in/scripts/AnnualPublications.aspx?head=Handbook+of+Statistics+on+Indian+States",
+      "description": "Number of scheduled commercial bank branches per 100,000 people. Indicates physical access to formal banking services."
     },
     {
       "id": "fin-digital-payments",
       "name": "Digital Payment Transactions Per Capita",
       "unit": "count",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "NPCI/RBI",
+      "source_url": "https://www.npci.org.in/",
+      "description": "Number of digital payment transactions (UPI, NEFT, etc.) per person. Indicates adoption of cashless financial services."
     },
     {
       "id": "fin-jan-dhan-accounts",
       "name": "Jan Dhan Accounts per 1000 Adults",
       "unit": "per 1000",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "PMJDY",
+      "source_url": "https://pmjdy.gov.in/",
+      "description": "Number of Pradhan Mantri Jan Dhan Yojana accounts per 1,000 adults. Measures the penetration of basic banking among unbanked populations."
     }
   ]
 }

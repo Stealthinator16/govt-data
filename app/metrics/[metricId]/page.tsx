@@ -8,6 +8,7 @@ import { ScoreDistribution } from "@/components/charts/score-distribution";
 import { formatNumber } from "@/lib/format";
 import { getTier, TIER_CONFIG } from "@/lib/constants";
 import type { Metadata } from "next";
+import { TierLegend } from "@/components/league-table/tier-legend";
 import type { Tier } from "@/lib/types";
 
 interface MetricData {
@@ -21,6 +22,8 @@ interface MetricData {
     category_id: string;
     category_name: string;
     weight: number;
+    description: string | null;
+    source_url: string | null;
   };
   rankings: Array<{
     state_id: string;
@@ -108,13 +111,44 @@ export default async function MetricPage({
 
           {/* Header */}
           <h1 className="text-3xl font-bold">{metric.name}</h1>
+          {metric.description && (
+            <p className="mt-2 text-muted-foreground">{metric.description}</p>
+          )}
           <div className="mt-2 flex flex-wrap items-center gap-3 text-sm text-muted-foreground">
             <span className="rounded bg-muted px-2 py-0.5">{metric.unit}</span>
-            <span>Source: {metric.source}</span>
             <span>
-              {metric.polarity === "positive" ? "Higher is better" : "Lower is better"}
+              Source:{" "}
+              {metric.source_url ? (
+                <a
+                  href={metric.source_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-foreground"
+                >
+                  {metric.source} ↗
+                </a>
+              ) : (
+                metric.source
+              )}
             </span>
-            <span>Weight: {metric.weight}x</span>
+            <span
+              title={
+                metric.polarity === "positive"
+                  ? "States with higher values score higher"
+                  : "States with lower values score higher"
+              }
+            >
+              {metric.polarity === "positive" ? "↑ Higher is better" : "↓ Lower is better"}
+            </span>
+            <span
+              title={
+                metric.weight === 1.0
+                  ? "Standard weight in its category score"
+                  : `This metric counts ${metric.weight > 1 ? `${((metric.weight - 1) * 100).toFixed(0)}% more` : `${((1 - metric.weight) * 100).toFixed(0)}% less`} than a standard metric in its category score`
+              }
+            >
+              Weight: {metric.weight}x
+            </span>
           </div>
 
           {/* Bar chart */}
@@ -136,6 +170,9 @@ export default async function MetricPage({
               />
             </div>
           </section>
+
+          {/* Tier Legend */}
+          <TierLegend className="mt-8" />
 
           {/* Data table */}
           <section className="mt-8">
@@ -199,6 +236,23 @@ export default async function MetricPage({
               </table>
             </div>
           </section>
+          {/* Source footer */}
+          <footer className="mt-8 text-xs text-muted-foreground border-t pt-4">
+            Data sourced from{" "}
+            {metric.source_url ? (
+              <a
+                href={metric.source_url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-foreground"
+              >
+                {metric.source}
+              </a>
+            ) : (
+              metric.source
+            )}
+            . Data year: {data.year}.
+          </footer>
         </div>
       </main>
       <Footer />

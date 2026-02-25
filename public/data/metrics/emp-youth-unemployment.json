@@ -8,7 +8,9 @@
     "polarity": "negative",
     "category_id": "employment",
     "category_name": "Employment & Labour",
-    "weight": 1.2
+    "weight": 1.2,
+    "description": "Unemployment rate among persons aged 15-29. High youth unemployment signals a mismatch between education output and job availability.",
+    "source_url": "https://www.mospi.gov.in/publication/annual-report-periodic-labour-force-survey-plfs-july-2022-june-2023"
   },
   "rankings": [
     {

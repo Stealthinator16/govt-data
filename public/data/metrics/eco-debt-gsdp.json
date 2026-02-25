@@ -8,7 +8,9 @@
     "polarity": "negative",
     "category_id": "economy",
     "category_name": "Economy & Income",
-    "weight": 0.8
+    "weight": 0.8,
+    "description": "Outstanding state government liabilities as a percentage of GSDP. Higher ratios signal greater debt burden and fiscal risk.",
+    "source_url": "https://prsindia.org/budgets/parliament/state-finances"
   },
   "rankings": [
     {

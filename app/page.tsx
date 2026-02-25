@@ -141,10 +141,21 @@ export default function Home() {
                       Rising: "bg-amber-500",
                       Developing: "bg-red-400",
                     };
+                    const descriptions = {
+                      Champion: "75–100: Top performers",
+                      Contender: "60–74: Above average",
+                      Rising: "45–59: Making progress",
+                      Developing: "0–44: Needs attention",
+                    };
                     return (
                       <div key={tier} className="flex items-center gap-2 mb-2">
                         <div className={`h-3 w-3 rounded-full ${colors[tier]}`} />
-                        <span className="text-sm flex-1">{tier}</span>
+                        <div className="flex-1">
+                          <span className="text-sm">{tier}</span>
+                          <span className="text-xs text-muted-foreground ml-1">
+                            ({descriptions[tier]})
+                          </span>
+                        </div>
                         <span className="text-sm font-mono tabular-nums text-muted-foreground">
                           {count}
                         </span>

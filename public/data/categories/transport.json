@@ -299,19 +299,28 @@
       "id": "trn-nh-length",
       "name": "National Highway Length per 1000 sq km",
       "unit": "km per 1000 sq km",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "MoRTH/NHAI",
+      "source_url": "https://morth.nic.in/",
+      "description": "Length of national highways per 1,000 sq km of area. Reflects the reach of the high-speed road network across a state."
     },
     {
       "id": "trn-road-accidents",
       "name": "Road Accident Fatalities per 100000 Population",
       "unit": "per 100000",
-      "polarity": "negative"
+      "polarity": "negative",
+      "source": "MoRTH",
+      "source_url": "https://morth.nic.in/",
+      "description": "Deaths from road accidents per 100,000 people. Measures road safety conditions, enforcement, and trauma care capacity."
     },
     {
       "id": "trn-vehicle-density",
       "name": "Registered Motor Vehicles per 1000 Population",
       "unit": "per 1000",
-      "polarity": "positive"
+      "polarity": "positive",
+      "source": "MoRTH",
+      "source_url": "https://morth.nic.in/",
+      "description": "Number of registered motor vehicles per 1,000 people. Indicates personal mobility levels and economic activity."
     }
   ]
 }

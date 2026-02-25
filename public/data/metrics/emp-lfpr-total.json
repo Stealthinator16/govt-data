@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "employment",
     "category_name": "Employment & Labour",
-    "weight": 1.2
+    "weight": 1.2,
+    "description": "Percentage of the working-age population either employed or actively seeking work. A fundamental measure of labour market engagement.",
+    "source_url": "https://www.mospi.gov.in/publication/annual-report-periodic-labour-force-survey-plfs-july-2022-june-2023"
   },
   "rankings": [
     {

@@ -8,7 +8,9 @@
     "polarity": "negative",
     "category_id": "demographics",
     "category_name": "Demographics & Social",
-    "weight": 0.5
+    "weight": 0.5,
+    "description": "Number of persons per square kilometre. Very high density strains infrastructure while very low density limits service delivery.",
+    "source_url": "https://censusindia.gov.in/"
   },
   "rankings": [
     {

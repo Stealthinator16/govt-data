@@ -8,7 +8,9 @@
     "polarity": "positive",
     "category_id": "women-gender",
     "category_name": "Women & Gender",
-    "weight": 1.2
+    "weight": 1.2,
+    "description": "Number of females born per 1,000 males. Deviations from the natural ratio indicate sex-selective practices.",
+    "source_url": "https://censusindia.gov.in/census.website/data/SRSP"
   },
   "rankings": [
     {

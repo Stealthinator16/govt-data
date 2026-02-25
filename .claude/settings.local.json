@@ -1,6 +1,13 @@
 {
+  "permissions": {
+    "allow": [
+      "mcp__claude_ai_Vercel__list_teams",
+      "mcp__claude_ai_Vercel__list_projects",
+      "mcp__claude_ai_Vercel__check_domain_availability_and_price"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
   "enabledMcpjsonServers": [
     "mospi"
-  ],
-  "enableAllProjectMcpServers": true
+  ]
 }
