@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { SearchDialog } from "@/components/search/search-dialog";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -47,6 +48,7 @@ export default function RootLayout({
       >
         {children}
         <SearchDialog />
+        <Analytics />
       </body>
     </html>
   );
