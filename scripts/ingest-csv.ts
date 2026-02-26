@@ -166,6 +166,107 @@ const CSV_SOURCES: CsvSource[] = [
     metrics: ["wgn-women-elected"],
     sourceRef: "ECI / PRS India",
   },
+  // --- Data For India (CC-BY 4.0) ---
+  {
+    file: "dfi-fertility.csv",
+    metrics: ["dem-tfr"],
+    sourceRef: "SRS / Data For India",
+  },
+  {
+    file: "dfi-anaemia-in-india.csv",
+    metrics: ["hlt-anaemia-women", "cyd-anaemia-children"],
+    sourceRef: "NFHS-5 / Data For India",
+  },
+  {
+    file: "dfi-sanitation.csv",
+    metrics: ["urb-sanitation-coverage"],
+    sourceRef: "NFHS-5 / Data For India",
+  },
+  {
+    file: "dfi-access-to-drinking-water.csv",
+    metrics: ["inf-piped-water"],
+    sourceRef: "NSS 79th Round / Data For India",
+  },
+  {
+    file: "dfi-housing.csv",
+    metrics: ["inf-durable-housing"],
+    sourceRef: "NFHS-5 / Data For India",
+  },
+  {
+    file: "dfi-access-to-banking.csv",
+    metrics: ["fin-bank-account-women"],
+    sourceRef: "PLFS / Data For India",
+  },
+  {
+    file: "dfi-computers.csv",
+    metrics: ["dig-computer-literacy"],
+    sourceRef: "NSS CAMS / Data For India",
+  },
+  {
+    file: "dfi-ict-skills.csv",
+    metrics: ["dig-ict-skills", "dig-internet-banking"],
+    sourceRef: "NSS CAMS / Data For India",
+  },
+  {
+    file: "dfi-households-assets.csv",
+    metrics: ["inf-tv-ownership", "inf-refrigerator-ownership", "inf-washing-machine"],
+    sourceRef: "HCES 2023-24 / Data For India",
+  },
+  {
+    file: "dfi-vehicle-ownership.csv",
+    metrics: ["trn-two-wheeler-ownership", "trn-car-ownership"],
+    sourceRef: "HCES 2022-23 / Data For India",
+  },
+  {
+    file: "dfi-road-accident-deaths.csv",
+    metrics: ["trn-road-deaths-per-lakh"],
+    sourceRef: "MoRTH / Data For India",
+  },
+  {
+    file: "dfi-age-distribution-states.csv",
+    metrics: ["eld-dependency-ratio"],
+    sourceRef: "Census Projections / Data For India",
+  },
+  {
+    file: "dfi-self-employment.csv",
+    metrics: ["emp-self-employed"],
+    sourceRef: "PLFS 2023-24 / Data For India",
+  },
+  {
+    file: "dfi-graduate-employment.csv",
+    metrics: ["edu-graduate-workforce"],
+    sourceRef: "PLFS 2023-24 / Data For India",
+  },
+  {
+    file: "dfi-women-in-manufacturing.csv",
+    metrics: ["wgn-women-manufacturing"],
+    sourceRef: "PLFS 2023-24 / Data For India",
+  },
+  {
+    file: "dfi-inflation.csv",
+    metrics: ["prices-avg-inflation"],
+    sourceRef: "MoSPI CPI / Data For India",
+  },
+  {
+    file: "dfi-population-mortality.csv",
+    metrics: ["hlt-crude-death-rate"],
+    sourceRef: "SRS 2023 / Data For India",
+  },
+  {
+    file: "dfi-malaria-in-india.csv",
+    metrics: ["hlt-malaria-incidence"],
+    sourceRef: "GBD / IHME / Data For India",
+  },
+  {
+    file: "dfi-meat-consumption.csv",
+    metrics: ["hlt-nonveg-consumption"],
+    sourceRef: "NFHS-5 / Data For India",
+  },
+  {
+    file: "dfi-unorganised-manufacturing.csv",
+    metrics: ["ind-unorganised-enterprises"],
+    sourceRef: "ASUSE 2023-24 / Data For India",
+  },
 ];
 
 function main() {

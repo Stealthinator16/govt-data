@@ -1,0 +1,193 @@
+{
+  "year": 2021,
+  "metric": {
+    "id": "dem-tfr",
+    "name": "Total Fertility Rate",
+    "unit": "children/woman",
+    "source": "SRS",
+    "polarity": "negative",
+    "category_id": "demographics",
+    "category_name": "Demographics & Social",
+    "weight": 1,
+    "description": "Average number of children a woman would have over her lifetime at current age-specific fertility rates. Below 2.1 indicates sub-replacement fertility.",
+    "source_url": "https://dataforindia.com/fertility"
+  },
+  "rankings": [
+    {
+      "state_id": "delhi",
+      "state_name": "Delhi",
+      "state_type": "ut",
+      "raw_value": 1.4,
+      "norm_score": 100,
+      "rank": 1
+    },
+    {
+      "state_id": "tamil-nadu",
+      "state_name": "Tamil Nadu",
+      "state_type": "state",
+      "raw_value": 1.4,
+      "norm_score": 100,
+      "rank": 2
+    },
+    {
+      "state_id": "west-bengal",
+      "state_name": "West Bengal",
+      "state_type": "state",
+      "raw_value": 1.4,
+      "norm_score": 100,
+      "rank": 3
+    },
+    {
+      "state_id": "andhra-pradesh",
+      "state_name": "Andhra Pradesh",
+      "state_type": "state",
+      "raw_value": 1.5,
+      "norm_score": 93.22,
+      "rank": 4
+    },
+    {
+      "state_id": "himachal-pradesh",
+      "state_name": "Himachal Pradesh",
+      "state_type": "state",
+      "raw_value": 1.5,
+      "norm_score": 93.22,
+      "rank": 5
+    },
+    {
+      "state_id": "jammu-kashmir",
+      "state_name": "Jammu & Kashmir",
+      "state_type": "ut",
+      "raw_value": 1.5,
+      "norm_score": 93.22,
+      "rank": 6
+    },
+    {
+      "state_id": "kerala",
+      "state_name": "Kerala",
+      "state_type": "state",
+      "raw_value": 1.5,
+      "norm_score": 93.22,
+      "rank": 7
+    },
+    {
+      "state_id": "maharashtra",
+      "state_name": "Maharashtra",
+      "state_type": "state",
+      "raw_value": 1.5,
+      "norm_score": 93.22,
+      "rank": 8
+    },
+    {
+      "state_id": "punjab",
+      "state_name": "Punjab",
+      "state_type": "state",
+      "raw_value": 1.5,
+      "norm_score": 93.22,
+      "rank": 9
+    },
+    {
+      "state_id": "telangana",
+      "state_name": "Telangana",
+      "state_type": "state",
+      "raw_value": 1.5,
+      "norm_score": 93.22,
+      "rank": 10
+    },
+    {
+      "state_id": "karnataka",
+      "state_name": "Karnataka",
+      "state_type": "state",
+      "raw_value": 1.6,
+      "norm_score": 86.43,
+      "rank": 11
+    },
+    {
+      "state_id": "odisha",
+      "state_name": "Odisha",
+      "state_type": "state",
+      "raw_value": 1.8,
+      "norm_score": 72.86,
+      "rank": 12
+    },
+    {
+      "state_id": "uttarakhand",
+      "state_name": "Uttarakhand",
+      "state_type": "state",
+      "raw_value": 1.8,
+      "norm_score": 72.86,
+      "rank": 13
+    },
+    {
+      "state_id": "gujarat",
+      "state_name": "Gujarat",
+      "state_type": "state",
+      "raw_value": 2,
+      "norm_score": 59.29,
+      "rank": 14
+    },
+    {
+      "state_id": "haryana",
+      "state_name": "Haryana",
+      "state_type": "state",
+      "raw_value": 2,
+      "norm_score": 59.29,
+      "rank": 15
+    },
+    {
+      "state_id": "assam",
+      "state_name": "Assam",
+      "state_type": "state",
+      "raw_value": 2.1,
+      "norm_score": 52.51,
+      "rank": 16
+    },
+    {
+      "state_id": "chhattisgarh",
+      "state_name": "Chhattisgarh",
+      "state_type": "state",
+      "raw_value": 2.2,
+      "norm_score": 45.73,
+      "rank": 17
+    },
+    {
+      "state_id": "jharkhand",
+      "state_name": "Jharkhand",
+      "state_type": "state",
+      "raw_value": 2.4,
+      "norm_score": 32.16,
+      "rank": 18
+    },
+    {
+      "state_id": "rajasthan",
+      "state_name": "Rajasthan",
+      "state_type": "state",
+      "raw_value": 2.4,
+      "norm_score": 32.16,
+      "rank": 19
+    },
+    {
+      "state_id": "madhya-pradesh",
+      "state_name": "Madhya Pradesh",
+      "state_type": "state",
+      "raw_value": 2.6,
+      "norm_score": 18.59,
+      "rank": 20
+    },
+    {
+      "state_id": "uttar-pradesh",
+      "state_name": "Uttar Pradesh",
+      "state_type": "state",
+      "raw_value": 2.7,
+      "norm_score": 11.8,
+      "rank": 21
+    },
+    {
+      "state_id": "bihar",
+      "state_name": "Bihar",
+      "state_type": "state",
+      "raw_value": 3,
+      "norm_score": 0,
+      "rank": 22
+    }
+  ]
+}

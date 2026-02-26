@@ -1,0 +1,305 @@
+{
+  "year": 2021,
+  "metric": {
+    "id": "hlt-anaemia-women",
+    "name": "Anaemia Prevalence (Women 15-49)",
+    "unit": "%",
+    "source": "NFHS-5",
+    "polarity": "negative",
+    "category_id": "health",
+    "category_name": "Health & Healthcare",
+    "weight": 0.8,
+    "description": "Percentage of women aged 15-49 with haemoglobin below 12 g/dl. A key indicator of nutritional deficiency affecting maternal and child health.",
+    "source_url": "https://dataforindia.com/anaemia-in-india"
+  },
+  "rankings": [
+    {
+      "state_id": "lakshadweep",
+      "state_name": "Lakshadweep",
+      "state_type": "ut",
+      "raw_value": 25.8,
+      "norm_score": 100,
+      "rank": 1
+    },
+    {
+      "state_id": "nagaland",
+      "state_name": "Nagaland",
+      "state_type": "state",
+      "raw_value": 28.88,
+      "norm_score": 98.15,
+      "rank": 2
+    },
+    {
+      "state_id": "manipur",
+      "state_name": "Manipur",
+      "state_type": "state",
+      "raw_value": 29.44,
+      "norm_score": 97.02,
+      "rank": 3
+    },
+    {
+      "state_id": "mizoram",
+      "state_name": "Mizoram",
+      "state_type": "state",
+      "raw_value": 34.77,
+      "norm_score": 86.33,
+      "rank": 4
+    },
+    {
+      "state_id": "kerala",
+      "state_name": "Kerala",
+      "state_type": "state",
+      "raw_value": 36.33,
+      "norm_score": 83.2,
+      "rank": 5
+    },
+    {
+      "state_id": "goa",
+      "state_name": "Goa",
+      "state_type": "state",
+      "raw_value": 38.95,
+      "norm_score": 77.95,
+      "rank": 6
+    },
+    {
+      "state_id": "arunachal-pradesh",
+      "state_name": "Arunachal Pradesh",
+      "state_type": "state",
+      "raw_value": 40.27,
+      "norm_score": 75.3,
+      "rank": 7
+    },
+    {
+      "state_id": "sikkim",
+      "state_name": "Sikkim",
+      "state_type": "state",
+      "raw_value": 41.87,
+      "norm_score": 72.09,
+      "rank": 8
+    },
+    {
+      "state_id": "uttarakhand",
+      "state_name": "Uttarakhand",
+      "state_type": "state",
+      "raw_value": 42.55,
+      "norm_score": 70.72,
+      "rank": 9
+    },
+    {
+      "state_id": "karnataka",
+      "state_name": "Karnataka",
+      "state_type": "state",
+      "raw_value": 47.76,
+      "norm_score": 60.27,
+      "rank": 10
+    },
+    {
+      "state_id": "delhi",
+      "state_name": "Delhi",
+      "state_type": "ut",
+      "raw_value": 49.91,
+      "norm_score": 55.96,
+      "rank": 11
+    },
+    {
+      "state_id": "uttar-pradesh",
+      "state_name": "Uttar Pradesh",
+      "state_type": "state",
+      "raw_value": 50.42,
+      "norm_score": 54.94,
+      "rank": 12
+    },
+    {
+      "state_id": "himachal-pradesh",
+      "state_name": "Himachal Pradesh",
+      "state_type": "state",
+      "raw_value": 53.01,
+      "norm_score": 49.74,
+      "rank": 13
+    },
+    {
+      "state_id": "tamil-nadu",
+      "state_name": "Tamil Nadu",
+      "state_type": "state",
+      "raw_value": 53.41,
+      "norm_score": 48.94,
+      "rank": 14
+    },
+    {
+      "state_id": "meghalaya",
+      "state_name": "Meghalaya",
+      "state_type": "state",
+      "raw_value": 53.79,
+      "norm_score": 48.18,
+      "rank": 15
+    },
+    {
+      "state_id": "maharashtra",
+      "state_name": "Maharashtra",
+      "state_type": "state",
+      "raw_value": 54.24,
+      "norm_score": 47.27,
+      "rank": 16
+    },
+    {
+      "state_id": "rajasthan",
+      "state_name": "Rajasthan",
+      "state_type": "state",
+      "raw_value": 54.35,
+      "norm_score": 47.05,
+      "rank": 17
+    },
+    {
+      "state_id": "madhya-pradesh",
+      "state_name": "Madhya Pradesh",
+      "state_type": "state",
+      "raw_value": 54.66,
+      "norm_score": 46.43,
+      "rank": 18
+    },
+    {
+      "state_id": "puducherry",
+      "state_name": "Puducherry",
+      "state_type": "ut",
+      "raw_value": 55.14,
+      "norm_score": 45.47,
+      "rank": 19
+    },
+    {
+      "state_id": "andaman-nicobar",
+      "state_name": "Andaman & Nicobar Islands",
+      "state_type": "ut",
+      "raw_value": 57.48,
+      "norm_score": 40.78,
+      "rank": 20
+    },
+    {
+      "state_id": "telangana",
+      "state_name": "Telangana",
+      "state_type": "state",
+      "raw_value": 57.62,
+      "norm_score": 40.49,
+      "rank": 21
+    },
+    {
+      "state_id": "punjab",
+      "state_name": "Punjab",
+      "state_type": "state",
+      "raw_value": 58.65,
+      "norm_score": 38.43,
+      "rank": 22
+    },
+    {
+      "state_id": "andhra-pradesh",
+      "state_name": "Andhra Pradesh",
+      "state_type": "state",
+      "raw_value": 58.83,
+      "norm_score": 38.07,
+      "rank": 23
+    },
+    {
+      "state_id": "chandigarh",
+      "state_name": "Chandigarh",
+      "state_type": "ut",
+      "raw_value": 60.3,
+      "norm_score": 35.12,
+      "rank": 24
+    },
+    {
+      "state_id": "haryana",
+      "state_name": "Haryana",
+      "state_type": "state",
+      "raw_value": 60.41,
+      "norm_score": 34.9,
+      "rank": 25
+    },
+    {
+      "state_id": "chhattisgarh",
+      "state_name": "Chhattisgarh",
+      "state_type": "state",
+      "raw_value": 60.82,
+      "norm_score": 34.08,
+      "rank": 26
+    },
+    {
+      "state_id": "dadra-nagar-haveli-daman-diu",
+      "state_name": "Dadra & Nagar Haveli and Daman & Diu",
+      "state_type": "ut",
+      "raw_value": 62.51,
+      "norm_score": 30.69,
+      "rank": 27
+    },
+    {
+      "state_id": "bihar",
+      "state_name": "Bihar",
+      "state_type": "state",
+      "raw_value": 63.52,
+      "norm_score": 28.66,
+      "rank": 28
+    },
+    {
+      "state_id": "odisha",
+      "state_name": "Odisha",
+      "state_type": "state",
+      "raw_value": 64.28,
+      "norm_score": 27.13,
+      "rank": 29
+    },
+    {
+      "state_id": "gujarat",
+      "state_name": "Gujarat",
+      "state_type": "state",
+      "raw_value": 64.98,
+      "norm_score": 25.73,
+      "rank": 30
+    },
+    {
+      "state_id": "jharkhand",
+      "state_name": "Jharkhand",
+      "state_type": "state",
+      "raw_value": 65.3,
+      "norm_score": 25.09,
+      "rank": 31
+    },
+    {
+      "state_id": "assam",
+      "state_name": "Assam",
+      "state_type": "state",
+      "raw_value": 65.86,
+      "norm_score": 23.97,
+      "rank": 32
+    },
+    {
+      "state_id": "jammu-kashmir",
+      "state_name": "Jammu & Kashmir",
+      "state_type": "ut",
+      "raw_value": 65.89,
+      "norm_score": 23.91,
+      "rank": 33
+    },
+    {
+      "state_id": "tripura",
+      "state_name": "Tripura",
+      "state_type": "state",
+      "raw_value": 67.15,
+      "norm_score": 21.38,
+      "rank": 34
+    },
+    {
+      "state_id": "west-bengal",
+      "state_name": "West Bengal",
+      "state_type": "state",
+      "raw_value": 71.39,
+      "norm_score": 12.87,
+      "rank": 35
+    },
+    {
+      "state_id": "ladakh",
+      "state_name": "Ladakh",
+      "state_type": "ut",
+      "raw_value": 92.78,
+      "norm_score": 0,
+      "rank": 36
+    }
+  ]
+}

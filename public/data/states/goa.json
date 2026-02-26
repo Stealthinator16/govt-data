@@ -9,8 +9,8 @@
     "area_sq_km": 3702
   },
   "overall": {
-    "score": 48.81,
-    "rank": 9,
+    "score": 54.49,
+    "rank": 5,
     "tier": "Rising"
   },
   "categories": [
@@ -23,44 +23,44 @@
     },
     {
       "category_id": "employment",
-      "score": 22.94,
-      "rank": 35,
-      "metrics_count": 6,
+      "score": 24.69,
+      "rank": 32,
+      "metrics_count": 7,
       "category_name": "Employment & Labour"
     },
     {
       "category_id": "education",
-      "score": 62.52,
-      "rank": 10,
-      "metrics_count": 5,
+      "score": 62.58,
+      "rank": 8,
+      "metrics_count": 6,
       "category_name": "Education"
     },
     {
       "category_id": "health",
-      "score": 91.21,
-      "rank": 5,
-      "metrics_count": 3,
+      "score": 88.11,
+      "rank": 4,
+      "metrics_count": 6,
       "category_name": "Health & Healthcare"
     },
     {
       "category_id": "women-gender",
-      "score": 35.87,
-      "rank": 31,
-      "metrics_count": 4,
+      "score": 32.84,
+      "rank": 32,
+      "metrics_count": 5,
       "category_name": "Women & Gender"
     },
     {
       "category_id": "children-youth",
-      "score": 83.6,
-      "rank": 4,
-      "metrics_count": 3,
+      "score": 81.16,
+      "rank": 3,
+      "metrics_count": 4,
       "category_name": "Children & Youth"
     },
     {
       "category_id": "prices",
-      "score": 75.41,
-      "rank": 11,
-      "metrics_count": 1,
+      "score": 83.28,
+      "rank": 7,
+      "metrics_count": 2,
       "category_name": "Prices & Cost of Living"
     },
     {
@@ -72,16 +72,16 @@
     },
     {
       "category_id": "industry",
-      "score": 3.65,
-      "rank": 23,
-      "metrics_count": 3,
+      "score": 3.2,
+      "rank": 24,
+      "metrics_count": 4,
       "category_name": "Industry & Manufacturing"
     },
     {
       "category_id": "infrastructure",
-      "score": 100,
+      "score": 98.23,
       "rank": 1,
-      "metrics_count": 2,
+      "metrics_count": 7,
       "category_name": "Infrastructure"
     },
     {
@@ -100,9 +100,9 @@
     },
     {
       "category_id": "financial-inclusion",
-      "score": 3.86,
-      "rank": 35,
-      "metrics_count": 1,
+      "score": 39.4,
+      "rank": 27,
+      "metrics_count": 2,
       "category_name": "Financial Inclusion"
     },
     {
@@ -115,23 +115,30 @@
     {
       "category_id": "demographics",
       "score": 76.27,
-      "rank": 2,
+      "rank": 4,
       "metrics_count": 3,
       "category_name": "Demographics & Social"
     },
     {
       "category_id": "digital-tech",
-      "score": 46.02,
-      "rank": 4,
-      "metrics_count": 1,
+      "score": 75.25,
+      "rank": 3,
+      "metrics_count": 4,
       "category_name": "Digital & Technology"
     },
     {
       "category_id": "transport",
-      "score": 50.17,
-      "rank": 13,
-      "metrics_count": 3,
+      "score": 51.43,
+      "rank": 14,
+      "metrics_count": 6,
       "category_name": "Transport & Mobility"
+    },
+    {
+      "category_id": "urban-quality",
+      "score": 86.29,
+      "rank": 11,
+      "metrics_count": 1,
+      "category_name": "Urban Quality of Life"
     }
   ]
 }

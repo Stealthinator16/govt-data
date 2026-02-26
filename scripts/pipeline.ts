@@ -16,6 +16,13 @@ const ingestStep = USE_SAMPLE_DATA
   ? { name: "Seed Sample Data", script: "scripts/seed-sample-data.ts" }
   : { name: "Ingest MoSPI Data", script: "scripts/ingest-mospi.ts" };
 
+const dfiSteps = USE_SAMPLE_DATA
+  ? []
+  : [
+      { name: "Fetch DFI Charts", script: "scripts/scrape-dfi.ts" },
+      { name: "Transform DFI Data", script: "scripts/transform-dfi.ts" },
+    ];
+
 const csvStep = USE_SAMPLE_DATA
   ? null
   : { name: "Ingest CSV Data", script: "scripts/ingest-csv.ts" };
@@ -23,6 +30,7 @@ const csvStep = USE_SAMPLE_DATA
 const steps = [
   { name: "Seed Reference Data", script: "scripts/seed-reference.ts" },
   ingestStep,
+  ...dfiSteps,
   ...(csvStep ? [csvStep] : []),
   { name: "Compute Scores", script: "scripts/compute-scores.ts" },
   { name: "Validate Data", script: "scripts/validate-data.ts" },

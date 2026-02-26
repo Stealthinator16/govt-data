@@ -7,289 +7,289 @@
   "rankings": [
     {
       "state_id": "sikkim",
-      "score": 92.31,
+      "score": 85.96,
       "rank": 1,
-      "metrics_count": 6,
+      "metrics_count": 7,
       "state_name": "Sikkim",
       "state_type": "state"
     },
     {
       "state_id": "dadra-nagar-haveli-daman-diu",
-      "score": 80.8,
+      "score": 78.28,
       "rank": 2,
-      "metrics_count": 6,
+      "metrics_count": 7,
       "state_name": "Dadra & Nagar Haveli and Daman & Diu",
       "state_type": "ut"
     },
     {
       "state_id": "himachal-pradesh",
-      "score": 79.08,
+      "score": 77.27,
       "rank": 3,
-      "metrics_count": 6,
+      "metrics_count": 7,
       "state_name": "Himachal Pradesh",
       "state_type": "state"
     },
     {
-      "state_id": "meghalaya",
-      "score": 75.54,
-      "rank": 4,
-      "metrics_count": 6,
-      "state_name": "Meghalaya",
-      "state_type": "state"
-    },
-    {
       "state_id": "chhattisgarh",
-      "score": 71.18,
-      "rank": 5,
-      "metrics_count": 6,
+      "score": 75.08,
+      "rank": 4,
+      "metrics_count": 7,
       "state_name": "Chhattisgarh",
       "state_type": "state"
     },
     {
-      "state_id": "gujarat",
-      "score": 67.66,
-      "rank": 6,
-      "metrics_count": 6,
-      "state_name": "Gujarat",
+      "state_id": "meghalaya",
+      "score": 71.92,
+      "rank": 5,
+      "metrics_count": 7,
+      "state_name": "Meghalaya",
       "state_type": "state"
     },
     {
-      "state_id": "ladakh",
-      "score": 66.28,
-      "rank": 7,
-      "metrics_count": 6,
-      "state_name": "Ladakh",
-      "state_type": "ut"
-    },
-    {
       "state_id": "jharkhand",
-      "score": 63.72,
-      "rank": 8,
-      "metrics_count": 6,
+      "score": 69.15,
+      "rank": 6,
+      "metrics_count": 7,
       "state_name": "Jharkhand",
       "state_type": "state"
     },
     {
+      "state_id": "gujarat",
+      "score": 65.54,
+      "rank": 7,
+      "metrics_count": 7,
+      "state_name": "Gujarat",
+      "state_type": "state"
+    },
+    {
       "state_id": "maharashtra",
-      "score": 62.76,
-      "rank": 9,
-      "metrics_count": 6,
+      "score": 62.42,
+      "rank": 8,
+      "metrics_count": 7,
       "state_name": "Maharashtra",
       "state_type": "state"
     },
     {
-      "state_id": "telangana",
-      "score": 60.92,
-      "rank": 10,
-      "metrics_count": 6,
-      "state_name": "Telangana",
-      "state_type": "state"
-    },
-    {
-      "state_id": "madhya-pradesh",
-      "score": 59.79,
-      "rank": 11,
-      "metrics_count": 6,
-      "state_name": "Madhya Pradesh",
-      "state_type": "state"
+      "state_id": "ladakh",
+      "score": 59.37,
+      "rank": 9,
+      "metrics_count": 7,
+      "state_name": "Ladakh",
+      "state_type": "ut"
     },
     {
       "state_id": "tamil-nadu",
-      "score": 56.78,
-      "rank": 12,
-      "metrics_count": 6,
+      "score": 58.94,
+      "rank": 10,
+      "metrics_count": 7,
       "state_name": "Tamil Nadu",
       "state_type": "state"
     },
     {
-      "state_id": "andhra-pradesh",
-      "score": 56.48,
-      "rank": 13,
-      "metrics_count": 6,
-      "state_name": "Andhra Pradesh",
-      "state_type": "state"
-    },
-    {
-      "state_id": "karnataka",
-      "score": 55.96,
-      "rank": 14,
-      "metrics_count": 6,
-      "state_name": "Karnataka",
-      "state_type": "state"
-    },
-    {
-      "state_id": "jammu-kashmir",
-      "score": 55.3,
-      "rank": 15,
-      "metrics_count": 6,
-      "state_name": "Jammu & Kashmir",
-      "state_type": "ut"
-    },
-    {
-      "state_id": "rajasthan",
-      "score": 53.88,
-      "rank": 16,
-      "metrics_count": 6,
-      "state_name": "Rajasthan",
-      "state_type": "state"
-    },
-    {
       "state_id": "andaman-nicobar",
-      "score": 53.22,
-      "rank": 17,
-      "metrics_count": 6,
+      "score": 57.44,
+      "rank": 11,
+      "metrics_count": 7,
       "state_name": "Andaman & Nicobar Islands",
       "state_type": "ut"
     },
     {
-      "state_id": "nagaland",
-      "score": 53.21,
-      "rank": 18,
-      "metrics_count": 6,
-      "state_name": "Nagaland",
-      "state_type": "state"
-    },
-    {
       "state_id": "puducherry",
-      "score": 52.75,
-      "rank": 19,
-      "metrics_count": 6,
+      "score": 57.39,
+      "rank": 12,
+      "metrics_count": 7,
       "state_name": "Puducherry",
       "state_type": "ut"
     },
     {
+      "state_id": "rajasthan",
+      "score": 54.45,
+      "rank": 13,
+      "metrics_count": 7,
+      "state_name": "Rajasthan",
+      "state_type": "state"
+    },
+    {
+      "state_id": "telangana",
+      "score": 54.35,
+      "rank": 14,
+      "metrics_count": 7,
+      "state_name": "Telangana",
+      "state_type": "state"
+    },
+    {
+      "state_id": "karnataka",
+      "score": 51.84,
+      "rank": 15,
+      "metrics_count": 7,
+      "state_name": "Karnataka",
+      "state_type": "state"
+    },
+    {
+      "state_id": "nagaland",
+      "score": 50.71,
+      "rank": 16,
+      "metrics_count": 7,
+      "state_name": "Nagaland",
+      "state_type": "state"
+    },
+    {
+      "state_id": "andhra-pradesh",
+      "score": 50.18,
+      "rank": 17,
+      "metrics_count": 7,
+      "state_name": "Andhra Pradesh",
+      "state_type": "state"
+    },
+    {
       "state_id": "tripura",
-      "score": 52.05,
-      "rank": 20,
-      "metrics_count": 6,
+      "score": 48.2,
+      "rank": 18,
+      "metrics_count": 7,
       "state_name": "Tripura",
       "state_type": "state"
     },
     {
-      "state_id": "assam",
-      "score": 49.93,
-      "rank": 21,
-      "metrics_count": 6,
-      "state_name": "Assam",
-      "state_type": "state"
-    },
-    {
-      "state_id": "west-bengal",
-      "score": 48,
-      "rank": 22,
-      "metrics_count": 6,
-      "state_name": "West Bengal",
+      "state_id": "madhya-pradesh",
+      "score": 47.43,
+      "rank": 19,
+      "metrics_count": 7,
+      "state_name": "Madhya Pradesh",
       "state_type": "state"
     },
     {
       "state_id": "uttar-pradesh",
-      "score": 47.56,
-      "rank": 23,
-      "metrics_count": 6,
+      "score": 47.42,
+      "rank": 20,
+      "metrics_count": 7,
       "state_name": "Uttar Pradesh",
       "state_type": "state"
     },
     {
-      "state_id": "mizoram",
-      "score": 46.66,
-      "rank": 24,
-      "metrics_count": 6,
-      "state_name": "Mizoram",
-      "state_type": "state"
-    },
-    {
       "state_id": "delhi",
-      "score": 44.52,
-      "rank": 25,
-      "metrics_count": 6,
+      "score": 45.1,
+      "rank": 21,
+      "metrics_count": 7,
       "state_name": "Delhi",
       "state_type": "ut"
     },
     {
+      "state_id": "assam",
+      "score": 44.68,
+      "rank": 22,
+      "metrics_count": 7,
+      "state_name": "Assam",
+      "state_type": "state"
+    },
+    {
+      "state_id": "jammu-kashmir",
+      "score": 44.52,
+      "rank": 23,
+      "metrics_count": 7,
+      "state_name": "Jammu & Kashmir",
+      "state_type": "ut"
+    },
+    {
       "state_id": "chandigarh",
-      "score": 40.49,
-      "rank": 26,
-      "metrics_count": 6,
+      "score": 43.33,
+      "rank": 24,
+      "metrics_count": 7,
       "state_name": "Chandigarh",
       "state_type": "ut"
     },
     {
-      "state_id": "uttarakhand",
-      "score": 38.29,
-      "rank": 27,
-      "metrics_count": 6,
-      "state_name": "Uttarakhand",
+      "state_id": "west-bengal",
+      "score": 42.6,
+      "rank": 25,
+      "metrics_count": 7,
+      "state_name": "West Bengal",
       "state_type": "state"
     },
     {
-      "state_id": "odisha",
-      "score": 37.52,
-      "rank": 28,
-      "metrics_count": 6,
-      "state_name": "Odisha",
-      "state_type": "state"
-    },
-    {
-      "state_id": "punjab",
-      "score": 36.8,
-      "rank": 29,
-      "metrics_count": 6,
-      "state_name": "Punjab",
-      "state_type": "state"
-    },
-    {
-      "state_id": "arunachal-pradesh",
-      "score": 35.02,
-      "rank": 30,
-      "metrics_count": 6,
-      "state_name": "Arunachal Pradesh",
+      "state_id": "mizoram",
+      "score": 42.23,
+      "rank": 26,
+      "metrics_count": 7,
+      "state_name": "Mizoram",
       "state_type": "state"
     },
     {
       "state_id": "kerala",
-      "score": 34.03,
-      "rank": 31,
-      "metrics_count": 6,
+      "score": 38.97,
+      "rank": 27,
+      "metrics_count": 7,
       "state_name": "Kerala",
       "state_type": "state"
     },
     {
-      "state_id": "bihar",
-      "score": 23.58,
+      "state_id": "punjab",
+      "score": 34.6,
+      "rank": 28,
+      "metrics_count": 7,
+      "state_name": "Punjab",
+      "state_type": "state"
+    },
+    {
+      "state_id": "uttarakhand",
+      "score": 34.25,
+      "rank": 29,
+      "metrics_count": 7,
+      "state_name": "Uttarakhand",
+      "state_type": "state"
+    },
+    {
+      "state_id": "arunachal-pradesh",
+      "score": 30.84,
+      "rank": 30,
+      "metrics_count": 7,
+      "state_name": "Arunachal Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "odisha",
+      "score": 29.36,
+      "rank": 31,
+      "metrics_count": 7,
+      "state_name": "Odisha",
+      "state_type": "state"
+    },
+    {
+      "state_id": "goa",
+      "score": 24.69,
       "rank": 32,
-      "metrics_count": 6,
+      "metrics_count": 7,
+      "state_name": "Goa",
+      "state_type": "state"
+    },
+    {
+      "state_id": "haryana",
+      "score": 22.83,
+      "rank": 33,
+      "metrics_count": 7,
+      "state_name": "Haryana",
+      "state_type": "state"
+    },
+    {
+      "state_id": "bihar",
+      "score": 22.62,
+      "rank": 34,
+      "metrics_count": 7,
       "state_name": "Bihar",
       "state_type": "state"
     },
     {
       "state_id": "manipur",
-      "score": 23.49,
-      "rank": 33,
-      "metrics_count": 6,
+      "score": 20.27,
+      "rank": 35,
+      "metrics_count": 7,
       "state_name": "Manipur",
       "state_type": "state"
     },
     {
-      "state_id": "haryana",
-      "score": 23.2,
-      "rank": 34,
-      "metrics_count": 6,
-      "state_name": "Haryana",
-      "state_type": "state"
-    },
-    {
-      "state_id": "goa",
-      "score": 22.94,
-      "rank": 35,
-      "metrics_count": 6,
-      "state_name": "Goa",
-      "state_type": "state"
-    },
-    {
       "state_id": "lakshadweep",
-      "score": 10.88,
+      "score": 16.78,
       "rank": 36,
-      "metrics_count": 6,
+      "metrics_count": 7,
       "state_name": "Lakshadweep",
       "state_type": "ut"
     }
@@ -339,6 +339,15 @@
       "source": "MoSPI PLFS",
       "source_url": "https://www.mospi.gov.in/publication/annual-report-periodic-labour-force-survey-plfs-july-2022-june-2023",
       "description": "Mean monthly income for regular salaried workers. Indicates earning levels in the formal and semi-formal employment sector."
+    },
+    {
+      "id": "emp-self-employed",
+      "name": "Self-Employment Share",
+      "unit": "%",
+      "polarity": "negative",
+      "source": "PLFS 2023-24",
+      "source_url": "https://dataforindia.com/self-employment",
+      "description": "Percentage of workforce that is self-employed. High self-employment often indicates limited formal job opportunities."
     },
     {
       "id": "emp-unemployment",

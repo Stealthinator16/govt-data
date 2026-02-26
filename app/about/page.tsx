@@ -92,6 +92,7 @@ export default function AboutPage() {
                   "Ministry of Road Transport — Roads, Vehicles",
                   "Central Electricity Authority — Power, Renewables",
                   "NITI Aayog — SDG Index, Multidimensional Poverty Index",
+                  "Data For India (dataforindia.com) — Curated government datasets, CC-BY 4.0",
                 ].map((source) => (
                   <p key={source}>• {source}</p>
                 ))}

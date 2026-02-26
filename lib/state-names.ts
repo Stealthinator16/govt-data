@@ -15,6 +15,7 @@ export const STATE_NAME_MAP: Record<string, string> = {
   bihar: "bihar",
   chhattisgarh: "chhattisgarh",
   chattisgarh: "chhattisgarh", // MoSPI ASI spelling
+  chattisgrah: "chhattisgarh",
   goa: "goa",
   gujarat: "gujarat",
   haryana: "haryana",
@@ -36,18 +37,23 @@ export const STATE_NAME_MAP: Record<string, string> = {
   rajasthan: "rajasthan",
   sikkim: "sikkim",
   "tamil nadu": "tamil-nadu",
+  tamilnadu: "tamil-nadu", // DFI ICT spelling
   tn: "tamil-nadu",
   telangana: "telangana",
   tripura: "tripura",
   "uttar pradesh": "uttar-pradesh",
+  "uttar prdesh": "uttar-pradesh", // DFI ICT typo
   up: "uttar-pradesh",
   uttarakhand: "uttarakhand",
   uttaranchal: "uttarakhand",
+  uttrakhand: "uttarakhand", // DFI ICT typo
   "west bengal": "west-bengal",
   wb: "west-bengal",
 
   // --- Union Territories ---
   "andaman & nicobar islands": "andaman-nicobar",
+  "andaman & nicobar": "andaman-nicobar",
+  "andaman % nicobar islands": "andaman-nicobar", // DFI typo
   "andaman and nicobar islands": "andaman-nicobar",
   "a & n islands": "andaman-nicobar",
   "a&n islands": "andaman-nicobar",
@@ -61,12 +67,14 @@ export const STATE_NAME_MAP: Record<string, string> = {
   "daman & diu": "dadra-nagar-haveli-daman-diu",
   "daman and diu": "dadra-nagar-haveli-daman-diu",
   "d & n haveli and daman & diu": "dadra-nagar-haveli-daman-diu",
+  "d & n haveli": "dadra-nagar-haveli-daman-diu",
   "d&nh and d&d": "dadra-nagar-haveli-daman-diu",
   "dnhdd": "dadra-nagar-haveli-daman-diu",
   "nct of delhi": "delhi",
   delhi: "delhi",
   "jammu & kashmir": "jammu-kashmir",
   "jammu and kashmir": "jammu-kashmir",
+  "jammu & kashmir and ladakh": "jammu-kashmir", // GBD malaria data
   "j&k": "jammu-kashmir",
   ladakh: "ladakh",
   lakshadweep: "lakshadweep",
@@ -92,7 +100,11 @@ export function resolveStateId(name: string): string | null {
     cleaned === "india" ||
     cleaned === "all states" ||
     cleaned === "total" ||
-    cleaned === ""
+    cleaned === "" ||
+    cleaned.includes("north-eastern states") ||
+    cleaned.includes("northeastern states") ||
+    cleaned.includes("other union territories") ||
+    cleaned.includes("other states")
   )
     return null;
 

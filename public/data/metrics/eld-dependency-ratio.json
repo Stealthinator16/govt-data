@@ -1,0 +1,193 @@
+{
+  "year": 2021,
+  "metric": {
+    "id": "eld-dependency-ratio",
+    "name": "Old-Age Dependency Ratio",
+    "unit": "ratio",
+    "source": "Census",
+    "polarity": "negative",
+    "category_id": "elderly",
+    "category_name": "Elderly",
+    "weight": 1,
+    "description": "Ratio of population aged 60+ to the working-age population (15-59). Higher values indicate greater economic burden on the workforce.",
+    "source_url": "https://censusindia.gov.in/"
+  },
+  "rankings": [
+    {
+      "state_id": "delhi",
+      "state_name": "Delhi",
+      "state_type": "ut",
+      "raw_value": 450,
+      "norm_score": 100,
+      "rank": 1
+    },
+    {
+      "state_id": "west-bengal",
+      "state_name": "West Bengal",
+      "state_type": "state",
+      "raw_value": 477,
+      "norm_score": 92.39,
+      "rank": 2
+    },
+    {
+      "state_id": "telangana",
+      "state_name": "Telangana",
+      "state_type": "state",
+      "raw_value": 482,
+      "norm_score": 89.96,
+      "rank": 3
+    },
+    {
+      "state_id": "andhra-pradesh",
+      "state_name": "Andhra Pradesh",
+      "state_type": "state",
+      "raw_value": 491,
+      "norm_score": 85.59,
+      "rank": 4
+    },
+    {
+      "state_id": "punjab",
+      "state_name": "Punjab",
+      "state_type": "state",
+      "raw_value": 492,
+      "norm_score": 85.1,
+      "rank": 5
+    },
+    {
+      "state_id": "jammu-kashmir",
+      "state_name": "Jammu & Kashmir",
+      "state_type": "ut",
+      "raw_value": 494,
+      "norm_score": 84.13,
+      "rank": 6
+    },
+    {
+      "state_id": "maharashtra",
+      "state_name": "Maharashtra",
+      "state_type": "state",
+      "raw_value": 500,
+      "norm_score": 81.21,
+      "rank": 7
+    },
+    {
+      "state_id": "karnataka",
+      "state_name": "Karnataka",
+      "state_type": "state",
+      "raw_value": 504,
+      "norm_score": 79.27,
+      "rank": 8
+    },
+    {
+      "state_id": "tamil-nadu",
+      "state_name": "Tamil Nadu",
+      "state_type": "state",
+      "raw_value": 504,
+      "norm_score": 79.27,
+      "rank": 9
+    },
+    {
+      "state_id": "himachal-pradesh",
+      "state_name": "Himachal Pradesh",
+      "state_type": "state",
+      "raw_value": 507,
+      "norm_score": 77.81,
+      "rank": 10
+    },
+    {
+      "state_id": "uttarakhand",
+      "state_name": "Uttarakhand",
+      "state_type": "state",
+      "raw_value": 524,
+      "norm_score": 69.55,
+      "rank": 11
+    },
+    {
+      "state_id": "haryana",
+      "state_name": "Haryana",
+      "state_type": "state",
+      "raw_value": 533,
+      "norm_score": 65.18,
+      "rank": 12
+    },
+    {
+      "state_id": "assam",
+      "state_name": "Assam",
+      "state_type": "state",
+      "raw_value": 537,
+      "norm_score": 63.24,
+      "rank": 13
+    },
+    {
+      "state_id": "gujarat",
+      "state_name": "Gujarat",
+      "state_type": "state",
+      "raw_value": 539,
+      "norm_score": 62.26,
+      "rank": 14
+    },
+    {
+      "state_id": "odisha",
+      "state_name": "Odisha",
+      "state_type": "state",
+      "raw_value": 541,
+      "norm_score": 61.29,
+      "rank": 15
+    },
+    {
+      "state_id": "chhattisgarh",
+      "state_name": "Chhattisgarh",
+      "state_type": "state",
+      "raw_value": 577,
+      "norm_score": 43.8,
+      "rank": 16
+    },
+    {
+      "state_id": "kerala",
+      "state_name": "Kerala",
+      "state_type": "state",
+      "raw_value": 585,
+      "norm_score": 39.91,
+      "rank": 17
+    },
+    {
+      "state_id": "jharkhand",
+      "state_name": "Jharkhand",
+      "state_type": "state",
+      "raw_value": 602,
+      "norm_score": 31.65,
+      "rank": 18
+    },
+    {
+      "state_id": "madhya-pradesh",
+      "state_name": "Madhya Pradesh",
+      "state_type": "state",
+      "raw_value": 607,
+      "norm_score": 29.22,
+      "rank": 19
+    },
+    {
+      "state_id": "rajasthan",
+      "state_name": "Rajasthan",
+      "state_type": "state",
+      "raw_value": 608,
+      "norm_score": 28.74,
+      "rank": 20
+    },
+    {
+      "state_id": "uttar-pradesh",
+      "state_name": "Uttar Pradesh",
+      "state_type": "state",
+      "raw_value": 619,
+      "norm_score": 23.39,
+      "rank": 21
+    },
+    {
+      "state_id": "bihar",
+      "state_name": "Bihar",
+      "state_type": "state",
+      "raw_value": 702,
+      "norm_score": 0,
+      "rank": 22
+    }
+  ]
+}

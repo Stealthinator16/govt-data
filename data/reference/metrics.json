@@ -162,7 +162,7 @@
     "unit": "INR/month",
     "source": "MoSPI HCES",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Average monthly household spending per person in rural areas. Based on rural MPCE from the Household Consumption Expenditure Survey 2022-23.",
     "source_url": "https://www.mospi.gov.in/publication/factsheet-household-consumption-expenditure-survey-hces2022-23"
@@ -264,6 +264,18 @@
     "source_url": "https://www.mospi.gov.in/publication/annual-report-periodic-labour-force-survey-plfs-july-2022-june-2023"
   },
   {
+    "id": "emp-self-employed",
+    "category_id": "employment",
+    "name": "Self-Employment Share",
+    "unit": "%",
+    "source": "PLFS 2023-24",
+    "polarity": "negative",
+    "weight": 0.6,
+    "is_featured": false,
+    "description": "Percentage of workforce that is self-employed. High self-employment often indicates limited formal job opportunities.",
+    "source_url": "https://dataforindia.com/self-employment"
+  },
+  {
     "id": "prices-cpi-general",
     "category_id": "prices",
     "name": "Consumer Price Index (General)",
@@ -274,6 +286,18 @@
     "is_featured": true,
     "description": "Weighted average price level of a basket of consumer goods and services. Higher values relative to base year indicate greater inflation pressure.",
     "source_url": "https://www.mospi.gov.in/cpi"
+  },
+  {
+    "id": "prices-avg-inflation",
+    "category_id": "prices",
+    "name": "Average CPI Inflation (10yr)",
+    "unit": "%",
+    "source": "MoSPI CPI",
+    "polarity": "negative",
+    "weight": 1,
+    "is_featured": true,
+    "description": "Average annual CPI inflation rate over 2014-2024. Lower inflation means more stable prices for consumers.",
+    "source_url": "https://dataforindia.com/inflation"
   },
   {
     "id": "ind-factories",
@@ -306,10 +330,22 @@
     "unit": "INR lakhs",
     "source": "MoSPI ASI",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Value added by registered factories (output minus input costs). Measures the industrial sector's contribution to the economy.",
     "source_url": "https://www.mospi.gov.in/asi-summary-results"
+  },
+  {
+    "id": "ind-unorganised-enterprises",
+    "category_id": "industry",
+    "name": "Unorganised Manufacturing Enterprises",
+    "unit": "count",
+    "source": "ASUSE 2023-24",
+    "polarity": "positive",
+    "weight": 0.4,
+    "is_featured": false,
+    "description": "Total number of unincorporated manufacturing establishments. Indicates the scale of informal manufacturing activity.",
+    "source_url": "https://dataforindia.com/unorganised-manufacturing"
   },
   {
     "id": "edu-literacy-total",
@@ -318,7 +354,7 @@
     "unit": "%",
     "source": "Census/NFHS",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Percentage of population aged 7+ that can read and write. A foundational indicator of educational attainment.",
     "source_url": "https://censusindia.gov.in/"
@@ -366,10 +402,22 @@
     "unit": "%",
     "source": "Census/NFHS",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Percentage of women aged 7+ who can read and write. A key measure of gender equity in education.",
     "source_url": "https://censusindia.gov.in/"
+  },
+  {
+    "id": "edu-graduate-workforce",
+    "category_id": "education",
+    "name": "Graduates in Workforce",
+    "unit": "%",
+    "source": "PLFS 2023-24",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": true,
+    "description": "Percentage of workers with a graduate degree or higher. Indicates human capital quality in the labour force.",
+    "source_url": "https://dataforindia.com/graduate-employment"
   },
   {
     "id": "hlt-imr",
@@ -438,12 +486,59 @@
     "unit": "per 1000",
     "source": "NHP",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Number of hospital beds available per 1,000 people. Measures the capacity of a state's healthcare infrastructure.",
     "source_url": "https://cbhidghs.mohfw.gov.in/publications/national-health-profile"
   },
-
+  {
+    "id": "hlt-anaemia-women",
+    "category_id": "health",
+    "name": "Anaemia Prevalence (Women 15-49)",
+    "unit": "%",
+    "source": "NFHS-5",
+    "polarity": "negative",
+    "weight": 0.8,
+    "is_featured": true,
+    "description": "Percentage of women aged 15-49 with haemoglobin below 12 g/dl. A key indicator of nutritional deficiency affecting maternal and child health.",
+    "source_url": "https://dataforindia.com/anaemia-in-india"
+  },
+  {
+    "id": "hlt-crude-death-rate",
+    "category_id": "health",
+    "name": "Crude Death Rate",
+    "unit": "per 1000",
+    "source": "SRS 2023",
+    "polarity": "negative",
+    "weight": 0.6,
+    "is_featured": false,
+    "description": "Deaths per 1,000 population across all age groups. A basic measure of population health outcomes.",
+    "source_url": "https://dataforindia.com/population-mortality"
+  },
+  {
+    "id": "hlt-malaria-incidence",
+    "category_id": "health",
+    "name": "Malaria Incidence",
+    "unit": "per 100K",
+    "source": "GBD / IHME",
+    "polarity": "negative",
+    "weight": 0.5,
+    "is_featured": false,
+    "description": "New malaria cases per 100,000 population. Measures the burden of malaria disease across states.",
+    "source_url": "https://dataforindia.com/malaria-in-india"
+  },
+  {
+    "id": "hlt-nonveg-consumption",
+    "category_id": "health",
+    "name": "Non-Vegetarian Consumption",
+    "unit": "%",
+    "source": "NFHS-5",
+    "polarity": "positive",
+    "weight": 0.3,
+    "is_featured": false,
+    "description": "Share of adults (15-49) who consume egg, fish, chicken or meat. Indicates dietary diversity and protein intake.",
+    "source_url": "https://dataforindia.com/meat-consumption"
+  },
   {
     "id": "wgn-female-lfpr",
     "category_id": "women-gender",
@@ -475,7 +570,7 @@
     "unit": "%",
     "source": "ECI/State Election Commissions",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Percentage of elected state legislators who are women. Measures women's political representation in governance.",
     "source_url": "https://eci.gov.in/"
@@ -492,7 +587,18 @@
     "description": "Reported crimes against women per 100,000 female population. Reflects both the prevalence of gender-based violence and reporting rates.",
     "source_url": "https://ncrb.gov.in/"
   },
-
+  {
+    "id": "wgn-women-manufacturing",
+    "category_id": "women-gender",
+    "name": "Women in Manufacturing",
+    "unit": "%",
+    "source": "PLFS 2023-24",
+    "polarity": "positive",
+    "weight": 0.6,
+    "is_featured": false,
+    "description": "Share of women in the manufacturing workforce.",
+    "source_url": "https://dataforindia.com/women-in-manufacturing"
+  },
   {
     "id": "cyd-child-marriage",
     "category_id": "children-youth",
@@ -536,12 +642,23 @@
     "unit": "%",
     "source": "NFHS",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": false,
     "description": "Percentage of children aged 12-23 months who received all basic vaccinations. Measures the reach and effectiveness of public immunization programs.",
     "source_url": "https://rchiips.org/nfhs/"
   },
-
+  {
+    "id": "cyd-anaemia-children",
+    "category_id": "children-youth",
+    "name": "Anaemia Prevalence (Children 6-59m)",
+    "unit": "%",
+    "source": "NFHS-5",
+    "polarity": "negative",
+    "weight": 0.8,
+    "is_featured": false,
+    "description": "Percentage of children aged 6-59 months with haemoglobin below 11 g/dl. Childhood anaemia impairs cognitive development and physical growth.",
+    "source_url": "https://dataforindia.com/anaemia-in-india"
+  },
   {
     "id": "eld-dependency-ratio",
     "category_id": "elderly",
@@ -549,7 +666,7 @@
     "unit": "ratio",
     "source": "Census",
     "polarity": "negative",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Ratio of population aged 60+ to the working-age population (15-59). Higher values indicate greater economic burden on the workforce.",
     "source_url": "https://censusindia.gov.in/"
@@ -573,12 +690,11 @@
     "unit": "years",
     "source": "SRS",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Average remaining years of life for a person who has reached age 60. Reflects elderly healthcare quality and living conditions.",
     "source_url": "https://censusindia.gov.in/census.website/data/SRSP"
   },
-
   {
     "id": "agr-food-grain-production",
     "category_id": "agriculture",
@@ -598,7 +714,7 @@
     "unit": "%",
     "source": "MoA&FW",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Share of cultivated land with access to irrigation. Higher irrigation coverage reduces dependence on rainfall and improves crop yields.",
     "source_url": "https://agricoop.nic.in/"
@@ -627,7 +743,6 @@
     "description": "Mean monthly income of agricultural households from all sources. A direct measure of farmer economic well-being.",
     "source_url": "https://www.mospi.gov.in/agriculture-surveys"
   },
-
   {
     "id": "inf-road-density",
     "category_id": "infrastructure",
@@ -635,7 +750,7 @@
     "unit": "km per 100 sq km",
     "source": "MoRTH",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Total road length per 100 square kilometres of area. Indicates the physical connectivity and transport infrastructure of a state.",
     "source_url": "https://morth.nic.in/"
@@ -671,12 +786,71 @@
     "unit": "%",
     "source": "Saubhagya",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": false,
     "description": "Percentage of households with an electricity connection. A basic measure of energy access and infrastructure reach.",
     "source_url": "https://saubhagya.gov.in/"
   },
-
+  {
+    "id": "inf-piped-water",
+    "category_id": "infrastructure",
+    "name": "Rural Piped Water Access",
+    "unit": "%",
+    "source": "NSS 79th Round",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": false,
+    "description": "Percentage of rural households with piped water as principal drinking water source.",
+    "source_url": "https://dataforindia.com/access-to-drinking-water"
+  },
+  {
+    "id": "inf-durable-housing",
+    "category_id": "infrastructure",
+    "name": "Durable Housing",
+    "unit": "%",
+    "source": "NFHS-5",
+    "polarity": "positive",
+    "weight": 0.6,
+    "is_featured": false,
+    "description": "Percentage of households living in fully durable houses (durable roof, wall, and floor materials).",
+    "source_url": "https://dataforindia.com/housing"
+  },
+  {
+    "id": "inf-tv-ownership",
+    "category_id": "infrastructure",
+    "name": "TV Ownership",
+    "unit": "%",
+    "source": "HCES 2023-24",
+    "polarity": "positive",
+    "weight": 0.3,
+    "is_featured": false,
+    "description": "Percentage of households owning a television.",
+    "source_url": "https://dataforindia.com/households-assets"
+  },
+  {
+    "id": "inf-refrigerator-ownership",
+    "category_id": "infrastructure",
+    "name": "Refrigerator Ownership",
+    "unit": "%",
+    "source": "HCES 2023-24",
+    "polarity": "positive",
+    "weight": 0.3,
+    "is_featured": false,
+    "description": "Percentage of households owning a refrigerator.",
+    "source_url": "https://dataforindia.com/households-assets"
+  },
+  {
+    "id": "inf-washing-machine",
+    "category_id": "infrastructure",
+    "name": "Washing Machine Ownership",
+    "unit": "%",
+    "source": "HCES 2023-24",
+    "polarity": "positive",
+    "weight": 0.3,
+    "is_featured": false,
+    "description": "Percentage of households owning a washing machine.",
+    "source_url": "https://dataforindia.com/households-assets"
+  },
   {
     "id": "ene-renewable-share",
     "category_id": "energy-environment",
@@ -696,7 +870,7 @@
     "unit": "%",
     "source": "FSI ISFR",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Share of a state's land area under forest cover as assessed by satellite imagery. Critical for biodiversity and climate resilience.",
     "source_url": "https://fsi.nic.in/"
@@ -717,15 +891,14 @@
     "id": "ene-air-quality",
     "category_id": "energy-environment",
     "name": "Annual Average PM2.5 Concentration",
-    "unit": "µg/m\u00b3",
+    "unit": "µg/m³",
     "source": "CPCB",
     "polarity": "negative",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": false,
     "description": "Average concentration of fine particulate matter (PM2.5) in the air. Lower values indicate better air quality and reduced health risks.",
     "source_url": "https://cpcb.nic.in/"
   },
-
   {
     "id": "crm-total-crime-rate",
     "category_id": "crime-justice",
@@ -769,12 +942,11 @@
     "unit": "%",
     "source": "NCRB",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Percentage of investigated cases in which a chargesheet was filed. Reflects the efficiency and thoroughness of police investigations.",
     "source_url": "https://ncrb.gov.in/"
   },
-
   {
     "id": "gov-voter-turnout",
     "category_id": "governance",
@@ -782,7 +954,7 @@
     "unit": "%",
     "source": "ECI",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Percentage of eligible voters who cast their ballot in the last state assembly election. A measure of democratic participation.",
     "source_url": "https://eci.gov.in/"
@@ -806,12 +978,11 @@
     "unit": "%",
     "source": "DFPD",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Percentage of the population covered under the National Food Security Act's public distribution system. Measures food security programme reach.",
     "source_url": "https://dfpd.gov.in/"
   },
-
   {
     "id": "fin-bank-branches",
     "category_id": "financial-inclusion",
@@ -819,7 +990,7 @@
     "unit": "per 100000",
     "source": "RBI",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Number of scheduled commercial bank branches per 100,000 people. Indicates physical access to formal banking services.",
     "source_url": "https://rbi.org.in/scripts/AnnualPublications.aspx?head=Handbook+of+Statistics+on+Indian+States"
@@ -831,7 +1002,7 @@
     "unit": "per 1000",
     "source": "PMJDY",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Number of Pradhan Mantri Jan Dhan Yojana accounts per 1,000 adults. Measures the penetration of basic banking among unbanked populations.",
     "source_url": "https://pmjdy.gov.in/"
@@ -848,7 +1019,18 @@
     "description": "Number of digital payment transactions (UPI, NEFT, etc.) per person. Indicates adoption of cashless financial services.",
     "source_url": "https://www.npci.org.in/"
   },
-
+  {
+    "id": "fin-bank-account-women",
+    "category_id": "financial-inclusion",
+    "name": "Women Bank Account Holders",
+    "unit": "%",
+    "source": "PLFS",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": false,
+    "description": "Percentage of adult women (18+) who have a bank account. Measures gender gap in financial access.",
+    "source_url": "https://dataforindia.com/access-to-banking"
+  },
   {
     "id": "spt-olympic-medals",
     "category_id": "sports",
@@ -856,7 +1038,7 @@
     "unit": "per million",
     "source": "SAI",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Medals won at the National Games normalized by state population. Reflects athletic talent development and sports investment.",
     "source_url": "https://sportsauthorityofindia.nic.in/"
@@ -868,7 +1050,7 @@
     "unit": "per million",
     "source": "MoYA&S",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Number of sports stadiums and complexes per million population. Indicates the availability of organized sports infrastructure.",
     "source_url": "https://yas.nic.in/"
@@ -885,7 +1067,6 @@
     "description": "Percentage of schools certified under the Fit India School programme. Measures institutional commitment to physical fitness in education.",
     "source_url": "https://yas.nic.in/"
   },
-
   {
     "id": "clt-domestic-tourists",
     "category_id": "culture-tourism",
@@ -893,7 +1074,7 @@
     "unit": "per capita",
     "source": "MoT",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Number of domestic tourist visits divided by state population. Reflects the attractiveness and tourism infrastructure of a state.",
     "source_url": "https://tourism.gov.in/"
@@ -922,7 +1103,6 @@
     "description": "Number of monuments and sites protected by the Archaeological Survey of India. Reflects the state's historical and cultural heritage density.",
     "source_url": "https://asi.nic.in/"
   },
-
   {
     "id": "dem-urbanization",
     "category_id": "demographics",
@@ -930,7 +1110,7 @@
     "unit": "%",
     "source": "Census",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Percentage of the state population living in urban areas. Higher urbanization generally correlates with greater economic opportunity.",
     "source_url": "https://censusindia.gov.in/"
@@ -959,7 +1139,18 @@
     "description": "Percentage increase in population over the last census decade. Faster growth can strain resources; slower growth signals demographic transition.",
     "source_url": "https://censusindia.gov.in/"
   },
-
+  {
+    "id": "dem-tfr",
+    "category_id": "demographics",
+    "name": "Total Fertility Rate",
+    "unit": "children/woman",
+    "source": "SRS",
+    "polarity": "negative",
+    "weight": 1,
+    "is_featured": true,
+    "description": "Average number of children a woman would have over her lifetime at current age-specific fertility rates. Below 2.1 indicates sub-replacement fertility.",
+    "source_url": "https://dataforindia.com/fertility"
+  },
   {
     "id": "dig-internet-subscribers",
     "category_id": "digital-tech",
@@ -979,7 +1170,7 @@
     "unit": "per 100",
     "source": "TRAI",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Number of broadband connections per 100 people. Indicates access to high-speed internet needed for modern services and remote work.",
     "source_url": "https://trai.gov.in/"
@@ -991,12 +1182,47 @@
     "unit": "per million",
     "source": "DPIIT",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "DPIIT-recognized startups per million people. Reflects the entrepreneurial ecosystem and innovation capacity of a state.",
     "source_url": "https://dpiit.gov.in/"
   },
-
+  {
+    "id": "dig-computer-literacy",
+    "category_id": "digital-tech",
+    "name": "Computer Literacy",
+    "unit": "%",
+    "source": "NSS CAMS",
+    "polarity": "positive",
+    "weight": 0.8,
+    "is_featured": false,
+    "description": "Percentage of adults able to use a computer.",
+    "source_url": "https://dataforindia.com/computers"
+  },
+  {
+    "id": "dig-ict-skills",
+    "category_id": "digital-tech",
+    "name": "ICT Skills (Messaging)",
+    "unit": "%",
+    "source": "NSS CAMS",
+    "polarity": "positive",
+    "weight": 0.6,
+    "is_featured": false,
+    "description": "Percentage of adults able to send messages via email or messaging services. Proxy for basic digital literacy.",
+    "source_url": "https://dataforindia.com/ict-skills"
+  },
+  {
+    "id": "dig-internet-banking",
+    "category_id": "digital-tech",
+    "name": "Internet Banking Usage",
+    "unit": "%",
+    "source": "NSS CAMS",
+    "polarity": "positive",
+    "weight": 0.6,
+    "is_featured": false,
+    "description": "Percentage of adults who do internet banking.",
+    "source_url": "https://dataforindia.com/ict-skills"
+  },
   {
     "id": "trn-vehicle-density",
     "category_id": "transport",
@@ -1004,7 +1230,7 @@
     "unit": "per 1000",
     "source": "MoRTH",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Number of registered motor vehicles per 1,000 people. Indicates personal mobility levels and economic activity.",
     "source_url": "https://morth.nic.in/"
@@ -1033,7 +1259,42 @@
     "description": "Length of national highways per 1,000 sq km of area. Reflects the reach of the high-speed road network across a state.",
     "source_url": "https://morth.nic.in/"
   },
-
+  {
+    "id": "trn-two-wheeler-ownership",
+    "category_id": "transport",
+    "name": "Two-Wheeler Ownership",
+    "unit": "%",
+    "source": "HCES 2022-23",
+    "polarity": "positive",
+    "weight": 0.4,
+    "is_featured": false,
+    "description": "Percentage of households owning a two-wheeler (motorcycle/scooter).",
+    "source_url": "https://dataforindia.com/vehicle-ownership"
+  },
+  {
+    "id": "trn-car-ownership",
+    "category_id": "transport",
+    "name": "Car Ownership",
+    "unit": "%",
+    "source": "HCES 2022-23",
+    "polarity": "positive",
+    "weight": 0.3,
+    "is_featured": false,
+    "description": "Percentage of households owning a four-wheeler (car/jeep).",
+    "source_url": "https://dataforindia.com/vehicle-ownership"
+  },
+  {
+    "id": "trn-road-deaths-per-lakh",
+    "category_id": "transport",
+    "name": "Road Accident Deaths Per Lakh",
+    "unit": "per lakh",
+    "source": "MoRTH",
+    "polarity": "negative",
+    "weight": 1,
+    "is_featured": true,
+    "description": "Number of road accident fatalities per lakh (100,000) population. A key road safety indicator.",
+    "source_url": "https://dataforindia.com/road-accident-deaths"
+  },
   {
     "id": "med-newspaper-circulation",
     "category_id": "media",
@@ -1041,7 +1302,7 @@
     "unit": "per 1000",
     "source": "RNI",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Registered newspaper copies circulated per 1,000 people. Indicates print media penetration and public engagement with news.",
     "source_url": "https://rfrni.nic.in/"
@@ -1058,7 +1319,6 @@
     "description": "Percentage of households owning a television set. Measures access to broadcast media and information.",
     "source_url": "https://barcindia.co.in/"
   },
-
   {
     "id": "mig-inter-state-migration",
     "category_id": "migration",
@@ -1066,7 +1326,7 @@
     "unit": "%",
     "source": "Census",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Percentage of residents who migrated from another state. Reflects labour mobility and a state's pull as an economic destination.",
     "source_url": "https://censusindia.gov.in/"
@@ -1083,7 +1343,6 @@
     "description": "Value of money sent home by migrant workers as a share of state GDP. Indicates economic dependence on out-migration.",
     "source_url": "https://www.rbi.org.in/"
   },
-
   {
     "id": "civ-ngo-density",
     "category_id": "civil-society",
@@ -1091,7 +1350,7 @@
     "unit": "per 100000",
     "source": "NGO Darpan",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Number of registered non-governmental organizations per 100,000 people. Measures civic engagement and civil society strength.",
     "source_url": "https://ngodarpan.gov.in/"
@@ -1108,7 +1367,6 @@
     "description": "Number of registered cooperative societies per 100,000 people. Reflects the tradition and strength of community-based economic organization.",
     "source_url": "https://msme.gov.in/"
   },
-
   {
     "id": "urb-swachh-score",
     "category_id": "urban-quality",
@@ -1128,7 +1386,7 @@
     "unit": "%",
     "source": "SBM-Urban",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Percentage of urban households with access to toilets under Swachh Bharat Mission. Measures progress toward eliminating open defecation.",
     "source_url": "https://sbmurban.org/"
@@ -1140,12 +1398,11 @@
     "unit": "%",
     "source": "CPCB",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Percentage of municipal solid waste that is processed or treated. Measures urban waste management effectiveness and environmental compliance.",
     "source_url": "https://cpcb.nic.in/"
   },
-
   {
     "id": "mhl-suicide-rate",
     "category_id": "mental-health",
@@ -1177,12 +1434,11 @@
     "unit": "%",
     "source": "MoHFW",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": false,
     "description": "Percentage of districts covered under the District Mental Health Programme. Indicates geographic reach of public mental health services.",
     "source_url": "https://mohfw.gov.in/"
   },
-
   {
     "id": "dis-disability-prevalence",
     "category_id": "disability",
@@ -1214,12 +1470,11 @@
     "unit": "%",
     "source": "DEPwD",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": false,
     "description": "Percentage of government buildings with ramps, lifts, and other accessibility features. Indicates compliance with disability access mandates.",
     "source_url": "https://depwd.gov.in/"
   },
-
   {
     "id": "tel-wireless-subscribers",
     "category_id": "telecom",
@@ -1227,7 +1482,7 @@
     "unit": "per 100",
     "source": "TRAI",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Number of mobile phone subscriptions per 100 people. Measures the reach of wireless communication across the state.",
     "source_url": "https://trai.gov.in/"
@@ -1239,7 +1494,7 @@
     "unit": "per 100 sq km",
     "source": "TRAI/DoT",
     "polarity": "positive",
-    "weight": 1.0,
+    "weight": 1,
     "is_featured": true,
     "description": "Number of telecom towers per 100 sq km. Indicates the physical infrastructure supporting mobile and data connectivity.",
     "source_url": "https://trai.gov.in/"
