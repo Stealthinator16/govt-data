@@ -86,12 +86,19 @@ export default function AboutPage() {
                     Step 3: Overall Score
                   </h3>
                   <p>
-                    The overall score is a simple (equal-weight) average across all categories where
-                    the state has data. This ensures no single domain — economy, health, education,
-                    etc. — dominates the final ranking.
+                    The overall score is a weighted average across all categories where the state has
+                    data. Categories are weighted by their importance to human development:
                   </p>
                   <div className="mt-2 rounded border bg-muted/50 px-3 py-2 font-mono text-xs">
-                    <p>overall_score = Σ(category_score) / number_of_categories_with_data</p>
+                    <p>overall_score = Σ(category_score × category_weight) / Σ(category_weight)</p>
+                  </div>
+                  <div className="mt-3 space-y-1 text-xs">
+                    <p><strong className="text-foreground">1.5x</strong> — Economy, Employment, Education, Health</p>
+                    <p><strong className="text-foreground">1.2x</strong> — Women &amp; Gender, Children &amp; Youth, Infrastructure, Crime &amp; Justice</p>
+                    <p><strong className="text-foreground">1.0x</strong> — Prices, Agriculture, Energy &amp; Environment, Governance, Financial Inclusion, Demographics, Digital &amp; Tech</p>
+                    <p><strong className="text-foreground">0.8x</strong> — Elderly, Industry, Transport, Urban Quality, Mental Health</p>
+                    <p><strong className="text-foreground">0.7x</strong> — Disability, Telecom</p>
+                    <p><strong className="text-foreground">0.5x</strong> — Sports, Culture &amp; Tourism, Media, Migration, Civil Society</p>
                   </div>
                   <p className="mt-2">
                     States are then ranked by overall score and assigned a tier based on their score.

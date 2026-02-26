@@ -9,8 +9,8 @@
     "area_sq_km": 196024
   },
   "overall": {
-    "score": 50.54,
-    "rank": 15,
+    "score": 46.41,
+    "rank": 21,
     "tier": "Rising"
   },
   "categories": [
@@ -23,9 +23,9 @@
     },
     {
       "category_id": "employment",
-      "score": 65.54,
-      "rank": 7,
-      "metrics_count": 7,
+      "score": 34.36,
+      "rank": 18,
+      "metrics_count": 1,
       "category_name": "Employment & Labour"
     },
     {
@@ -44,9 +44,9 @@
     },
     {
       "category_id": "women-gender",
-      "score": 53.97,
-      "rank": 12,
-      "metrics_count": 5,
+      "score": 56.1,
+      "rank": 11,
+      "metrics_count": 4,
       "category_name": "Women & Gender"
     },
     {
@@ -65,9 +65,9 @@
     },
     {
       "category_id": "prices",
-      "score": 87.27,
-      "rank": 6,
-      "metrics_count": 2,
+      "score": 78.13,
+      "rank": 9,
+      "metrics_count": 1,
       "category_name": "Prices & Cost of Living"
     },
     {
@@ -79,9 +79,9 @@
     },
     {
       "category_id": "industry",
-      "score": 88.36,
-      "rank": 1,
-      "metrics_count": 4,
+      "score": 55.23,
+      "rank": 4,
+      "metrics_count": 1,
       "category_name": "Industry & Manufacturing"
     },
     {

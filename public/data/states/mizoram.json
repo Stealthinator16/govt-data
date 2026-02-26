@@ -10,7 +10,7 @@
   },
   "overall": {
     "score": 53.45,
-    "rank": 8,
+    "rank": 10,
     "tier": "Rising"
   },
   "categories": [
@@ -23,9 +23,9 @@
     },
     {
       "category_id": "employment",
-      "score": 42.23,
-      "rank": 26,
-      "metrics_count": 7,
+      "score": 10.55,
+      "rank": 33,
+      "metrics_count": 1,
       "category_name": "Employment & Labour"
     },
     {
@@ -44,9 +44,9 @@
     },
     {
       "category_id": "women-gender",
-      "score": 59.75,
-      "rank": 8,
-      "metrics_count": 5,
+      "score": 63.82,
+      "rank": 4,
+      "metrics_count": 4,
       "category_name": "Women & Gender"
     },
     {
@@ -58,9 +58,9 @@
     },
     {
       "category_id": "prices",
-      "score": 64.86,
-      "rank": 16,
-      "metrics_count": 2,
+      "score": 61.64,
+      "rank": 13,
+      "metrics_count": 1,
       "category_name": "Prices & Cost of Living"
     },
     {
@@ -72,9 +72,9 @@
     },
     {
       "category_id": "industry",
-      "score": 0.18,
-      "rank": 33,
-      "metrics_count": 4,
+      "score": 0,
+      "rank": 35,
+      "metrics_count": 1,
       "category_name": "Industry & Manufacturing"
     },
     {

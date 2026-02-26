@@ -138,11 +138,14 @@ function main() {
   `);
 
   const categories = db
-    .prepare("SELECT id FROM categories ORDER BY sort_order")
-    .all() as Array<{ id: string }>;
+    .prepare("SELECT id, weight FROM categories ORDER BY sort_order")
+    .all() as Array<{ id: string; weight: number }>;
+
+  const categoryWeightMap: Record<string, number> = {};
+  for (const cat of categories) categoryWeightMap[cat.id] = cat.weight;
 
   // Track per-state overall scores
-  const stateCategoryScores: Record<string, { score: number; categoryId: string }[]> = {};
+  const stateCategoryScores: Record<string, { score: number; weight: number }[]> = {};
 
   for (const cat of categories) {
     const categoryStateScores: Array<{
@@ -172,7 +175,7 @@ function main() {
         insertCategoryScore.run(cat.id, s.stateId, year, s.score, rank, s.metricsCount);
 
         if (!stateCategoryScores[s.stateId]) stateCategoryScores[s.stateId] = [];
-        stateCategoryScores[s.stateId].push({ score: s.score, categoryId: cat.id });
+        stateCategoryScores[s.stateId].push({ score: s.score, weight: categoryWeightMap[cat.id] });
       });
     });
     insertBatch();
@@ -192,10 +195,10 @@ function main() {
 
   for (const [stateId, catScores] of Object.entries(stateCategoryScores)) {
     if (catScores.length === 0) continue;
-    // Equal weight across categories
-    const avg =
-      catScores.reduce((sum, c) => sum + c.score, 0) / catScores.length;
-    const score = Math.round(avg * 100) / 100;
+    // Weighted average across categories
+    const totalWeight = catScores.reduce((sum, c) => sum + c.weight, 0);
+    const weightedSum = catScores.reduce((sum, c) => sum + c.score * c.weight, 0);
+    const score = Math.round((weightedSum / totalWeight) * 100) / 100;
     overallScores.push({ stateId, score });
   }
 

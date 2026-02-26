@@ -35,7 +35,8 @@ CREATE TABLE IF NOT EXISTS categories (
   name TEXT NOT NULL,
   description TEXT,
   icon TEXT,
-  sort_order INTEGER NOT NULL DEFAULT 0
+  sort_order INTEGER NOT NULL DEFAULT 0,
+  weight REAL NOT NULL DEFAULT 1.0
 );
 
 CREATE TABLE IF NOT EXISTS metrics (

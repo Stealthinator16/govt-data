@@ -53,8 +53,8 @@ insertStates(states);
 // Insert categories
 console.log(`Inserting ${categories.length} categories...`);
 const insertCategory = db.prepare(`
-  INSERT OR REPLACE INTO categories (id, name, description, icon, sort_order)
-  VALUES (@id, @name, @description, @icon, @sort_order)
+  INSERT OR REPLACE INTO categories (id, name, description, icon, sort_order, weight)
+  VALUES (@id, @name, @description, @icon, @sort_order, @weight)
 `);
 
 const insertCategories = db.transaction((rows: typeof categories) => {
