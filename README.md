@@ -1,6 +1,6 @@
 # National Premier League -- Indian State Rankings
 
-A dashboard for ranking and comparing Indian states across measurable dimensions of governance and human development. Built on official data from MoSPI (Ministry of Statistics and Programme Implementation), it computes normalized scores across 27 categories and 1000+ metrics for all 36 states and union territories.
+A dashboard for ranking and comparing Indian states across measurable dimensions of governance and human development. Built on official data from MoSPI, RBI, NFHS, Census, NCRB, UDISE+, and other government sources, it computes normalized scores across 27 categories and 126 metrics for all 36 states and union territories.
 
 ## Features
 
@@ -35,9 +35,12 @@ This runs the following steps in order:
 
 1. **Seed reference data** -- loads states, categories, and metric definitions into SQLite
 2. **Ingest MoSPI data** -- connects to the MoSPI MCP server (`mcp.mospi.gov.in`) and fetches indicator data via a 4-step API workflow
-3. **Compute scores** -- normalizes metrics, caps outliers, and aggregates weighted scores into category and overall rankings with tier assignment
-4. **Validate data** -- checks data integrity
-5. **Generate JSON** -- exports static JSON bundles to `public/data/` for the Next.js frontend
+3. **Fetch DFI charts** -- discovers and downloads chart data from Data For India's public API
+4. **Transform DFI data** -- converts DFI chart JSON into standardized CSV format
+5. **Ingest CSV data** -- loads all curated CSV files (government publications + DFI-derived) into the database
+6. **Compute scores** -- normalizes metrics (min-max with outlier capping at p2/p98), computes weighted category averages, and aggregates into overall rankings with tier assignment
+7. **Validate data** -- checks data integrity
+8. **Generate JSON** -- exports static JSON bundles to `public/data/` for the Next.js frontend
 
 Individual steps can also be run separately:
 
@@ -112,6 +115,10 @@ scripts/
   pipeline.ts           # Orchestrator for the full data pipeline
   seed-reference.ts     # Loads reference data into SQLite
   ingest-mospi.ts       # Fetches data from MoSPI MCP server
+  scrape-dfi.ts         # Fetches chart data from Data For India
+  transform-dfi.ts      # Converts DFI chart JSON to CSV
+  dfi-inspect.ts        # Utility to inspect DFI chart structure
+  ingest-csv.ts         # Config-driven CSV ingestion (40+ files)
   compute-scores.ts     # Scoring engine (normalize, weight, aggregate)
   generate-json.ts      # Exports JSON bundles for static rendering
   validate-data.ts      # Data integrity checks
@@ -128,4 +135,14 @@ data/
 
 ## Data Sources
 
-All data is sourced from the Ministry of Statistics and Programme Implementation (MoSPI), Government of India, via their MCP server at `mcp.mospi.gov.in`.
+Data is sourced from multiple official government databases:
+
+- **MoSPI** — National Accounts, PLFS (employment), CPI (prices), ASI (industry) via MCP server
+- **RBI** — State finances, banking statistics
+- **NFHS-5** — Health, nutrition, women and children indicators
+- **Census / SRS** — Demographics, literacy, mortality, life tables
+- **NCRB** — Crime statistics, police strength
+- **UDISE+ / AISHE** — School and higher education enrollment
+- **NITI Aayog** — Multidimensional Poverty Index
+- **Data For India** — Curated government datasets (CC-BY 4.0)
+- **Other** — DPIIT, GST Council, CEA, FSI, MoRTH, JJM, ECI, MoT

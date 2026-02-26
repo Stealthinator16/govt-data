@@ -8,7 +8,6 @@ import { ScoreDistribution } from "@/components/charts/score-distribution";
 import { formatNumber } from "@/lib/format";
 import { getTier, TIER_CONFIG } from "@/lib/constants";
 import type { Metadata } from "next";
-import { TierLegend } from "@/components/league-table/tier-legend";
 import type { Tier } from "@/lib/types";
 
 interface MetricData {
@@ -130,7 +129,9 @@ export default async function MetricPage({
               ) : (
                 metric.source
               )}
+
             </span>
+            <span>Data year: {data.year}</span>
             <span
               title={
                 metric.polarity === "positive"
@@ -170,9 +171,6 @@ export default async function MetricPage({
               />
             </div>
           </section>
-
-          {/* Tier Legend */}
-          <TierLegend className="mt-8" />
 
           {/* Data table */}
           <section className="mt-8">
@@ -236,23 +234,6 @@ export default async function MetricPage({
               </table>
             </div>
           </section>
-          {/* Source footer */}
-          <footer className="mt-8 text-xs text-muted-foreground border-t pt-4">
-            Data sourced from{" "}
-            {metric.source_url ? (
-              <a
-                href={metric.source_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-foreground"
-              >
-                {metric.source}
-              </a>
-            ) : (
-              metric.source
-            )}
-            . Data year: {data.year}.
-          </footer>
         </div>
       </main>
       <Footer />

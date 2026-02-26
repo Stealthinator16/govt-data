@@ -30,28 +30,88 @@ export default function AboutPage() {
 
             <section>
               <h2 className="text-xl font-semibold mb-3">Methodology</h2>
-              <div className="space-y-3 text-muted-foreground">
+              <div className="space-y-5 text-muted-foreground">
                 <p>
-                  <strong className="text-foreground">Normalization:</strong> Each metric is
-                  normalized to a 0-100 scale using min-max normalization. Values are capped at
-                  the 2nd and 98th percentile to handle outliers. A score of 100 means best
-                  performance; 0 means worst.
+                  Scores are computed in three stages: metric normalization, category aggregation,
+                  and overall ranking. The goal is to produce a single comparable score (0–100) for
+                  every state across every dimension.
                 </p>
-                <p>
-                  <strong className="text-foreground">Polarity:</strong> Metrics where higher
-                  values are better (e.g., literacy rate) use positive polarity. Metrics where
-                  lower values are better (e.g., infant mortality) use negative polarity, so the
-                  scale is inverted.
-                </p>
-                <p>
-                  <strong className="text-foreground">Category Scores:</strong> Weighted average
-                  of all metric scores within the category. Weights reflect relative importance
-                  (e.g., IMR weighted higher than hospital beds).
-                </p>
-                <p>
-                  <strong className="text-foreground">Overall Score:</strong> Equal-weight
-                  average across all 27 categories. This ensures no single domain dominates.
-                </p>
+
+                <div>
+                  <h3 className="text-base font-semibold text-foreground mb-1">
+                    Step 1: Metric Normalization
+                  </h3>
+                  <p>
+                    Each metric is normalized to a 0–100 scale using min-max normalization. Before
+                    normalizing, values are capped at the 2nd and 98th percentile to prevent extreme
+                    outliers (e.g., a tiny UT with an anomalous value) from compressing the scale for
+                    all other states.
+                  </p>
+                  <div className="mt-2 rounded border bg-muted/50 px-3 py-2 font-mono text-xs">
+                    <p>capped_value = clamp(value, P2, P98)</p>
+                    <p className="mt-1">score = (capped_value − P2) / (P98 − P2) × 100</p>
+                    <p className="mt-1 text-muted-foreground">
+                      If polarity is negative (lower is better), the score is inverted: score = 100 − score
+                    </p>
+                  </div>
+                  <p className="mt-2">
+                    A score of 100 means the state is at or above the 98th percentile (best performer).
+                    A score of 0 means it is at or below the 2nd percentile. Metrics need at least 2
+                    states with data to be scored.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-base font-semibold text-foreground mb-1">
+                    Step 2: Category Scores
+                  </h3>
+                  <p>
+                    Each category score is a weighted average of all metric scores within that category.
+                    Weights range from 0.3x to 1.5x and reflect the relative importance and reliability
+                    of each metric.
+                  </p>
+                  <div className="mt-2 rounded border bg-muted/50 px-3 py-2 font-mono text-xs">
+                    <p>category_score = Σ(metric_score × weight) / Σ(weight)</p>
+                  </div>
+                  <p className="mt-2">
+                    For example, in the Health category, IMR and MMR carry 1.5x weight because they are
+                    the most critical health outcomes, while non-veg consumption carries 0.3x as a
+                    dietary indicator with indirect health relevance. A state is only scored in a
+                    category if it has data for at least one metric in that category.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-base font-semibold text-foreground mb-1">
+                    Step 3: Overall Score
+                  </h3>
+                  <p>
+                    The overall score is a simple (equal-weight) average across all categories where
+                    the state has data. This ensures no single domain — economy, health, education,
+                    etc. — dominates the final ranking.
+                  </p>
+                  <div className="mt-2 rounded border bg-muted/50 px-3 py-2 font-mono text-xs">
+                    <p>overall_score = Σ(category_score) / number_of_categories_with_data</p>
+                  </div>
+                  <p className="mt-2">
+                    States are then ranked by overall score and assigned a tier based on their score.
+                  </p>
+                </div>
+
+                <div>
+                  <h3 className="text-base font-semibold text-foreground mb-1">
+                    Weight Rationale
+                  </h3>
+                  <p>
+                    Metric weights are assigned based on three factors: (1) how directly the metric
+                    measures the category&apos;s core outcome, (2) reliability and coverage of the data
+                    source, and (3) policy significance. Core outcome indicators (e.g., GSDP per
+                    capita for economy, IMR for health, unemployment rate for employment) receive
+                    1.2x–1.5x weight. Supplementary or proxy indicators (e.g., TV ownership for
+                    infrastructure, heritage sites for culture) receive 0.3x–0.8x weight. Standard
+                    indicators receive 1.0x.
+                  </p>
+                </div>
               </div>
             </section>
 
