@@ -9,23 +9,23 @@
     "area_sq_km": 44212
   },
   "overall": {
-    "score": 48.28,
-    "rank": 16,
+    "score": 50.88,
+    "rank": 15,
     "tier": "Rising"
   },
   "categories": [
     {
       "category_id": "economy",
-      "score": 50.37,
+      "score": 48.59,
       "rank": 13,
-      "metrics_count": 11,
+      "metrics_count": 16,
       "category_name": "Economy & Income"
     },
     {
       "category_id": "employment",
-      "score": 51.14,
-      "rank": 11,
-      "metrics_count": 1,
+      "score": 42.04,
+      "rank": 28,
+      "metrics_count": 10,
       "category_name": "Employment & Labour"
     },
     {
@@ -37,16 +37,16 @@
     },
     {
       "category_id": "health",
-      "score": 50.3,
+      "score": 52.64,
       "rank": 27,
-      "metrics_count": 9,
+      "metrics_count": 10,
       "category_name": "Health & Healthcare"
     },
     {
       "category_id": "women-gender",
-      "score": 23.17,
-      "rank": 36,
-      "metrics_count": 4,
+      "score": 20.35,
+      "rank": 35,
+      "metrics_count": 5,
       "category_name": "Women & Gender"
     },
     {
@@ -65,23 +65,23 @@
     },
     {
       "category_id": "prices",
-      "score": 61.64,
-      "rank": 12,
-      "metrics_count": 1,
+      "score": 61.65,
+      "rank": 13,
+      "metrics_count": 2,
       "category_name": "Prices & Cost of Living"
     },
     {
       "category_id": "agriculture",
-      "score": 77.76,
-      "rank": 2,
-      "metrics_count": 2,
+      "score": 83.35,
+      "rank": 5,
+      "metrics_count": 3,
       "category_name": "Agriculture & Food"
     },
     {
       "category_id": "industry",
-      "score": 10.55,
-      "rank": 16,
-      "metrics_count": 1,
+      "score": 35.2,
+      "rank": 7,
+      "metrics_count": 4,
       "category_name": "Industry & Manufacturing"
     },
     {
@@ -100,23 +100,30 @@
     },
     {
       "category_id": "crime-justice",
-      "score": 12.1,
-      "rank": 33,
-      "metrics_count": 2,
+      "score": 31.24,
+      "rank": 35,
+      "metrics_count": 4,
       "category_name": "Crime & Justice"
     },
     {
+      "category_id": "governance",
+      "score": 31.68,
+      "rank": 24,
+      "metrics_count": 1,
+      "category_name": "Governance & Public Services"
+    },
+    {
       "category_id": "financial-inclusion",
-      "score": 62.01,
-      "rank": 12,
-      "metrics_count": 2,
+      "score": 53.04,
+      "rank": 8,
+      "metrics_count": 3,
       "category_name": "Financial Inclusion"
     },
     {
       "category_id": "culture-tourism",
-      "score": 7.19,
-      "rank": 27,
-      "metrics_count": 2,
+      "score": 4.98,
+      "rank": 28,
+      "metrics_count": 3,
       "category_name": "Culture, Tourism & Heritage"
     },
     {
@@ -128,9 +135,9 @@
     },
     {
       "category_id": "digital-tech",
-      "score": 48.75,
+      "score": 47.39,
       "rank": 9,
-      "metrics_count": 4,
+      "metrics_count": 6,
       "category_name": "Digital & Technology"
     },
     {
@@ -141,11 +148,39 @@
       "category_name": "Transport & Mobility"
     },
     {
+      "category_id": "media",
+      "score": 83.84,
+      "rank": 8,
+      "metrics_count": 1,
+      "category_name": "Media & Information"
+    },
+    {
       "category_id": "urban-quality",
       "score": 91.39,
       "rank": 9,
       "metrics_count": 1,
       "category_name": "Urban Quality of Life"
+    },
+    {
+      "category_id": "disability",
+      "score": 47.27,
+      "rank": 17,
+      "metrics_count": 1,
+      "category_name": "Disability & Inclusion"
+    },
+    {
+      "category_id": "telecom",
+      "score": 47.13,
+      "rank": 9,
+      "metrics_count": 1,
+      "category_name": "Telecom & Connectivity"
+    },
+    {
+      "category_id": "water-sanitation",
+      "score": 91.39,
+      "rank": 9,
+      "metrics_count": 1,
+      "category_name": "Water & Sanitation"
     }
   ]
 }

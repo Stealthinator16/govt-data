@@ -104,15 +104,6 @@
   ],
   "metrics": [
     {
-      "id": "mhl-mental-health-facilities",
-      "name": "District Mental Health Programme Coverage",
-      "unit": "%",
-      "polarity": "positive",
-      "source": "MoHFW",
-      "source_url": "https://mohfw.gov.in/",
-      "description": "Percentage of districts covered under the District Mental Health Programme. Indicates geographic reach of public mental health services."
-    },
-    {
       "id": "mhl-psychiatrists",
       "name": "Psychiatrists per 100000 Population",
       "unit": "per 100000",

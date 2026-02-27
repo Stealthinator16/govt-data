@@ -267,6 +267,69 @@ const CSV_SOURCES: CsvSource[] = [
     metrics: ["ind-unorganised-enterprises"],
     sourceRef: "ASUSE 2023-24 / Data For India",
   },
+  // --- Batch 2: New data sources ---
+  {
+    file: "ncrb-crime-extended.csv",
+    metrics: ["crm-total-crime-rate", "crm-chargesheet-rate"],
+    sourceRef: "NCRB Crime in India 2022",
+  },
+  {
+    file: "eci-voter-turnout.csv",
+    metrics: ["gov-voter-turnout"],
+    sourceRef: "ECI Lok Sabha 2024",
+  },
+  {
+    file: "tourism-mot-foreign.csv",
+    metrics: ["clt-foreign-tourists"],
+    sourceRef: "MoT India Tourism Statistics 2023",
+  },
+  {
+    file: "rbi-bank-branches.csv",
+    metrics: ["fin-bank-branches"],
+    sourceRef: "RBI BSR March 2024",
+  },
+  {
+    file: "census-disability.csv",
+    metrics: ["dis-disability-prevalence"],
+    sourceRef: "Census 2011",
+  },
+  {
+    file: "des-irrigation.csv",
+    metrics: ["agr-gross-irrigated-area"],
+    sourceRef: "DES Land Use Statistics 2022-23",
+  },
+  // --- Batch 3: DFI GSDP sector shares ---
+  {
+    file: "dfi-state-economies.csv",
+    metrics: [
+      "eco-agriculture-share",
+      "eco-industry-share",
+      "eco-services-share",
+      "eco-relative-income",
+      "eco-national-gdp-share",
+    ],
+    sourceRef: "MoSPI NAS / Data For India",
+  },
+  {
+    file: "dfi-salaried-jobs.csv",
+    metrics: ["emp-casual-worker-share"],
+    sourceRef: "PLFS 2023-24 / Data For India",
+  },
+  {
+    file: "dfi-dairy-consumption.csv",
+    metrics: ["hlt-dairy-consumption"],
+    sourceRef: "NFHS-5 / Data For India",
+  },
+  // --- Batch 5: TRAI telecom data (circle→state mapped) ---
+  {
+    file: "trai-telecom.csv",
+    metrics: [
+      "tel-wireless-subscribers",
+      "dig-internet-subscribers",
+      "dig-broadband-subscribers",
+    ],
+    sourceRef: "TRAI Quarterly Report Q3 FY2024-25",
+  },
 ];
 
 function main() {
@@ -374,6 +437,36 @@ function main() {
   if (aliased.changes > 0) {
     totalRows += aliased.changes;
     console.log(`\nAlias: wgn-female-lfpr ← emp-lfpr-female (${aliased.changes} rows)`);
+  }
+
+  // med-tv-households is identical to inf-tv-ownership (both from HCES).
+  // Copy existing data_points so the media category gets scored.
+  const aliasedTv = db
+    .prepare(
+      `INSERT OR REPLACE INTO data_points
+        (metric_id, state_id, year, period, value, gender, sector, age_group, social_group, status, source_ref)
+      SELECT 'med-tv-households', state_id, year, period, value, gender, sector, age_group, social_group, status, source_ref
+      FROM data_points WHERE metric_id = 'inf-tv-ownership'`
+    )
+    .run();
+  if (aliasedTv.changes > 0) {
+    totalRows += aliasedTv.changes;
+    console.log(`Alias: med-tv-households ← inf-tv-ownership (${aliasedTv.changes} rows)`);
+  }
+
+  // wat-sanitation-coverage is identical to urb-sanitation-coverage (NFHS-5 flush toilet data).
+  // Copy so the water-sanitation category gets scored immediately.
+  const aliasedSanitation = db
+    .prepare(
+      `INSERT OR REPLACE INTO data_points
+        (metric_id, state_id, year, period, value, gender, sector, age_group, social_group, status, source_ref)
+      SELECT 'wat-sanitation-coverage', state_id, year, period, value, gender, sector, age_group, social_group, status, source_ref
+      FROM data_points WHERE metric_id = 'urb-sanitation-coverage'`
+    )
+    .run();
+  if (aliasedSanitation.changes > 0) {
+    totalRows += aliasedSanitation.changes;
+    console.log(`Alias: wat-sanitation-coverage ← urb-sanitation-coverage (${aliasedSanitation.changes} rows)`);
   }
 
   db.prepare(

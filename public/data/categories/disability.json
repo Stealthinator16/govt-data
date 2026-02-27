@@ -1,0 +1,309 @@
+{
+  "year": 2021,
+  "category": {
+    "id": "disability",
+    "name": "Disability & Inclusion"
+  },
+  "rankings": [
+    {
+      "state_id": "dadra-nagar-haveli-daman-diu",
+      "score": 100,
+      "rank": 1,
+      "metrics_count": 1,
+      "state_name": "Dadra & Nagar Haveli and Daman & Diu",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "mizoram",
+      "score": 91.85,
+      "rank": 2,
+      "metrics_count": 1,
+      "state_name": "Mizoram",
+      "state_type": "state"
+    },
+    {
+      "state_id": "delhi",
+      "score": 90.69,
+      "rank": 3,
+      "metrics_count": 1,
+      "state_name": "Delhi",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "chandigarh",
+      "score": 90.69,
+      "rank": 4,
+      "metrics_count": 1,
+      "state_name": "Chandigarh",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "meghalaya",
+      "score": 85.48,
+      "rank": 5,
+      "metrics_count": 1,
+      "state_name": "Meghalaya",
+      "state_type": "state"
+    },
+    {
+      "state_id": "nagaland",
+      "score": 84.9,
+      "rank": 6,
+      "metrics_count": 1,
+      "state_name": "Nagaland",
+      "state_type": "state"
+    },
+    {
+      "state_id": "assam",
+      "score": 82.58,
+      "rank": 7,
+      "metrics_count": 1,
+      "state_name": "Assam",
+      "state_type": "state"
+    },
+    {
+      "state_id": "tamil-nadu",
+      "score": 76.79,
+      "rank": 8,
+      "metrics_count": 1,
+      "state_name": "Tamil Nadu",
+      "state_type": "state"
+    },
+    {
+      "state_id": "tripura",
+      "score": 70.43,
+      "rank": 9,
+      "metrics_count": 1,
+      "state_name": "Tripura",
+      "state_type": "state"
+    },
+    {
+      "state_id": "andaman-nicobar",
+      "score": 70.43,
+      "rank": 10,
+      "metrics_count": 1,
+      "state_name": "Andaman & Nicobar Islands",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "gujarat",
+      "score": 66.95,
+      "rank": 11,
+      "metrics_count": 1,
+      "state_name": "Gujarat",
+      "state_type": "state"
+    },
+    {
+      "state_id": "uttarakhand",
+      "score": 65.22,
+      "rank": 12,
+      "metrics_count": 1,
+      "state_name": "Uttarakhand",
+      "state_type": "state"
+    },
+    {
+      "state_id": "manipur",
+      "score": 62.32,
+      "rank": 13,
+      "metrics_count": 1,
+      "state_name": "Manipur",
+      "state_type": "state"
+    },
+    {
+      "state_id": "arunachal-pradesh",
+      "score": 60,
+      "rank": 14,
+      "metrics_count": 1,
+      "state_name": "Arunachal Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "uttar-pradesh",
+      "score": 51.32,
+      "rank": 15,
+      "metrics_count": 1,
+      "state_name": "Uttar Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "madhya-pradesh",
+      "score": 47.85,
+      "rank": 16,
+      "metrics_count": 1,
+      "state_name": "Madhya Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "haryana",
+      "score": 47.27,
+      "rank": 17,
+      "metrics_count": 1,
+      "state_name": "Haryana",
+      "state_type": "state"
+    },
+    {
+      "state_id": "karnataka",
+      "score": 46.11,
+      "rank": 18,
+      "metrics_count": 1,
+      "state_name": "Karnataka",
+      "state_type": "state"
+    },
+    {
+      "state_id": "west-bengal",
+      "score": 43.79,
+      "rank": 19,
+      "metrics_count": 1,
+      "state_name": "West Bengal",
+      "state_type": "state"
+    },
+    {
+      "state_id": "bihar",
+      "score": 42.06,
+      "rank": 20,
+      "metrics_count": 1,
+      "state_name": "Bihar",
+      "state_type": "state"
+    },
+    {
+      "state_id": "himachal-pradesh",
+      "score": 40.9,
+      "rank": 21,
+      "metrics_count": 1,
+      "state_name": "Himachal Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "goa",
+      "score": 40.9,
+      "rank": 22,
+      "metrics_count": 1,
+      "state_name": "Goa",
+      "state_type": "state"
+    },
+    {
+      "state_id": "kerala",
+      "score": 39.74,
+      "rank": 23,
+      "metrics_count": 1,
+      "state_name": "Kerala",
+      "state_type": "state"
+    },
+    {
+      "state_id": "rajasthan",
+      "score": 39.74,
+      "rank": 24,
+      "metrics_count": 1,
+      "state_name": "Rajasthan",
+      "state_type": "state"
+    },
+    {
+      "state_id": "jharkhand",
+      "score": 36.85,
+      "rank": 25,
+      "metrics_count": 1,
+      "state_name": "Jharkhand",
+      "state_type": "state"
+    },
+    {
+      "state_id": "punjab",
+      "score": 35.11,
+      "rank": 26,
+      "metrics_count": 1,
+      "state_name": "Punjab",
+      "state_type": "state"
+    },
+    {
+      "state_id": "puducherry",
+      "score": 31.64,
+      "rank": 27,
+      "metrics_count": 1,
+      "state_name": "Puducherry",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "chhattisgarh",
+      "score": 29.9,
+      "rank": 28,
+      "metrics_count": 1,
+      "state_name": "Chhattisgarh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "lakshadweep",
+      "score": 27,
+      "rank": 29,
+      "metrics_count": 1,
+      "state_name": "Lakshadweep",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "maharashtra",
+      "score": 18.9,
+      "rank": 30,
+      "metrics_count": 1,
+      "state_name": "Maharashtra",
+      "state_type": "state"
+    },
+    {
+      "state_id": "andhra-pradesh",
+      "score": 16.58,
+      "rank": 31,
+      "metrics_count": 1,
+      "state_name": "Andhra Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "telangana",
+      "score": 10.79,
+      "rank": 32,
+      "metrics_count": 1,
+      "state_name": "Telangana",
+      "state_type": "state"
+    },
+    {
+      "state_id": "jammu-kashmir",
+      "score": 5,
+      "rank": 33,
+      "metrics_count": 1,
+      "state_name": "Jammu & Kashmir",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "odisha",
+      "score": 0.37,
+      "rank": 34,
+      "metrics_count": 1,
+      "state_name": "Odisha",
+      "state_type": "state"
+    },
+    {
+      "state_id": "sikkim",
+      "score": 0,
+      "rank": 35,
+      "metrics_count": 1,
+      "state_name": "Sikkim",
+      "state_type": "state"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "dis-disability-employment",
+      "name": "Disability Employment Rate",
+      "unit": "%",
+      "polarity": "positive",
+      "source": "NSO/PLFS",
+      "source_url": "https://www.mospi.gov.in/unit-level-data-report-nss-76th-round-schedule-260-july-december-2018-survey-persons-disabilities",
+      "description": "Share of persons with disabilities who are employed. Measures economic inclusion and workplace accessibility for disabled persons."
+    },
+    {
+      "id": "dis-disability-prevalence",
+      "name": "Disability Prevalence Rate",
+      "unit": "%",
+      "polarity": "negative",
+      "source": "Census/NSO",
+      "source_url": "https://www.mospi.gov.in/unit-level-data-report-nss-76th-round-schedule-260-july-december-2018-survey-persons-disabilities",
+      "description": "Percentage of the population with one or more disabilities. Used for planning inclusive policies and estimating service needs."
+    }
+  ]
+}

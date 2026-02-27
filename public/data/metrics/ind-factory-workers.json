@@ -17,7 +17,7 @@
       "state_id": "tamil-nadu",
       "state_name": "Tamil Nadu",
       "state_type": "state",
-      "raw_value": 2173213,
+      "raw_value": 2475675,
       "norm_score": 100,
       "rank": 1
     },
@@ -25,273 +25,281 @@
       "state_id": "gujarat",
       "state_name": "Gujarat",
       "state_type": "state",
-      "raw_value": 1655897,
-      "norm_score": 90.91,
+      "raw_value": 1978830,
+      "norm_score": 92.99,
       "rank": 2
     },
     {
       "state_id": "maharashtra",
       "state_name": "Maharashtra",
       "state_type": "state",
-      "raw_value": 1549289,
-      "norm_score": 85.06,
+      "raw_value": 1849633,
+      "norm_score": 86.92,
       "rank": 3
     },
     {
       "state_id": "uttar-pradesh",
       "state_name": "Uttar Pradesh",
       "state_type": "state",
-      "raw_value": 1044690,
-      "norm_score": 57.35,
+      "raw_value": 1280760,
+      "norm_score": 60.19,
       "rank": 4
-    },
-    {
-      "state_id": "haryana",
-      "state_name": "Haryana",
-      "state_type": "state",
-      "raw_value": 888115,
-      "norm_score": 48.76,
-      "rank": 5
     },
     {
       "state_id": "karnataka",
       "state_name": "Karnataka",
       "state_type": "state",
-      "raw_value": 839642,
-      "norm_score": 46.09,
+      "raw_value": 968922,
+      "norm_score": 45.53,
+      "rank": 5
+    },
+    {
+      "state_id": "haryana",
+      "state_name": "Haryana",
+      "state_type": "state",
+      "raw_value": 946914,
+      "norm_score": 44.5,
       "rank": 6
     },
     {
       "state_id": "telangana",
       "state_name": "Telangana",
       "state_type": "state",
-      "raw_value": 708219,
-      "norm_score": 38.88,
+      "raw_value": 772749,
+      "norm_score": 36.31,
       "rank": 7
-    },
-    {
-      "state_id": "punjab",
-      "state_name": "Punjab",
-      "state_type": "state",
-      "raw_value": 618026,
-      "norm_score": 33.93,
-      "rank": 8
-    },
-    {
-      "state_id": "west-bengal",
-      "state_name": "West Bengal",
-      "state_type": "state",
-      "raw_value": 564987,
-      "norm_score": 31.01,
-      "rank": 9
     },
     {
       "state_id": "andhra-pradesh",
       "state_name": "Andhra Pradesh",
       "state_type": "state",
-      "raw_value": 550303,
-      "norm_score": 30.21,
+      "raw_value": 635844,
+      "norm_score": 29.88,
+      "rank": 8
+    },
+    {
+      "state_id": "punjab",
+      "state_name": "Punjab",
+      "state_type": "state",
+      "raw_value": 627499,
+      "norm_score": 29.49,
+      "rank": 9
+    },
+    {
+      "state_id": "west-bengal",
+      "state_name": "West Bengal",
+      "state_type": "state",
+      "raw_value": 608746,
+      "norm_score": 28.6,
       "rank": 10
     },
     {
       "state_id": "rajasthan",
       "state_name": "Rajasthan",
       "state_type": "state",
-      "raw_value": 520197,
-      "norm_score": 28.56,
+      "raw_value": 596600,
+      "norm_score": 28.03,
       "rank": 11
-    },
-    {
-      "state_id": "uttarakhand",
-      "state_name": "Uttarakhand",
-      "state_type": "state",
-      "raw_value": 336436,
-      "norm_score": 18.47,
-      "rank": 12
     },
     {
       "state_id": "madhya-pradesh",
       "state_name": "Madhya Pradesh",
       "state_type": "state",
-      "raw_value": 322247,
-      "norm_score": 17.69,
+      "raw_value": 384680,
+      "norm_score": 18.07,
+      "rank": 12
+    },
+    {
+      "state_id": "uttarakhand",
+      "state_name": "Uttarakhand",
+      "state_type": "state",
+      "raw_value": 351659,
+      "norm_score": 16.52,
       "rank": 13
     },
     {
       "state_id": "odisha",
       "state_name": "Odisha",
       "state_type": "state",
-      "raw_value": 270399,
-      "norm_score": 14.84,
+      "raw_value": 314090,
+      "norm_score": 14.76,
       "rank": 14
     },
     {
       "state_id": "kerala",
       "state_name": "Kerala",
       "state_type": "state",
-      "raw_value": 241677,
-      "norm_score": 13.26,
+      "raw_value": 282993,
+      "norm_score": 13.3,
       "rank": 15
-    },
-    {
-      "state_id": "dadra-nagar-haveli-daman-diu",
-      "state_name": "Dadra & Nagar Haveli and Daman & Diu",
-      "state_type": "ut",
-      "raw_value": 208974,
-      "norm_score": 11.47,
-      "rank": 16
     },
     {
       "state_id": "chhattisgarh",
       "state_name": "Chhattisgarh",
       "state_type": "state",
-      "raw_value": 198792,
-      "norm_score": 10.91,
+      "raw_value": 239408,
+      "norm_score": 11.25,
+      "rank": 16
+    },
+    {
+      "state_id": "dadra-nagar-haveli-daman-diu",
+      "state_name": "Dadra & Nagar Haveli and Daman & Diu",
+      "state_type": "ut",
+      "raw_value": 222878,
+      "norm_score": 10.47,
       "rank": 17
     },
     {
       "state_id": "assam",
       "state_name": "Assam",
       "state_type": "state",
-      "raw_value": 194795,
-      "norm_score": 10.69,
+      "raw_value": 201498,
+      "norm_score": 9.47,
       "rank": 18
     },
     {
       "state_id": "jharkhand",
       "state_name": "Jharkhand",
       "state_type": "state",
-      "raw_value": 174352,
-      "norm_score": 9.57,
+      "raw_value": 190991,
+      "norm_score": 8.97,
       "rank": 19
     },
     {
       "state_id": "himachal-pradesh",
       "state_name": "Himachal Pradesh",
       "state_type": "state",
-      "raw_value": 153230,
-      "norm_score": 8.41,
+      "raw_value": 172793,
+      "norm_score": 8.12,
       "rank": 20
     },
     {
       "state_id": "bihar",
       "state_name": "Bihar",
       "state_type": "state",
-      "raw_value": 110490,
-      "norm_score": 6.06,
+      "raw_value": 117074,
+      "norm_score": 5.5,
       "rank": 21
     },
     {
       "state_id": "delhi",
       "state_name": "Delhi",
       "state_type": "ut",
-      "raw_value": 63362,
-      "norm_score": 3.47,
+      "raw_value": 67932,
+      "norm_score": 3.19,
       "rank": 22
     },
     {
       "state_id": "goa",
       "state_name": "Goa",
       "state_type": "state",
-      "raw_value": 61839,
-      "norm_score": 3.39,
+      "raw_value": 66181,
+      "norm_score": 3.11,
       "rank": 23
     },
     {
       "state_id": "jammu-kashmir",
       "state_name": "Jammu & Kashmir",
       "state_type": "ut",
-      "raw_value": 49133,
-      "norm_score": 2.69,
+      "raw_value": 51826,
+      "norm_score": 2.43,
       "rank": 24
     },
     {
       "state_id": "puducherry",
       "state_name": "Puducherry",
       "state_type": "ut",
-      "raw_value": 42048,
-      "norm_score": 2.3,
+      "raw_value": 42240,
+      "norm_score": 1.98,
       "rank": 25
-    },
-    {
-      "state_id": "tripura",
-      "state_name": "Tripura",
-      "state_type": "state",
-      "raw_value": 19745,
-      "norm_score": 1.08,
-      "rank": 26
     },
     {
       "state_id": "sikkim",
       "state_name": "Sikkim",
       "state_type": "state",
-      "raw_value": 18580,
-      "norm_score": 1.01,
+      "raw_value": 20825,
+      "norm_score": 0.97,
+      "rank": 26
+    },
+    {
+      "state_id": "tripura",
+      "state_name": "Tripura",
+      "state_type": "state",
+      "raw_value": 20601,
+      "norm_score": 0.96,
       "rank": 27
     },
     {
       "state_id": "meghalaya",
       "state_name": "Meghalaya",
       "state_type": "state",
-      "raw_value": 10406,
-      "norm_score": 0.57,
+      "raw_value": 10682,
+      "norm_score": 0.5,
       "rank": 28
     },
     {
       "state_id": "chandigarh",
       "state_name": "Chandigarh",
       "state_type": "ut",
-      "raw_value": 6124,
-      "norm_score": 0.33,
+      "raw_value": 5489,
+      "norm_score": 0.25,
       "rank": 29
-    },
-    {
-      "state_id": "manipur",
-      "state_name": "Manipur",
-      "state_type": "state",
-      "raw_value": 5616,
-      "norm_score": 0.3,
-      "rank": 30
     },
     {
       "state_id": "nagaland",
       "state_name": "Nagaland",
       "state_type": "state",
-      "raw_value": 4602,
-      "norm_score": 0.25,
+      "raw_value": 5082,
+      "norm_score": 0.23,
+      "rank": 30
+    },
+    {
+      "state_id": "manipur",
+      "state_name": "Manipur",
+      "state_type": "state",
+      "raw_value": 4219,
+      "norm_score": 0.19,
       "rank": 31
     },
     {
       "state_id": "arunachal-pradesh",
       "state_name": "Arunachal Pradesh",
       "state_type": "state",
-      "raw_value": 3247,
-      "norm_score": 0.17,
+      "raw_value": 3225,
+      "norm_score": 0.15,
       "rank": 32
     },
     {
       "state_id": "mizoram",
       "state_name": "Mizoram",
       "state_type": "state",
-      "raw_value": 1076,
-      "norm_score": 0.05,
+      "raw_value": 1048,
+      "norm_score": 0.04,
       "rank": 33
-    },
-    {
-      "state_id": "andaman-nicobar",
-      "state_name": "Andaman & Nicobar Islands",
-      "state_type": "ut",
-      "raw_value": 149,
-      "norm_score": 0,
-      "rank": 34
     },
     {
       "state_id": "ladakh",
       "state_name": "Ladakh",
       "state_type": "ut",
-      "raw_value": 33,
+      "raw_value": 223,
+      "norm_score": 0.01,
+      "rank": 34
+    },
+    {
+      "state_id": "andaman-nicobar",
+      "state_name": "Andaman & Nicobar Islands",
+      "state_type": "ut",
+      "raw_value": 138,
       "norm_score": 0,
       "rank": 35
+    },
+    {
+      "state_id": "lakshadweep",
+      "state_name": "Lakshadweep",
+      "state_type": "ut",
+      "raw_value": 8,
+      "norm_score": 0,
+      "rank": 36
     }
   ]
 }

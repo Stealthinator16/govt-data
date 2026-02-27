@@ -16,6 +16,10 @@ const ingestStep = USE_SAMPLE_DATA
   ? { name: "Seed Sample Data", script: "scripts/seed-sample-data.ts" }
   : { name: "Ingest MoSPI Data", script: "scripts/ingest-mospi.ts" };
 
+const cachedMospiStep = USE_SAMPLE_DATA
+  ? null
+  : { name: "Ingest MoSPI Cached", script: "scripts/ingest-mospi-cached.ts" };
+
 const dfiSteps = USE_SAMPLE_DATA
   ? []
   : [
@@ -30,6 +34,7 @@ const csvStep = USE_SAMPLE_DATA
 const steps = [
   { name: "Seed Reference Data", script: "scripts/seed-reference.ts" },
   ingestStep,
+  ...(cachedMospiStep ? [cachedMospiStep] : []),
   ...dfiSteps,
   ...(csvStep ? [csvStep] : []),
   { name: "Compute Scores", script: "scripts/compute-scores.ts" },

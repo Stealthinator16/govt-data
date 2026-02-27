@@ -25,5 +25,8 @@
   { "id": "urban-quality", "name": "Urban Quality of Life", "description": "Cleanliness, green space, smart city progress, sanitation", "icon": "building", "sort_order": 24, "weight": 0.8 },
   { "id": "mental-health", "name": "Mental Health & Well-being", "description": "Suicide rates, mental health infrastructure, substance abuse", "icon": "brain", "sort_order": 25, "weight": 0.8 },
   { "id": "disability", "name": "Disability & Inclusion", "description": "Disability prevalence, accessibility, employment, social security", "icon": "accessibility", "sort_order": 26, "weight": 0.7 },
-  { "id": "telecom", "name": "Telecom & Connectivity", "description": "Tower density, broadband, data speed, postal network", "icon": "signal", "sort_order": 27, "weight": 0.7 }
+  { "id": "telecom", "name": "Telecom & Connectivity", "description": "Wireless subscribers, broadband, internet penetration", "icon": "signal", "sort_order": 27, "weight": 0.7 },
+  { "id": "water-sanitation", "name": "Water & Sanitation", "description": "Tap water access, groundwater, sanitation coverage", "icon": "droplets", "sort_order": 28, "weight": 1.0 },
+  { "id": "justice", "name": "Justice & Legal System", "description": "Judicial capacity, prison conditions, legal aid access", "icon": "scale", "sort_order": 29, "weight": 1.0 },
+  { "id": "social-protection", "name": "Social Protection & Welfare", "description": "MGNREGA, PM-KISAN, welfare scheme reach", "icon": "shield-check", "sort_order": 30, "weight": 1.0 }
 ]

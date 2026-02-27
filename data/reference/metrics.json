@@ -168,6 +168,30 @@
     "source_url": "https://www.mospi.gov.in/publication/factsheet-household-consumption-expenditure-survey-hces2022-23"
   },
   {
+    "id": "eco-relative-income",
+    "category_id": "economy",
+    "name": "Per Capita Income Relative to India",
+    "unit": "index (India=100)",
+    "source": "MoSPI NAS / Data For India",
+    "polarity": "positive",
+    "weight": 1,
+    "is_featured": false,
+    "description": "State per capita income as an index with India average = 100. Values above 100 indicate above-average prosperity.",
+    "source_url": "https://dataforindia.com/state-economies"
+  },
+  {
+    "id": "eco-national-gdp-share",
+    "category_id": "economy",
+    "name": "Share of National GSDP",
+    "unit": "%",
+    "source": "MoSPI NAS / Data For India",
+    "polarity": "positive",
+    "weight": 0.5,
+    "is_featured": false,
+    "description": "State's percentage share of India's total GDP. Indicates the relative size of a state's economy within the national output.",
+    "source_url": "https://dataforindia.com/state-economies"
+  },
+  {
     "id": "emp-lfpr-total",
     "category_id": "employment",
     "name": "Labour Force Participation Rate (Total)",
@@ -274,6 +298,18 @@
     "is_featured": false,
     "description": "Percentage of workforce that is self-employed. High self-employment often indicates limited formal job opportunities.",
     "source_url": "https://dataforindia.com/self-employment"
+  },
+  {
+    "id": "emp-casual-worker-share",
+    "category_id": "employment",
+    "name": "Casual/Temporary Workers Share",
+    "unit": "%",
+    "source": "PLFS 2023-24 / Data For India",
+    "polarity": "negative",
+    "weight": 0.8,
+    "is_featured": false,
+    "description": "Percentage of workforce employed as casual or temporary workers. High casual work share indicates precarious employment conditions.",
+    "source_url": "https://dataforindia.com/salaried-jobs"
   },
   {
     "id": "prices-cpi-general",
@@ -538,6 +574,18 @@
     "is_featured": false,
     "description": "Share of adults (15-49) who consume egg, fish, chicken or meat. Indicates dietary diversity and protein intake.",
     "source_url": "https://dataforindia.com/meat-consumption"
+  },
+  {
+    "id": "hlt-dairy-consumption",
+    "category_id": "health",
+    "name": "Weekly Dairy Consumption",
+    "unit": "%",
+    "source": "NFHS-5 / Data For India",
+    "polarity": "positive",
+    "weight": 0.5,
+    "is_featured": false,
+    "description": "Percentage of population consuming dairy products at least once a week. Indicates nutritional access and dietary quality.",
+    "source_url": "https://dataforindia.com/dairy-consumption"
   },
   {
     "id": "wgn-female-lfpr",
@@ -1032,42 +1080,6 @@
     "source_url": "https://dataforindia.com/access-to-banking"
   },
   {
-    "id": "spt-olympic-medals",
-    "category_id": "sports",
-    "name": "National Games Medal Tally (per million pop.)",
-    "unit": "per million",
-    "source": "SAI",
-    "polarity": "positive",
-    "weight": 1,
-    "is_featured": true,
-    "description": "Medals won at the National Games normalized by state population. Reflects athletic talent development and sports investment.",
-    "source_url": "https://sportsauthorityofindia.nic.in/"
-  },
-  {
-    "id": "spt-sports-infra",
-    "category_id": "sports",
-    "name": "Sports Stadiums and Complexes per Million",
-    "unit": "per million",
-    "source": "MoYA&S",
-    "polarity": "positive",
-    "weight": 1,
-    "is_featured": true,
-    "description": "Number of sports stadiums and complexes per million population. Indicates the availability of organized sports infrastructure.",
-    "source_url": "https://yas.nic.in/"
-  },
-  {
-    "id": "spt-fit-india",
-    "category_id": "sports",
-    "name": "Fit India School Certification Rate",
-    "unit": "%",
-    "source": "MoYA&S",
-    "polarity": "positive",
-    "weight": 0.8,
-    "is_featured": false,
-    "description": "Percentage of schools certified under the Fit India School programme. Measures institutional commitment to physical fitness in education.",
-    "source_url": "https://yas.nic.in/"
-  },
-  {
     "id": "clt-domestic-tourists",
     "category_id": "culture-tourism",
     "name": "Domestic Tourist Visits Per Capita",
@@ -1296,18 +1308,6 @@
     "source_url": "https://dataforindia.com/road-accident-deaths"
   },
   {
-    "id": "med-newspaper-circulation",
-    "category_id": "media",
-    "name": "Newspaper Circulation per 1000 Population",
-    "unit": "per 1000",
-    "source": "RNI",
-    "polarity": "positive",
-    "weight": 1,
-    "is_featured": true,
-    "description": "Registered newspaper copies circulated per 1,000 people. Indicates print media penetration and public engagement with news.",
-    "source_url": "https://rfrni.nic.in/"
-  },
-  {
     "id": "med-tv-households",
     "category_id": "media",
     "name": "TV-Owning Households",
@@ -1330,18 +1330,6 @@
     "is_featured": true,
     "description": "Percentage of residents who migrated from another state. Reflects labour mobility and a state's pull as an economic destination.",
     "source_url": "https://censusindia.gov.in/"
-  },
-  {
-    "id": "mig-remittance-share",
-    "category_id": "migration",
-    "name": "Domestic Remittances as % of GSDP",
-    "unit": "%",
-    "source": "RBI/NSSO",
-    "polarity": "positive",
-    "weight": 0.8,
-    "is_featured": true,
-    "description": "Value of money sent home by migrant workers as a share of state GDP. Indicates economic dependence on out-migration.",
-    "source_url": "https://www.rbi.org.in/"
   },
   {
     "id": "civ-ngo-density",
@@ -1428,18 +1416,6 @@
     "source_url": "https://cbhidghs.mohfw.gov.in/publications/national-health-profile"
   },
   {
-    "id": "mhl-mental-health-facilities",
-    "category_id": "mental-health",
-    "name": "District Mental Health Programme Coverage",
-    "unit": "%",
-    "source": "MoHFW",
-    "polarity": "positive",
-    "weight": 1,
-    "is_featured": false,
-    "description": "Percentage of districts covered under the District Mental Health Programme. Indicates geographic reach of public mental health services.",
-    "source_url": "https://mohfw.gov.in/"
-  },
-  {
     "id": "dis-disability-prevalence",
     "category_id": "disability",
     "name": "Disability Prevalence Rate",
@@ -1464,18 +1440,6 @@
     "source_url": "https://www.mospi.gov.in/unit-level-data-report-nss-76th-round-schedule-260-july-december-2018-survey-persons-disabilities"
   },
   {
-    "id": "dis-accessible-buildings",
-    "category_id": "disability",
-    "name": "Government Buildings with Accessibility Features",
-    "unit": "%",
-    "source": "DEPwD",
-    "polarity": "positive",
-    "weight": 1,
-    "is_featured": false,
-    "description": "Percentage of government buildings with ramps, lifts, and other accessibility features. Indicates compliance with disability access mandates.",
-    "source_url": "https://depwd.gov.in/"
-  },
-  {
     "id": "tel-wireless-subscribers",
     "category_id": "telecom",
     "name": "Wireless Subscribers per 100 Population",
@@ -1488,27 +1452,99 @@
     "source_url": "https://trai.gov.in/"
   },
   {
-    "id": "tel-tower-density",
-    "category_id": "telecom",
-    "name": "Telecom Tower Density",
-    "unit": "per 100 sq km",
-    "source": "TRAI/DoT",
+    "id": "wat-jjm-tap-connections",
+    "category_id": "water-sanitation",
+    "name": "JJM Household Tap Water Coverage",
+    "unit": "%",
+    "source": "Jal Jeevan Mission",
     "polarity": "positive",
-    "weight": 1,
+    "weight": 1.5,
     "is_featured": true,
-    "description": "Number of telecom towers per 100 sq km. Indicates the physical infrastructure supporting mobile and data connectivity.",
-    "source_url": "https://trai.gov.in/"
+    "description": "Percentage of rural households with functional tap water connections under Jal Jeevan Mission. Measures access to safe drinking water.",
+    "source_url": "https://ejalshakti.gov.in/"
   },
   {
-    "id": "tel-avg-data-usage",
-    "category_id": "telecom",
-    "name": "Average Monthly Data Usage per Subscriber",
-    "unit": "GB",
-    "source": "TRAI",
+    "id": "wat-groundwater-exploitation",
+    "category_id": "water-sanitation",
+    "name": "Groundwater Stage of Extraction",
+    "unit": "%",
+    "source": "CGWB 2024",
+    "polarity": "negative",
+    "weight": 1,
+    "is_featured": true,
+    "description": "Annual groundwater extraction as a percentage of net recharge. Values above 100% indicate over-exploitation.",
+    "source_url": "https://cgwb.gov.in/"
+  },
+  {
+    "id": "wat-sanitation-coverage",
+    "category_id": "water-sanitation",
+    "name": "Improved Sanitation Coverage",
+    "unit": "%",
+    "source": "NFHS-5",
     "polarity": "positive",
+    "weight": 1,
+    "is_featured": false,
+    "description": "Percentage of households using improved sanitation facilities (flush/pour-flush toilets). Measures basic sanitation access.",
+    "source_url": "https://rchiips.org/nfhs/nfhs-5.shtml"
+  },
+  {
+    "id": "jus-overall-score",
+    "category_id": "justice",
+    "name": "India Justice Report Score",
+    "unit": "index (0-10)",
+    "source": "India Justice Report 2025",
+    "polarity": "positive",
+    "weight": 1.5,
+    "is_featured": true,
+    "description": "Composite score from the India Justice Report measuring the capacity and delivery of justice across police, judiciary, prisons, and legal aid.",
+    "source_url": "https://indiajusticereport.org/"
+  },
+  {
+    "id": "jus-undertrial-ratio",
+    "category_id": "justice",
+    "name": "Undertrial Prisoners as % of Inmates",
+    "unit": "%",
+    "source": "NCRB Prison Statistics 2022",
+    "polarity": "negative",
+    "weight": 1,
+    "is_featured": true,
+    "description": "Proportion of prison inmates who are undertrial (awaiting trial). High ratios indicate inefficiency in the judicial system.",
+    "source_url": "https://ncrb.gov.in/"
+  },
+  {
+    "id": "jus-prison-occupancy",
+    "category_id": "justice",
+    "name": "Prison Occupancy Rate",
+    "unit": "%",
+    "source": "NCRB Prison Statistics 2022",
+    "polarity": "negative",
     "weight": 0.8,
     "is_featured": false,
-    "description": "Mean monthly mobile data consumption per subscriber in gigabytes. Reflects digital literacy and the shift toward data-driven services.",
-    "source_url": "https://trai.gov.in/"
+    "description": "Number of actual inmates as a percentage of official capacity. Values above 100% indicate overcrowding.",
+    "source_url": "https://ncrb.gov.in/"
+  },
+  {
+    "id": "soc-mgnrega-days",
+    "category_id": "social-protection",
+    "name": "Avg MGNREGA Person-Days per Household",
+    "unit": "days",
+    "source": "nregastrep.nic.in",
+    "polarity": "positive",
+    "weight": 1.5,
+    "is_featured": true,
+    "description": "Average number of MGNREGA person-days worked per registered household. Measures the uptake and delivery of rural employment guarantee.",
+    "source_url": "https://nregastrep.nic.in/"
+  },
+  {
+    "id": "soc-pm-kisan-coverage",
+    "category_id": "social-protection",
+    "name": "PM-KISAN Beneficiaries per 1000 Rural HH",
+    "unit": "per 1000",
+    "source": "pmkisan.gov.in",
+    "polarity": "positive",
+    "weight": 1,
+    "is_featured": false,
+    "description": "Number of PM-KISAN farmer beneficiaries per 1000 rural households. Indicates reach of direct income support to farmers.",
+    "source_url": "https://pmkisan.gov.in/"
   }
 ]

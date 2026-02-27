@@ -1,0 +1,308 @@
+{
+  "year": 2021,
+  "category": {
+    "id": "telecom",
+    "name": "Telecom & Connectivity"
+  },
+  "rankings": [
+    {
+      "state_id": "delhi",
+      "score": 100,
+      "rank": 1,
+      "metrics_count": 1,
+      "state_name": "Delhi",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "kerala",
+      "score": 69.41,
+      "rank": 2,
+      "metrics_count": 1,
+      "state_name": "Kerala",
+      "state_type": "state"
+    },
+    {
+      "state_id": "punjab",
+      "score": 63.41,
+      "rank": 3,
+      "metrics_count": 1,
+      "state_name": "Punjab",
+      "state_type": "state"
+    },
+    {
+      "state_id": "chandigarh",
+      "score": 63.41,
+      "rank": 4,
+      "metrics_count": 1,
+      "state_name": "Chandigarh",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "tamil-nadu",
+      "score": 61.7,
+      "rank": 5,
+      "metrics_count": 1,
+      "state_name": "Tamil Nadu",
+      "state_type": "state"
+    },
+    {
+      "state_id": "puducherry",
+      "score": 61.7,
+      "rank": 6,
+      "metrics_count": 1,
+      "state_name": "Puducherry",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "karnataka",
+      "score": 53.98,
+      "rank": 7,
+      "metrics_count": 1,
+      "state_name": "Karnataka",
+      "state_type": "state"
+    },
+    {
+      "state_id": "himachal-pradesh",
+      "score": 53.13,
+      "rank": 8,
+      "metrics_count": 1,
+      "state_name": "Himachal Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "haryana",
+      "score": 47.13,
+      "rank": 9,
+      "metrics_count": 1,
+      "state_name": "Haryana",
+      "state_type": "state"
+    },
+    {
+      "state_id": "gujarat",
+      "score": 38.56,
+      "rank": 10,
+      "metrics_count": 1,
+      "state_name": "Gujarat",
+      "state_type": "state"
+    },
+    {
+      "state_id": "dadra-nagar-haveli-daman-diu",
+      "score": 38.56,
+      "rank": 11,
+      "metrics_count": 1,
+      "state_name": "Dadra & Nagar Haveli and Daman & Diu",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "maharashtra",
+      "score": 29.99,
+      "rank": 12,
+      "metrics_count": 1,
+      "state_name": "Maharashtra",
+      "state_type": "state"
+    },
+    {
+      "state_id": "andhra-pradesh",
+      "score": 29.13,
+      "rank": 13,
+      "metrics_count": 1,
+      "state_name": "Andhra Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "telangana",
+      "score": 29.13,
+      "rank": 14,
+      "metrics_count": 1,
+      "state_name": "Telangana",
+      "state_type": "state"
+    },
+    {
+      "state_id": "rajasthan",
+      "score": 25.71,
+      "rank": 15,
+      "metrics_count": 1,
+      "state_name": "Rajasthan",
+      "state_type": "state"
+    },
+    {
+      "state_id": "assam",
+      "score": 19.71,
+      "rank": 16,
+      "metrics_count": 1,
+      "state_name": "Assam",
+      "state_type": "state"
+    },
+    {
+      "state_id": "goa",
+      "score": 17.99,
+      "rank": 17,
+      "metrics_count": 1,
+      "state_name": "Goa",
+      "state_type": "state"
+    },
+    {
+      "state_id": "uttarakhand",
+      "score": 12.85,
+      "rank": 18,
+      "metrics_count": 1,
+      "state_name": "Uttarakhand",
+      "state_type": "state"
+    },
+    {
+      "state_id": "chhattisgarh",
+      "score": 11.14,
+      "rank": 19,
+      "metrics_count": 1,
+      "state_name": "Chhattisgarh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "madhya-pradesh",
+      "score": 11.14,
+      "rank": 20,
+      "metrics_count": 1,
+      "state_name": "Madhya Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "odisha",
+      "score": 10.28,
+      "rank": 21,
+      "metrics_count": 1,
+      "state_name": "Odisha",
+      "state_type": "state"
+    },
+    {
+      "state_id": "andaman-nicobar",
+      "score": 8.57,
+      "rank": 22,
+      "metrics_count": 1,
+      "state_name": "Andaman & Nicobar Islands",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "lakshadweep",
+      "score": 8.57,
+      "rank": 23,
+      "metrics_count": 1,
+      "state_name": "Lakshadweep",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "uttar-pradesh",
+      "score": 6,
+      "rank": 24,
+      "metrics_count": 1,
+      "state_name": "Uttar Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "jammu-kashmir",
+      "score": 4.28,
+      "rank": 25,
+      "metrics_count": 1,
+      "state_name": "Jammu & Kashmir",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "ladakh",
+      "score": 4.28,
+      "rank": 26,
+      "metrics_count": 1,
+      "state_name": "Ladakh",
+      "state_type": "ut"
+    },
+    {
+      "state_id": "meghalaya",
+      "score": 2.57,
+      "rank": 27,
+      "metrics_count": 1,
+      "state_name": "Meghalaya",
+      "state_type": "state"
+    },
+    {
+      "state_id": "arunachal-pradesh",
+      "score": 2.57,
+      "rank": 28,
+      "metrics_count": 1,
+      "state_name": "Arunachal Pradesh",
+      "state_type": "state"
+    },
+    {
+      "state_id": "mizoram",
+      "score": 2.57,
+      "rank": 29,
+      "metrics_count": 1,
+      "state_name": "Mizoram",
+      "state_type": "state"
+    },
+    {
+      "state_id": "manipur",
+      "score": 2.57,
+      "rank": 30,
+      "metrics_count": 1,
+      "state_name": "Manipur",
+      "state_type": "state"
+    },
+    {
+      "state_id": "tripura",
+      "score": 2.57,
+      "rank": 31,
+      "metrics_count": 1,
+      "state_name": "Tripura",
+      "state_type": "state"
+    },
+    {
+      "state_id": "nagaland",
+      "score": 2.57,
+      "rank": 32,
+      "metrics_count": 1,
+      "state_name": "Nagaland",
+      "state_type": "state"
+    },
+    {
+      "state_id": "sikkim",
+      "score": 0,
+      "rank": 33,
+      "metrics_count": 1,
+      "state_name": "Sikkim",
+      "state_type": "state"
+    },
+    {
+      "state_id": "bihar",
+      "score": 0,
+      "rank": 34,
+      "metrics_count": 1,
+      "state_name": "Bihar",
+      "state_type": "state"
+    },
+    {
+      "state_id": "west-bengal",
+      "score": 0,
+      "rank": 35,
+      "metrics_count": 1,
+      "state_name": "West Bengal",
+      "state_type": "state"
+    },
+    {
+      "state_id": "jharkhand",
+      "score": 0,
+      "rank": 36,
+      "metrics_count": 1,
+      "state_name": "Jharkhand",
+      "state_type": "state"
+    }
+  ],
+  "metrics": [
+    {
+      "id": "tel-wireless-subscribers",
+      "name": "Wireless Subscribers per 100 Population",
+      "unit": "per 100",
+      "polarity": "positive",
+      "source": "TRAI",
+      "source_url": "https://trai.gov.in/",
+      "description": "Number of mobile phone subscriptions per 100 people. Measures the reach of wireless communication across the state."
+    }
+  ]
+}

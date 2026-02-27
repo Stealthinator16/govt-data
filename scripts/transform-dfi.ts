@@ -299,6 +299,29 @@ const MAPPINGS: ChartMapping[] = [
     period: "2023-24",
   },
 
+  // --- Casual Worker Share (PLFS 2024) ---
+  {
+    chartId: "8bbaeefb1c0047fb801b2c5f9d2b021c",
+    articleSlug: "salaried-jobs",
+    metricId: "emp-casual-worker-share",
+    stateField: "dfi_276_state",
+    valueField: "0 - dfi_3_counreco",
+    sourceRef: "PLFS 2023-24 / Data For India",
+    period: "2023-24",
+  },
+
+  // --- Dairy Consumption (NFHS-5) ---
+  {
+    chartId: "6d82704b68f34034baa6f60b03c09611",
+    articleSlug: "dairy-consumption",
+    metricId: "hlt-dairy-consumption",
+    stateField: "dfi_3_state",
+    valueField: "0 - dfi_5_counreco",
+    categoryFilter: { field: "dfi_2_gender", value: "Overall" },
+    sourceRef: "NFHS-5 / Data For India",
+    period: "2019-21",
+  },
+
   // --- Road Accident Deaths ---
   {
     chartId: "a957a54a25294be2a6307b9470d1bd05",
@@ -307,6 +330,57 @@ const MAPPINGS: ChartMapping[] = [
     stateField: "dfi_1_state",
     valueField: "dfi_4_tnopaplp",
     sourceRef: "MoRTH / Data For India",
+    period: "2022",
+  },
+
+  // --- State Economies: Relative Income & GDP Share ---
+  {
+    chartId: "4f00aa70a70c490f9d184ebbc103d049",
+    articleSlug: "state-economies",
+    metricId: "eco-relative-income",
+    stateField: "dfi_2_state",
+    valueField: "dfi_4_repecain",
+    yearFilter: { field: "dfi_1_year", value: "2021" },
+    sourceRef: "MoSPI NAS / Data For India",
+    period: "2021",
+  },
+  {
+    chartId: "3db011fcdc1a4f56b343d4bd0ad812ac",
+    articleSlug: "state-economies",
+    metricId: "eco-national-gdp-share",
+    stateField: "dfi_2_state",
+    valueField: "dfi_3_shinnaec",
+    yearFilter: { field: "dfi_1_year", value: "2021" },
+    sourceRef: "MoSPI NAS / Data For India",
+    period: "2021",
+  },
+
+  // --- GSDP Sector Shares (state-economies) ---
+  {
+    chartId: "cfee3f5c942d424aa89bcab82f68d751",
+    articleSlug: "state-economies",
+    metricId: "eco-agriculture-share",
+    stateField: "dfi_1_statname",
+    valueField: "0 - dfi_8_nsvacurr",
+    sourceRef: "MoSPI NAS / Data For India",
+    period: "2022",
+  },
+  {
+    chartId: "cfee3f5c942d424aa89bcab82f68d751",
+    articleSlug: "state-economies",
+    metricId: "eco-industry-share",
+    stateField: "dfi_1_statname",
+    valueField: "1 - dfi_8_nsvacurr",
+    sourceRef: "MoSPI NAS / Data For India",
+    period: "2022",
+  },
+  {
+    chartId: "cfee3f5c942d424aa89bcab82f68d751",
+    articleSlug: "state-economies",
+    metricId: "eco-services-share",
+    stateField: "dfi_1_statname",
+    valueField: "2 - dfi_8_nsvacurr",
+    sourceRef: "MoSPI NAS / Data For India",
     period: "2022",
   },
 ];
