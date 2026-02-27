@@ -20,14 +20,14 @@
 - [x] Build IndiaMap choropleth (react-simple-maps)
 - [x] Build /states/[stateId] radar chart (Recharts)
 - [x] Cmd+K search (cmdk)
-- [x] 126 metrics defined across all 27 categories
+- [x] 129 metrics defined across 30 categories
 
 ## Phase 2: Comparison + Real Data ✓
 - [x] Generate JSON bundles for client-side use
 - [x] Build /compare page with two-state selector + radar overlay + diff table
-- [x] CSV ingestion pipeline (41 CSV files, 21 curated + 20 DFI-derived)
+- [x] CSV ingestion pipeline (52 CSV files, 32 curated + 20 DFI-derived)
 - [x] MoSPI API ingestion (12 metrics)
-- [x] 24/27 categories populated with real data
+- [x] 27/30 categories populated with real data
 - [x] MetricBarChart component (Recharts, tier-colored)
 - [x] Build /metrics/[metricId] deep-dive pages (bar chart, score distribution, full rankings)
 
@@ -35,13 +35,17 @@
 - [x] SEO (metadata, sitemap, robots.txt, OpenGraph, Twitter cards)
 - [x] Responsive design (Tailwind responsive classes throughout)
 - [x] Deploy to Vercel — https://nationalpremierleague.vercel.app/
-- [ ] Fill remaining 3 categories with real data (3/27 empty)
-- [ ] Fill 29 metrics that have no data yet (97/126 populated — Batch 3 added 17 via MoSPI cache + DFI)
+- [ ] Fill 25 metrics that have no data yet — 3 new CSVs needed (see below)
 - [ ] Improve metrics with partial state coverage (see MEMORY.md for details)
 - [ ] Add time-series data and trend indicators
 - [ ] Add sparklines to tables
 - [ ] Disaggregation views (gender, urban/rural toggle)
 - [ ] Performance optimization — target Lighthouse > 95
+
+### Data CSVs still needed
+- `data/raw/water-sanitation.csv` → `wat-jjm-tap-connections` (ejalshakti.gov.in), `wat-groundwater-exploitation` (cgwb.gov.in)
+- `data/raw/india-justice-report.csv` → `jus-overall-score` (indiajusticereport.org), `jus-undertrial-ratio`, `jus-prison-occupancy` (NCRB PSI 2022)
+- `data/raw/social-protection.csv` → `soc-mgnrega-days` (nregastrep.nic.in), `soc-pm-kisan-coverage` (pmkisan.gov.in)
 
 ## Phase 4: Automation
 - [x] Pipeline orchestrator script
@@ -53,8 +57,15 @@
 - **Phase 0**: COMPLETE
 - **Phase 1**: COMPLETE
 - **Phase 2**: COMPLETE
-- **Phase 3**: PARTIAL — deployed + SEO + responsive done; data gaps + time-series + sparklines remaining
+- **Phase 3**: PARTIAL — deployed + SEO + responsive done; 25 metrics empty, time-series + sparklines remaining
 - **Phase 4**: PARTIAL — pipeline done, CI/CD not set up
 - **Build**: 205 static pages (homepage, rankings×30, states×37, compare, about, metrics×129 [104 with data])
 - **Data**: 129 metrics defined, 104 with data, 25 empty. 52 CSV files + 3 aliases in data/raw/
-- **Batch 5 complete**: Dropped 2 unfillable telecom metrics; Added 3 new categories (water-sanitation, justice, social-protection); Added 8 new metrics; TRAI CSV fills 3 metrics (36 states each); wat-sanitation-coverage aliased from urb-sanitation-coverage
+- **Categories**: 30 defined (27 with data; water-sanitation/justice/social-protection partially empty)
+
+## Batch History
+- **Batch 1**: 21 curated CSVs + MoSPI ingestion — core categories filled
+- **Batch 2**: 6 new CSVs (NCRB extended, ECI turnout, foreign tourism, bank branches, disability, irrigation)
+- **Batch 3**: DFI GSDP sectors + salaried jobs + dairy — employment/industry/economy complete
+- **Batch 4**: eco-relative-income, eco-national-gdp-share, emp-casual-worker-share, hlt-dairy-consumption; dropped 7 unfillable metrics
+- **Batch 5**: TRAI CSV (36-state circle mapping, 3 metrics); 3 new categories; 8 new metric definitions; dropped 2 unfillable telecom metrics; wat-sanitation-coverage alias
