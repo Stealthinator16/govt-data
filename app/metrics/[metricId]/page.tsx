@@ -3,8 +3,8 @@ import path from "path";
 import { notFound } from "next/navigation";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { MetricBarChart } from "@/components/charts/metric-bar-chart";
-import { ScoreDistribution } from "@/components/charts/score-distribution";
+import { LazyMetricBarChart } from "@/components/charts/lazy-metric-bar-chart";
+import { LazyScoreDistribution } from "@/components/charts/lazy-score-distribution";
 import { formatNumber } from "@/lib/format";
 import { getTier, TIER_CONFIG } from "@/lib/constants";
 import type { Metadata } from "next";
@@ -158,7 +158,7 @@ export default async function MetricPage({
               State Rankings — {metric.name}
             </h2>
             <div className="rounded-lg border p-4 overflow-x-auto">
-              <MetricBarChart rankings={rankings} unit={metric.unit} />
+              <LazyMetricBarChart rankings={rankings} unit={metric.unit} />
             </div>
           </section>
 
@@ -166,7 +166,7 @@ export default async function MetricPage({
           <section className="mt-8">
             <h2 className="text-lg font-semibold mb-4">Score Distribution</h2>
             <div className="rounded-lg border p-4">
-              <ScoreDistribution
+              <LazyScoreDistribution
                 scores={rankings.map((r) => r.norm_score)}
               />
             </div>

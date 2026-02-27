@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Search, Menu, X } from "lucide-react";
+import { SearchIcon, MenuIcon, XIcon } from "@/components/icons";
 
 const NAV_LINKS = [
   { href: "/rankings", label: "Rankings" },
@@ -36,7 +36,7 @@ export function Header() {
             onClick={openSearch}
             className="flex items-center gap-2 rounded-md border bg-muted/50 px-3 py-1.5 text-muted-foreground hover:bg-muted transition-colors"
           >
-            <Search className="h-3.5 w-3.5" />
+            <SearchIcon className="h-3.5 w-3.5" />
             <span className="hidden sm:inline">Search...</span>
             <kbd className="hidden sm:inline-flex h-5 items-center rounded border bg-background px-1.5 text-[10px] font-medium">
               ⌘K
@@ -62,7 +62,7 @@ export function Header() {
             className="md:hidden p-1.5 rounded-md hover:bg-muted transition-colors"
             aria-label="Toggle menu"
           >
-            {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+            {menuOpen ? <XIcon className="h-5 w-5" /> : <MenuIcon className="h-5 w-5" />}
           </button>
         </div>
       </div>

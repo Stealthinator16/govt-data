@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Command } from "cmdk";
 import * as Dialog from "@radix-ui/react-dialog";
-import { Search } from "lucide-react";
+import { SearchIcon } from "@/components/icons";
 
 interface StateEntry {
   id: string;
@@ -113,7 +113,7 @@ export function SearchDialog() {
         <Dialog.Content className="fixed left-1/2 top-[20%] z-50 w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 rounded-xl border bg-popover shadow-xl">
           <Command className="flex flex-col" label="Search">
             <div className="flex items-center border-b px-3">
-              <Search className="mr-2 h-4 w-4 shrink-0 text-muted-foreground" />
+              <SearchIcon className="mr-2 h-4 w-4 shrink-0 text-muted-foreground" />
               <Command.Input
                 placeholder="Search states and categories..."
                 className="flex h-11 w-full bg-transparent py-3 text-sm outline-none placeholder:text-muted-foreground"
@@ -164,7 +164,7 @@ export function SearchTrigger({ onClick }: { onClick: () => void }) {
       onClick={onClick}
       className="flex items-center gap-2 rounded-md border bg-muted/50 px-3 py-1.5 text-sm text-muted-foreground hover:bg-muted transition-colors"
     >
-      <Search className="h-3.5 w-3.5" />
+      <SearchIcon className="h-3.5 w-3.5" />
       <span className="hidden sm:inline">Search...</span>
       <kbd className="hidden sm:inline-flex h-5 items-center rounded border bg-background px-1.5 text-[10px] font-medium">
         ⌘K

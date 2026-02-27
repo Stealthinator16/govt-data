@@ -5,7 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { TierBadge } from "@/components/league-table/tier-badge";
 import { ScoreBar } from "@/components/league-table/score-bar";
-import { CategoryRadar } from "@/components/charts/category-radar";
+import { LazyCategoryRadar } from "@/components/charts/lazy-category-radar";
 import type { Metadata } from "next";
 import type { Tier } from "@/lib/types";
 
@@ -138,7 +138,7 @@ export default async function StateProfilePage({
             <div className="mt-8">
               <h2 className="text-xl font-semibold mb-4">Performance Radar</h2>
               <div className="rounded-lg border p-4">
-                <CategoryRadar
+                <LazyCategoryRadar
                   categories={categories.map((c) => ({
                     category_name: c.category_name,
                     score: c.score,

@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ScoreBar } from "@/components/league-table/score-bar";
-import { CompareRadar } from "@/components/charts/compare-radar";
+import { LazyCompareRadar } from "@/components/charts/lazy-compare-radar";
 import { CATEGORIES } from "@/lib/constants";
 
 interface CompareData {
@@ -96,7 +96,7 @@ export default function ComparePage() {
 
                   {/* Radar overlay */}
                   <div className="rounded-lg border p-4 mb-6">
-                    <CompareRadar
+                    <LazyCompareRadar
                       categories={categories}
                       nameA={stateAName}
                       nameB={stateBName}
