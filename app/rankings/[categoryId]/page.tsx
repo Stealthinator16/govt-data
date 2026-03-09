@@ -2,8 +2,6 @@ import fs from "fs";
 import path from "path";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
 import { LeagueTable } from "@/components/league-table/league-table";
 
 interface CategoryData {
@@ -101,57 +99,43 @@ export default async function CategoryRankingsPage({
 
   return (
     <>
-      <Header />
-      <main className="flex-1">
-        <div className="mx-auto max-w-5xl px-4 py-8">
-          <div className="mb-2">
-            <a
-              href="/rankings"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              ← All Rankings
-            </a>
-          </div>
-          <h1 className="text-3xl font-bold">{data.category.name}</h1>
-          <p className="mt-2 text-muted-foreground">
-            {rankings.length} states ranked by {data.category.name.toLowerCase()} metrics.
-          </p>
-          <div className="mt-6 rounded-lg border">
-            <LeagueTable rankings={rankings} />
-          </div>
+      <h1 className="text-3xl font-bold">{data.category.name}</h1>
+      <p className="mt-2 text-muted-foreground">
+        {rankings.length} states ranked by {data.category.name.toLowerCase()} metrics.
+      </p>
+      <div className="mt-6 rounded-lg border">
+        <LeagueTable rankings={rankings} />
+      </div>
 
-          {data.metrics && data.metrics.length > 0 && (
-            <section className="mt-8">
-              <h2 className="text-lg font-semibold mb-3">Metrics in this category</h2>
-              <div className="grid gap-2 sm:grid-cols-2">
-                {data.metrics.map((m) => (
-                  <a
-                    key={m.id}
-                    href={`/metrics/${m.id}`}
-                    className="flex flex-col rounded-lg border px-4 py-3 hover:bg-muted/50 transition-colors"
-                  >
-                    <div className="flex items-center justify-between">
-                      <span className="font-medium text-sm">{m.name}</span>
-                      <span className="text-xs text-muted-foreground">{m.unit}</span>
-                    </div>
-                    {m.description && (
-                      <span className="text-xs text-muted-foreground mt-1 line-clamp-2">
-                        {m.description}
-                      </span>
-                    )}
-                    {m.source && (
-                      <span className="text-xs text-muted-foreground/70 mt-1">
-                        Source: {m.source}
-                      </span>
-                    )}
-                  </a>
-                ))}
-              </div>
-            </section>
-          )}
-        </div>
-      </main>
-      <Footer />
+      {data.metrics && data.metrics.length > 0 && (
+        <section className="mt-8">
+          <h2 className="text-lg font-semibold mb-3">Metrics in this category</h2>
+          <div className="grid gap-2 sm:grid-cols-2">
+            {data.metrics.map((m) => (
+              <a
+                key={m.id}
+                href={`/metrics/${m.id}`}
+                className="flex flex-col rounded-lg border px-4 py-3 hover:bg-muted/50 transition-colors"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="font-medium text-sm">{m.name}</span>
+                  <span className="text-xs text-muted-foreground">{m.unit}</span>
+                </div>
+                {m.description && (
+                  <span className="text-xs text-muted-foreground mt-1 line-clamp-2">
+                    {m.description}
+                  </span>
+                )}
+                {m.source && (
+                  <span className="text-xs text-muted-foreground/70 mt-1">
+                    Source: {m.source}
+                  </span>
+                )}
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
     </>
   );
 }
