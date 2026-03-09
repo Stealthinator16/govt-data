@@ -93,35 +93,34 @@ export default function Home() {
           </div>
         </section>
 
-        {/* India Map */}
-        <section className="border-b">
-          <div className="mx-auto max-w-3xl px-4 py-8">
-            <h2 className="text-xl font-semibold mb-4 text-center">State Performance Map</h2>
-            <LazyIndiaMap rankings={rankings} />
-          </div>
-        </section>
+        <div className="border-b">
+          <div className="mx-auto max-w-7xl px-4 py-8">
+            <div className="grid gap-8 lg:grid-cols-2 items-start">
+              {/* Rankings table — order-2 on mobile (below map), order-1 on desktop */}
+              <div className="order-2 lg:order-1">
+                <div className="flex items-center justify-between mb-4">
+                  <h2 className="text-xl font-semibold">Overall Rankings</h2>
+                  <a
+                    href="/rankings"
+                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    View all →
+                  </a>
+                </div>
+                <div className="rounded-lg border overflow-hidden">
+                  <div className="overflow-y-auto max-h-[580px]">
+                    <LeagueTable rankings={rankings} limit={36} />
+                  </div>
+                </div>
+              </div>
 
-        <div className="mx-auto max-w-7xl px-4 py-8">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-xl font-semibold">Overall Rankings</h2>
-            <a
-              href="/rankings"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              View all →
-            </a>
+              {/* Map — order-1 on mobile (above table), order-2 on desktop */}
+              <div className="order-1 lg:order-2">
+                <h2 className="text-xl font-semibold mb-4">State Performance Map</h2>
+                <LazyIndiaMap rankings={rankings} />
+              </div>
+            </div>
           </div>
-          <div className="rounded-lg border">
-            <LeagueTable rankings={rankings} limit={15} />
-          </div>
-          {rankings.length > 15 && (
-            <p className="mt-2 text-center text-sm text-muted-foreground">
-              Showing top 15 of {rankings.length} states.{" "}
-              <a href="/rankings" className="underline">
-                See full table
-              </a>
-            </p>
-          )}
         </div>
 
         {/* Categories Grid — full width */}
