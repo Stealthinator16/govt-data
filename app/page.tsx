@@ -83,7 +83,7 @@ export default function Home() {
             </h1>
             <p className="mt-3 text-lg text-muted-foreground max-w-2xl">
               Ranking Indian states across every measurable dimension of human life.
-              27 categories, 1000+ metrics, 36 states and UTs.
+              30 categories, 1000+ metrics, 36 states and UTs.
             </p>
             <div className="mt-4 flex items-center gap-4 text-sm text-muted-foreground">
               <span>Data Year: {year}</span>
@@ -127,9 +127,8 @@ export default function Home() {
               )}
             </div>
 
-            {/* Sidebar: Tier Summary + Featured Categories */}
-            <div className="space-y-6">
-              {/* Tier Summary */}
+            {/* Sidebar: Tier Summary only */}
+            <div>
               <div className="rounded-lg border p-4">
                 <h3 className="font-semibold mb-3">Tier Summary</h3>
                 {(["Champion", "Contender", "Rising", "Developing"] as const).map(
@@ -164,25 +163,35 @@ export default function Home() {
                   }
                 )}
               </div>
-
-              {/* Category Cards */}
-              <div>
-                <h3 className="font-semibold mb-3">Categories</h3>
-                <div className="grid gap-2">
-                  {categoryCards?.map((cat) => (
-                    <CategoryCard
-                      key={cat.id}
-                      id={cat.id}
-                      name={cat.name}
-                      description={cat.description}
-                      topState={categoryTopStates[cat.id]}
-                    />
-                  ))}
-                </div>
-              </div>
             </div>
           </div>
         </div>
+
+        {/* Categories Grid — full width */}
+        <section className="border-t">
+          <div className="mx-auto max-w-7xl px-4 py-8">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-semibold">Browse by Category</h2>
+              <a
+                href="/rankings"
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                All rankings →
+              </a>
+            </div>
+            <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+              {categoryCards?.map((cat) => (
+                <CategoryCard
+                  key={cat.id}
+                  id={cat.id}
+                  name={cat.name}
+                  description={cat.description}
+                  topState={categoryTopStates[cat.id]}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
