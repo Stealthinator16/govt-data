@@ -33,11 +33,12 @@ export function StateNav({ states }: { states: StateEntry[] }) {
             key={s.state_id}
             href={`/states/${s.state_id}`}
             className={cn(
-              "block rounded-md px-3 py-2 text-sm transition-colors",
+              "block truncate rounded-md px-3 py-2 text-sm transition-colors",
               pathname === `/states/${s.state_id}`
                 ? "bg-muted font-medium text-foreground"
                 : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
             )}
+            title={s.state_name}
           >
             {s.state_name}
           </Link>

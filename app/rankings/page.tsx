@@ -22,6 +22,12 @@ interface OverallData {
   }>;
 }
 
+interface Category {
+  id: string;
+  name: string;
+  description: string;
+}
+
 export default function RankingsPage() {
   let data: OverallData | null = null;
   try {
@@ -31,6 +37,10 @@ export default function RankingsPage() {
     );
     data = JSON.parse(content);
   } catch {}
+
+  const categories = JSON.parse(
+    fs.readFileSync(path.join(process.cwd(), "data/reference/categories.json"), "utf-8")
+  ) as Category[];
 
   const rankings = data?.rankings ?? [];
 
@@ -44,6 +54,26 @@ export default function RankingsPage() {
       <div className="mt-6 rounded-lg border">
         <LeagueTable rankings={rankings} />
       </div>
+
+      <section className="mt-8">
+        <h2 className="text-lg font-semibold mb-3">Browse by Category</h2>
+        <div className="grid gap-2 sm:grid-cols-2">
+          {categories.map((cat) => (
+            <a
+              key={cat.id}
+              href={`/rankings/${cat.id}`}
+              className="flex flex-col rounded-lg border px-4 py-3 hover:bg-muted/50 transition-colors"
+            >
+              <span className="font-medium text-sm">{cat.name}</span>
+              {cat.description && (
+                <span className="text-xs text-muted-foreground mt-1 line-clamp-2">
+                  {cat.description}
+                </span>
+              )}
+            </a>
+          ))}
+        </div>
+      </section>
     </>
   );
 }
