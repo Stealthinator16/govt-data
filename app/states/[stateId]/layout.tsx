@@ -2,12 +2,16 @@ import fs from "fs";
 import path from "path";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { CategoryNav } from "@/components/rankings/category-nav";
+import { StateNav } from "@/components/states/state-nav";
 
-export default function RankingsLayout({ children }: { children: React.ReactNode }) {
-  const categories = JSON.parse(
-    fs.readFileSync(path.join(process.cwd(), "data/reference/categories.json"), "utf-8")
-  ) as Array<{ id: string; name: string }>;
+export default function StateProfileLayout({ children }: { children: React.ReactNode }) {
+  const overall = JSON.parse(
+    fs.readFileSync(path.join(process.cwd(), "public/data/overall.json"), "utf-8")
+  ) as {
+    rankings: Array<{ state_id: string; state_name: string; rank: number; tier: string }>;
+  };
+
+  const states = overall.rankings.sort((a, b) => a.rank - b.rank);
 
   return (
     <>
@@ -15,7 +19,7 @@ export default function RankingsLayout({ children }: { children: React.ReactNode
       <div className="mx-auto max-w-7xl px-4 py-8 flex-1">
         <div className="lg:flex gap-8">
           <aside className="hidden lg:block w-52 shrink-0">
-            <CategoryNav categories={categories} />
+            <StateNav states={states} />
           </aside>
           <main className="flex-1 min-w-0">
             {children}
