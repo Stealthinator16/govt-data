@@ -5,7 +5,6 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { TierBadge } from "@/components/league-table/tier-badge";
 import { ScoreBar } from "@/components/league-table/score-bar";
-import { LazyCategoryRadar } from "@/components/charts/lazy-category-radar";
 import type { Metadata } from "next";
 import type { Tier } from "@/lib/types";
 
@@ -132,28 +131,6 @@ export default async function StateProfilePage({
               </div>
             )}
           </div>
-
-          {/* Radar Chart */}
-          {overall && categories.filter((c) => c.score > 0).length >= 3 && (
-            <div className="mt-8">
-              <h2 className="text-xl font-semibold mb-4">Performance Radar</h2>
-              <div className="rounded-lg border p-4">
-                <LazyCategoryRadar
-                  categories={categories.map((c) => ({
-                    category_name: c.category_name,
-                    score: c.score,
-                    rank: c.rank,
-                  }))}
-                  tierColor={
-                    overall.tier === "Champion" ? "#10b981"
-                    : overall.tier === "Contender" ? "#3b82f6"
-                    : overall.tier === "Rising" ? "#f59e0b"
-                    : "#f87171"
-                  }
-                />
-              </div>
-            </div>
-          )}
 
           {/* Category Breakdown */}
           <div className="mt-8">
