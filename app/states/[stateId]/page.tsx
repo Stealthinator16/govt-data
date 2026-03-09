@@ -2,7 +2,6 @@ import fs from "fs";
 import path from "path";
 import { notFound } from "next/navigation";
 import { TierBadge } from "@/components/league-table/tier-badge";
-import { ScoreBar } from "@/components/league-table/score-bar";
 import type { Metadata } from "next";
 import type { Tier } from "@/lib/types";
 
@@ -113,26 +112,26 @@ export default async function StateProfilePage({
       </div>
 
       {/* Category Breakdown */}
-      <div className="mt-8">
-        <h2 className="text-xl font-semibold mb-4">Category Breakdown</h2>
-        <div className="grid gap-3">
+      <section className="mt-8">
+        <h2 className="text-lg font-semibold mb-3">Category Breakdown</h2>
+        <div className="grid gap-2 sm:grid-cols-2">
           {categories.map((cat) => (
             <a
               key={cat.category_id}
               href={`/rankings/${cat.category_id}`}
-              className="flex items-center gap-4 rounded-lg border p-4 hover:bg-muted/50 transition-all"
+              className="flex flex-col rounded-lg border px-4 py-3 hover:bg-muted/50 transition-colors"
             >
-              <div className="flex-1 min-w-0">
-                <div className="font-medium text-sm truncate">{cat.category_name}</div>
-                <div className="text-xs text-muted-foreground mt-0.5">
-                  Rank #{cat.rank} | {cat.metrics_count} metrics
-                </div>
+              <div className="flex items-center justify-between">
+                <span className="font-medium text-sm">{cat.category_name}</span>
+                <span className="text-xs text-muted-foreground">{cat.score.toFixed(1)}</span>
               </div>
-              <ScoreBar score={cat.score} />
+              <span className="text-xs text-muted-foreground mt-1">
+                Rank #{cat.rank} · {cat.metrics_count} metrics
+              </span>
             </a>
           ))}
         </div>
-      </div>
+      </section>
 
       {overall && (
         <p className="mt-6 text-xs text-muted-foreground">

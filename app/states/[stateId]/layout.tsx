@@ -11,7 +11,7 @@ export default function StateProfileLayout({ children }: { children: React.React
     rankings: Array<{ state_id: string; state_name: string; rank: number; tier: string }>;
   };
 
-  const states = overall.rankings.sort((a, b) => a.rank - b.rank);
+  const states = overall.rankings.sort((a, b) => a.state_name.localeCompare(b.state_name));
 
   return (
     <>
