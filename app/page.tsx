@@ -102,69 +102,26 @@ export default function Home() {
         </section>
 
         <div className="mx-auto max-w-7xl px-4 py-8">
-          <div className="grid gap-8 lg:grid-cols-3">
-            {/* League Table */}
-            <div className="lg:col-span-2">
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="text-xl font-semibold">Overall Rankings</h2>
-                <a
-                  href="/rankings"
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-                >
-                  View all →
-                </a>
-              </div>
-              <div className="rounded-lg border">
-                <LeagueTable rankings={rankings} limit={15} />
-              </div>
-              {rankings.length > 15 && (
-                <p className="mt-2 text-center text-sm text-muted-foreground">
-                  Showing top 15 of {rankings.length} states.{" "}
-                  <a href="/rankings" className="underline">
-                    See full table
-                  </a>
-                </p>
-              )}
-            </div>
-
-            {/* Sidebar: Tier Summary only */}
-            <div>
-              <div className="rounded-lg border p-4">
-                <h3 className="font-semibold mb-3">Tier Summary</h3>
-                {(["Champion", "Contender", "Rising", "Developing"] as const).map(
-                  (tier) => {
-                    const count = rankings.filter((r) => r.tier === tier).length;
-                    const colors = {
-                      Champion: "bg-emerald-500",
-                      Contender: "bg-blue-500",
-                      Rising: "bg-amber-500",
-                      Developing: "bg-red-400",
-                    };
-                    const descriptions = {
-                      Champion: "75–100: Top performers",
-                      Contender: "60–74: Above average",
-                      Rising: "45–59: Making progress",
-                      Developing: "0–44: Needs attention",
-                    };
-                    return (
-                      <div key={tier} className="flex items-center gap-2 mb-2">
-                        <div className={`h-3 w-3 rounded-full ${colors[tier]}`} />
-                        <div className="flex-1">
-                          <span className="text-sm">{tier}</span>
-                          <span className="text-xs text-muted-foreground ml-1">
-                            ({descriptions[tier]})
-                          </span>
-                        </div>
-                        <span className="text-sm font-mono tabular-nums text-muted-foreground">
-                          {count}
-                        </span>
-                      </div>
-                    );
-                  }
-                )}
-              </div>
-            </div>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-xl font-semibold">Overall Rankings</h2>
+            <a
+              href="/rankings"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              View all →
+            </a>
           </div>
+          <div className="rounded-lg border">
+            <LeagueTable rankings={rankings} limit={15} />
+          </div>
+          {rankings.length > 15 && (
+            <p className="mt-2 text-center text-sm text-muted-foreground">
+              Showing top 15 of {rankings.length} states.{" "}
+              <a href="/rankings" className="underline">
+                See full table
+              </a>
+            </p>
+          )}
         </div>
 
         {/* Categories Grid — full width */}
